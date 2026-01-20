@@ -1,0 +1,48 @@
+{
+  "id": "ecosystem",
+  "type": "SharedSlice",
+  "name": "Ecosystem",
+  "description": "Ecosystem partners logo section with colored logos",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Ecosystem logos with title and colored partner logos",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": "Freeda is part of a recognised deeptech ecosystem:"
+          }
+        },
+        "logos": {
+          "type": "Group",
+          "config": {
+            "label": "Logos",
+            "fields": {
+              "logo": {
+                "type": "Image",
+                "config": {
+                  "label": "Logo",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "company_name": {
+                "type": "Text",
+                "config": {
+                  "label": "Company Name",
+                  "placeholder": "Company name for alt text"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

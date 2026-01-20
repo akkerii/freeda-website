@@ -1,0 +1,33 @@
+{
+  "id": "last_case_study",
+  "type": "SharedSlice",
+  "name": "LastCaseStudy",
+  "description": "Display latest case study cards from linked page",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default variation",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Section Title",
+            "placeholder": "Latest CASE STUDIES"
+          }
+        },
+        "case_study_page": {
+          "type": "Link",
+          "config": {
+            "label": "Case Study Page",
+            "select": "document",
+            "customtypes": ["case_study_page"]
+          }
+        }
+      }
+    }
+  ]
+}

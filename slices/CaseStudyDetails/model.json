@@ -1,0 +1,76 @@
+{
+  "id": "case_study_details",
+  "type": "SharedSlice",
+  "name": "CaseStudyDetails",
+  "description": "Alternating content sections with images and text",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Alternating image/text sections for case study details",
+      "imageUrl": "",
+      "primary": {
+        "section_title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Section Title",
+            "single": "heading1",
+            "placeholder": "Automating Plan Verification"
+          }
+        },
+        "section_description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Section Description",
+            "single": "paragraph",
+            "placeholder": "Ensure that architectural layouts comply..."
+          }
+        },
+        "sections": {
+          "type": "Group",
+          "config": {
+            "label": "Content Sections",
+            "fields": {
+              "heading": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Section Heading",
+                  "single": "heading2",
+                  "placeholder": "Understanding Cohabs' challenges"
+                }
+              },
+              "body_text": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Body Text",
+                  "multi": "paragraph, strong, em, hyperlink",
+                  "placeholder": "Freeda worked closely with..."
+                }
+              },
+              "image": {
+                "type": "Image",
+                "config": {
+                  "label": "Section Image",
+                  "constraint": {
+                    "width": 523,
+                    "height": 560
+                  }
+                }
+              },
+              "image_position": {
+                "type": "Select",
+                "config": {
+                  "label": "Image Position",
+                  "options": ["left", "right"],
+                  "default_value": "left"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

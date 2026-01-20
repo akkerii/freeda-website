@@ -1,0 +1,44 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "guess",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"stat_value",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "south",
+							"type": "Text"
+						}
+					],
+					[
+						"stat_label",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "suppose",
+							"type": "Text"
+						}
+					],
+					[
+						"stat_description",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "conversation",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
+	}
+]

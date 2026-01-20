@@ -1,0 +1,65 @@
+{
+  "id": "dark_cta",
+  "type": "SharedSlice",
+  "name": "DarkCta",
+  "description": "Dark background call-to-action section",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Dark CTA with image",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": "CTA headline"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "CTA description",
+            "multi": "paragraph"
+          }
+        },
+        "button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Button Text",
+            "placeholder": "Get Started"
+          }
+        },
+        "button_link": {
+          "type": "Link",
+          "config": {
+            "label": "Button Link",
+            "allowTargetBlank": true,
+            "select": null
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {
+        "use_case_label": {
+          "type": "Text",
+          "config": {
+            "label": "Use Case Label",
+            "placeholder": "Technical specifications"
+          }
+        }
+      }
+    }
+  ]
+}

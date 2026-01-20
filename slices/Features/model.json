@@ -1,0 +1,89 @@
+{
+  "id": "features",
+  "type": "SharedSlice",
+  "name": "Features",
+  "description": "Feature cards section",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Features grid with cards",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": "Features section title"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "Section description",
+            "multi": "paragraph"
+          }
+        },
+        "document_image_1": {
+          "type": "Image",
+          "config": {
+            "label": "Document Image 1",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "document_image_2": {
+          "type": "Image",
+          "config": {
+            "label": "Document Image 2",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "main_feature_title": {
+          "type": "Text",
+          "config": {
+            "label": "Main Feature Title",
+            "placeholder": "Main feature headline"
+          }
+        },
+        "main_feature_description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Main Feature Description",
+            "placeholder": "Main feature description",
+            "multi": "paragraph"
+          }
+        }
+      },
+      "items": {
+        "icon": {
+          "type": "Image",
+          "config": {
+            "label": "Icon",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "feature_title": {
+          "type": "Text",
+          "config": {
+            "label": "Feature Title",
+            "placeholder": "Feature name"
+          }
+        },
+        "feature_description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Feature Description",
+            "placeholder": "Feature description",
+            "multi": "paragraph"
+          }
+        }
+      }
+    }
+  ]
+}

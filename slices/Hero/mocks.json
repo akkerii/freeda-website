@@ -1,0 +1,92 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"logo_text": {
+				"__TYPE__": "FieldContent",
+				"value": "Freeda.",
+				"type": "Text"
+			},
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "You build. We double-check.",
+				"type": "Text"
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Construction risk starts long before the site opens. Freeda analyses plans and technical documents to detect errors early - before they turn into delays, redesigns, or disputes."
+						}
+					}
+				]
+			},
+			"primary_button_text": {
+				"__TYPE__": "FieldContent",
+				"value": "Discuss a project",
+				"type": "Text"
+			},
+			"primary_button_link": {
+				"key": "4a586292-cce3-4290-aca7-b01058187c96",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://freeda.ai/contact"
+				}
+			},
+			"secondary_button_text": {
+				"__TYPE__": "FieldContent",
+				"value": "Explore use cases",
+				"type": "Text"
+			},
+			"secondary_button_link": {
+				"key": "07b282d4-f059-44a8-abe7-ca1023bfee0c",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://freeda.ai/use-cases"
+				}
+			},
+			"header_button_text": {
+				"__TYPE__": "FieldContent",
+				"value": "Discuss a project",
+				"type": "Text"
+			},
+			"header_button_link": {
+				"key": "efbfdb70-068e-4b9d-ae3d-7ee163248395",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://freeda.ai/contact"
+				}
+			},
+			"hero_image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+					"width": 1139,
+					"height": 700
+				},
+				"url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+				"width": 1139,
+				"height": 700,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "Freeda Dashboard - Interactive Report",
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			}
+		},
+		"items": []
+	}
+]

@@ -1,0 +1,106 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "company_logo": {
+        "__TYPE__": "ImageContent",
+        "url": "https://images.prismic.io/freeda-dev/placeholder-logo.png",
+        "alt": "Cohabs Logo",
+        "dimensions": {
+          "width": 137,
+          "height": 36
+        }
+      },
+      "title": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "Automating Plan Verification with Cohabs"
+      },
+      "description": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "Ensure that architectural layouts comply with accessibility requirements by automatically checking dimensions, clearances, and circulation rules directly on your drawings."
+      },
+      "background_image": {
+        "__TYPE__": "ImageContent",
+        "url": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=524&h=656&fit=crop",
+        "alt": "Industrial building interior",
+        "dimensions": {
+          "width": 524,
+          "height": 656
+        }
+      },
+      "foreground_image": {
+        "__TYPE__": "ImageContent",
+        "url": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=425&h=528&fit=crop",
+        "alt": "Industrial machinery",
+        "dimensions": {
+          "width": 425,
+          "height": 528
+        }
+      },
+      "annual_roi_label": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "Annual ROI:"
+      },
+      "annual_roi_value": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "×37"
+      },
+      "productivity_label": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "Productivity gains:"
+      },
+      "productivity_value": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "23 hours saved per month"
+      },
+      "cities_label": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "Cities:"
+      },
+      "cities_value": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "5"
+      },
+      "about_title": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "About the company"
+      },
+      "about_description": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "Ensure that architectural layouts comply with accessibility requirements by automatically checking dimensions, clearances, and circulation rules directly on your drawings."
+      },
+      "industry_title": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "Industrie"
+      },
+      "industry_type": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "Industry type"
+      },
+      "since_title": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "With Freeda since"
+      },
+      "since_description": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "Ensure that architectural layouts comply with accessibility requirements by automatically checking dimensions, clearances, and circulation rules directly on your drawings."
+      }
+    },
+    "items": []
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "id": "working_hero",
+  "type": "SharedSlice",
+  "name": "WorkingHero",
+  "description": "Hero section for the Working with Freeda page",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default variation",
+      "imageUrl": "",
+      "primary": {
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "Description",
+            "placeholder": "Freeda is designed for teams dealing with complex projects..."
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

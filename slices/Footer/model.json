@@ -1,0 +1,112 @@
+{
+  "id": "footer",
+  "type": "SharedSlice",
+  "name": "Footer",
+  "description": "Footer with partner logos, navigation columns, and social links",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Footer with partner logos, company info, social links and navigation",
+      "imageUrl": "",
+      "primary": {
+        "partners_title": {
+          "type": "Text",
+          "config": {
+            "label": "Partners Title",
+            "placeholder": "Technical Partners & Investors"
+          }
+        },
+        "partner_logos": {
+          "type": "Group",
+          "config": {
+            "label": "Partner Logos",
+            "fields": {
+              "logo": {
+                "type": "Image",
+                "config": {
+                  "label": "Logo",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              }
+            }
+          }
+        },
+        "company_tagline": {
+          "type": "Text",
+          "config": {
+            "label": "Company Tagline",
+            "placeholder": "Descriptive line about what your company does."
+          }
+        },
+        "social_links": {
+          "type": "Group",
+          "config": {
+            "label": "Social Links",
+            "fields": {
+              "platform": {
+                "type": "Select",
+                "config": {
+                  "label": "Platform",
+                  "options": [
+                    "Instagram",
+                    "LinkedIn",
+                    "X",
+                    "Facebook",
+                    "YouTube"
+                  ]
+                }
+              },
+              "url": {
+                "type": "Link",
+                "config": {
+                  "label": "URL",
+                  "allowTargetBlank": true,
+                  "select": null
+                }
+              }
+            }
+          }
+        },
+        "nav_links": {
+          "type": "Group",
+          "config": {
+            "label": "Navigation Links",
+            "fields": {
+              "column": {
+                "type": "Select",
+                "config": {
+                  "label": "Column",
+                  "options": [
+                    "Solutions",
+                    "For Who",
+                    "Resources",
+                    "Company"
+                  ]
+                }
+              },
+              "link_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Link Text",
+                  "placeholder": "Link label"
+                }
+              },
+              "link_url": {
+                "type": "Link",
+                "config": {
+                  "label": "Link URL",
+                  "allowTargetBlank": true,
+                  "select": null
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

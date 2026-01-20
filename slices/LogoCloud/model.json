@@ -1,0 +1,42 @@
+{
+  "id": "logo_cloud",
+  "type": "SharedSlice",
+  "name": "LogoCloud",
+  "description": "Trusted by logo carousel section",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Logo cloud with title and partner logos",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": "Trusted By"
+          }
+        }
+      },
+      "items": {
+        "logo": {
+          "type": "Image",
+          "config": {
+            "label": "Logo",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "company_name": {
+          "type": "Text",
+          "config": {
+            "label": "Company Name",
+            "placeholder": "Company name for alt text"
+          }
+        }
+      }
+    }
+  ]
+}

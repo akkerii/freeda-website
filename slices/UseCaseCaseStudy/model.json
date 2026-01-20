@@ -1,0 +1,100 @@
+{
+  "id": "use_case_case_study",
+  "type": "SharedSlice",
+  "name": "UseCaseCaseStudy",
+  "description": "Case study section showing project examples with images and location labels",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Case study with images grid and location labels",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": "Last Case Study"
+          }
+        },
+        "subtitle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Subtitle",
+            "multi": "paragraph"
+          }
+        },
+        "main_image": {
+          "type": "Image",
+          "config": {
+            "label": "Main Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "secondary_image": {
+          "type": "Image",
+          "config": {
+            "label": "Secondary Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "tertiary_image": {
+          "type": "Image",
+          "config": {
+            "label": "Tertiary Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "location_label_1": {
+          "type": "Text",
+          "config": {
+            "label": "Location Label 1",
+            "placeholder": "Cohabs, Global"
+          }
+        },
+        "location_label_2": {
+          "type": "Text",
+          "config": {
+            "label": "Location Label 2",
+            "placeholder": "Coming soon"
+          }
+        },
+        "case_study_title": {
+          "type": "Text",
+          "config": {
+            "label": "Case Study Title",
+            "placeholder": "Project title"
+          }
+        },
+        "case_study_description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Case Study Description",
+            "multi": "paragraph"
+          }
+        },
+        "button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Button Text",
+            "placeholder": "View case study"
+          }
+        },
+        "button_link": {
+          "type": "Link",
+          "config": {
+            "label": "Button Link",
+            "allowTargetBlank": true,
+            "select": null
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

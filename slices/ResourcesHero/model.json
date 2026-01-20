@@ -1,0 +1,68 @@
+{
+  "id": "resources_hero",
+  "type": "SharedSlice",
+  "name": "ResourcesHero",
+  "description": "Hero section for resources page",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default variation",
+      "imageUrl": "",
+      "primary": {
+        "logo_text": {
+          "type": "Text",
+          "config": {
+            "label": "Logo Text",
+            "placeholder": "Freeda."
+          }
+        },
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": "Ressources"
+          }
+        },
+        "button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Button Text",
+            "placeholder": "Another button"
+          }
+        },
+        "button_link": {
+          "type": "Link",
+          "config": {
+            "label": "Button Link",
+            "select": "web"
+          }
+        },
+        "nav_items": {
+          "type": "Group",
+          "config": {
+            "label": "Navigation Items",
+            "fields": {
+              "nav_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Nav Text"
+                }
+              },
+              "nav_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Nav Link",
+                  "select": "web"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

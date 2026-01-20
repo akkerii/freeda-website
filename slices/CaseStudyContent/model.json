@@ -1,0 +1,59 @@
+{
+  "id": "case_study_content",
+  "type": "SharedSlice",
+  "name": "CaseStudyContent",
+  "description": "Case study content sections with text blocks and images",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Stacked content sections with headings, paragraphs, and images",
+      "imageUrl": "",
+      "primary": {
+        "sections": {
+          "type": "Group",
+          "config": {
+            "label": "Content Sections",
+            "fields": {
+              "section_type": {
+                "type": "Select",
+                "config": {
+                  "label": "Section Type",
+                  "options": ["text_with_heading", "text_only", "image"],
+                  "default_value": "text_with_heading"
+                }
+              },
+              "heading": {
+                "type": "Text",
+                "config": {
+                  "label": "Heading",
+                  "placeholder": "Understanding Cohabs' challenges"
+                }
+              },
+              "body_text": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Body Text",
+                  "multi": "paragraph, strong, em, hyperlink",
+                  "placeholder": "Freeda worked closely with multiple Cohabs teams..."
+                }
+              },
+              "image": {
+                "type": "Image",
+                "config": {
+                  "label": "Section Image",
+                  "constraint": {
+                    "width": 880,
+                    "height": 560
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

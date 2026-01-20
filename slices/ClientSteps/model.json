@@ -1,0 +1,58 @@
+{
+  "id": "client_steps",
+  "type": "SharedSlice",
+  "name": "ClientSteps",
+  "description": "Client-oriented analysis section with steps",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default variation",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": "Client-oriented analysis, deployment, and implementation"
+          }
+        },
+        "subtitle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Subtitle",
+            "multi": "paragraph,strong,em",
+            "placeholder": "Description with emphasis support"
+          }
+        },
+        "steps": {
+          "type": "Group",
+          "config": {
+            "label": "Steps",
+            "fields": {
+              "step_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Step Text",
+                  "placeholder": "Understand business objectives and regulatory constraints"
+                }
+              },
+              "icon": {
+                "type": "Image",
+                "config": {
+                  "label": "Icon",
+                  "constraint": {
+                    "width": 32,
+                    "height": 32
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

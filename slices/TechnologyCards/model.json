@@ -1,0 +1,47 @@
+{
+  "id": "technology_cards",
+  "type": "SharedSlice",
+  "name": "TechnologyCards",
+  "description": "Technology cards section with title, subtitle, and cards showcasing different technologies",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default variation",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": "Proprietary deeptech, guided by human expertise"
+          }
+        },
+        "subtitle": {
+          "type": "Text",
+          "config": {
+            "label": "Subtitle",
+            "placeholder": "Description text"
+          }
+        },
+        "cards": {
+          "type": "Group",
+          "config": {
+            "label": "Technology Cards",
+            "fields": {
+              "card_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Card Text",
+                  "placeholder": "Technology description"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

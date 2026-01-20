@@ -1,0 +1,110 @@
+{
+  "id": "global_presence",
+  "type": "SharedSlice",
+  "name": "GlobalPresence",
+  "description": "World map with interactive location markers",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Global presence map section",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": "Global presence, local context"
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "Description",
+            "placeholder": "Trusted by clients across Europe, North America, and the Middle East"
+          }
+        },
+        "button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Button Text",
+            "placeholder": "View global presence"
+          }
+        },
+        "button_link": {
+          "type": "Link",
+          "config": {
+            "label": "Button Link",
+            "allowTargetBlank": true,
+            "select": null
+          }
+        }
+      },
+      "items": {
+        "location_name": {
+          "type": "Text",
+          "config": {
+            "label": "Location Name",
+            "placeholder": "Nice / France"
+          }
+        },
+        "project_title": {
+          "type": "Text",
+          "config": {
+            "label": "Project Title",
+            "placeholder": "Sécuriser une opération de 150 logements"
+          }
+        },
+        "project_description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Project Description",
+            "placeholder": "Project details...",
+            "multi": "paragraph"
+          }
+        },
+        "project_image": {
+          "type": "Image",
+          "config": {
+            "label": "Project Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "client_logo": {
+          "type": "Image",
+          "config": {
+            "label": "Client Logo",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "position_x": {
+          "type": "Number",
+          "config": {
+            "label": "Position X (%)",
+            "placeholder": "50"
+          }
+        },
+        "position_y": {
+          "type": "Number",
+          "config": {
+            "label": "Position Y (%)",
+            "placeholder": "50"
+          }
+        },
+        "has_pulse": {
+          "type": "Boolean",
+          "config": {
+            "label": "Has Pulse Effect",
+            "default_value": false,
+            "placeholder_false": "No",
+            "placeholder_true": "Yes"
+          }
+        }
+      }
+    }
+  ]
+}

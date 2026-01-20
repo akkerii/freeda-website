@@ -1,0 +1,40 @@
+{
+  "id": "project_page",
+  "label": "Project Page",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "UID"
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "project_hero": {
+              "type": "SharedSlice"
+            },
+            "project_details": {
+              "type": "SharedSlice"
+            },
+            "projects": {
+              "type": "SharedSlice"
+            },
+            "global_presence": {
+              "type": "SharedSlice"
+            },
+            "footer": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  },
+  "format": "custom"
+}

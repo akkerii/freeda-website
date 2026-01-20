@@ -1,0 +1,154 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "Client-oriented analysis, deployment, and implementation",
+				"type": "Text"
+			},
+			"subtitle": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Freeda adapts its technology to each client's reality — not a one-size-fits-all solution. Multidisciplinary teams (architects, engineers, construction experts, designers, developers, and AI researchers) work directly with clients to:",
+							"spans": [
+								{
+									"start": 159,
+									"end": 191,
+									"type": "strong"
+								}
+							]
+						}
+					}
+				]
+			},
+			"steps": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"key": "bbff000f-fdc5-4439-a935-1395c8d32870",
+						"value": [
+							[
+								"step_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Understand business objectives and regulatory constraints",
+									"type": "Text"
+								}
+							],
+							[
+								"icon",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8",
+										"width": 3456,
+										"height": 3456
+									},
+									"url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8?rect=0%2C0%2C3456%2C3456&w=32&h=32",
+									"width": 32,
+									"height": 32,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": null,
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"key": "9d6d7fcd-c146-43b7-9ef7-201322f0b2fe",
+						"value": [
+							[
+								"step_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Configure the right modules for each geography and use case",
+									"type": "Text"
+								}
+							],
+							[
+								"icon",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8",
+										"width": 3456,
+										"height": 3456
+									},
+									"url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8?rect=0%2C0%2C3456%2C3456&w=32&h=32",
+									"width": 32,
+									"height": 32,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": null,
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"key": "fdb235a7-a63b-46db-ac22-d73406dd7943",
+						"value": [
+							[
+								"step_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Deploy usable analysis environments",
+									"type": "Text"
+								}
+							],
+							[
+								"icon",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8",
+										"width": 3456,
+										"height": 3456
+									},
+									"url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8?rect=0%2C0%2C3456%2C3456&w=32&h=32",
+									"width": 32,
+									"height": 32,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": null,
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

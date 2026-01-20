@@ -1,0 +1,112 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"logo_text": {
+				"__TYPE__": "FieldContent",
+				"value": "Freeda.",
+				"type": "Text"
+			},
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "Ressources",
+				"type": "Text"
+			},
+			"button_text": {
+				"__TYPE__": "FieldContent",
+				"value": "Another button",
+				"type": "Text"
+			},
+			"button_link": {
+				"key": "a0c4136f-bb08-4e3e-9a1d-382b158cdf71",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "#"
+				}
+			},
+			"nav_items": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"key": "b6835281-08c2-4e5b-9ade-a22a5f850038",
+						"value": [
+							[
+								"nav_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Home",
+									"type": "Text"
+								}
+							],
+							[
+								"nav_link",
+								{
+									"key": "da3e7a16-06bc-4a80-abc7-1664c62bda88",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "/"
+									}
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"key": "2e5a9779-365b-451a-a8c5-df1e2301f6c8",
+						"value": [
+							[
+								"nav_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "About",
+									"type": "Text"
+								}
+							],
+							[
+								"nav_link",
+								{
+									"key": "c1af4536-311d-4e9c-831b-fbc9822c4d7d",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "/about"
+									}
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"key": "f1f5b2f8-0ff0-49b4-8ca5-a10d6bda6aa3",
+						"value": [
+							[
+								"nav_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Contact",
+									"type": "Text"
+								}
+							],
+							[
+								"nav_link",
+								{
+									"key": "36c89831-4740-488c-b4b7-c445c49cded8",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "/contact"
+									}
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

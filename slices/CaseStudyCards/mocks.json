@@ -1,0 +1,954 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"section_title": {
+				"__TYPE__": "FieldContent",
+				"value": "Case Study",
+				"type": "Text"
+			},
+			"cards": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"key": "5c6712b7-c72e-4f01-bbd2-a54789909d7d",
+						"value": [
+							[
+								"image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=524&h=698&fit=crop",
+										"width": 524,
+										"height": 698
+									},
+									"url": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=524&h=698&fit=crop",
+									"width": 524,
+									"height": 698,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "Cohabs Case Study",
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"label",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Cohabs",
+									"type": "Text"
+								}
+							],
+							[
+								"show_details",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": true
+								}
+							],
+							[
+								"application_description",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Freeda helps Cohabs verify that schematic and detailed design plans complied with brand guidelines and local codes in 5 countries.",
+									"type": "Text"
+								}
+							],
+							[
+								"document_tags",
+								{
+									"__TYPE__": "GroupContentType",
+									"value": [
+										{
+											"__TYPE__": "GroupItemContent",
+											"key": "69289308-034b-4f7f-a930-4911cb417eb2",
+											"value": [
+												[
+													"icon_type",
+													{
+														"__TYPE__": "FieldContent",
+														"value": "file",
+														"type": "Select"
+													}
+												],
+												[
+													"tag_text",
+													{
+														"__TYPE__": "FieldContent",
+														"value": "Plans",
+														"type": "Text"
+													}
+												]
+											]
+										},
+										{
+											"__TYPE__": "GroupItemContent",
+											"key": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+											"value": [
+												[
+													"icon_type",
+													{
+														"__TYPE__": "FieldContent",
+														"value": "lock",
+														"type": "Select"
+													}
+												],
+												[
+													"tag_text",
+													{
+														"__TYPE__": "FieldContent",
+														"value": "Local Regulations",
+														"type": "Text"
+													}
+												]
+											]
+										},
+										{
+											"__TYPE__": "GroupItemContent",
+											"key": "f6e5d4c3-b2a1-4f5e-9d8c-7b6a5e4d3c2b",
+											"value": [
+												[
+													"icon_type",
+													{
+														"__TYPE__": "FieldContent",
+														"value": "check",
+														"type": "Select"
+													}
+												],
+												[
+													"tag_text",
+													{
+														"__TYPE__": "FieldContent",
+														"value": "Brand Guidelines",
+														"type": "Text"
+													}
+												]
+											]
+										}
+									]
+								}
+							],
+							[
+								"logo",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=137&h=36&fit=crop",
+										"width": 137,
+										"height": 36
+									},
+									"url": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=137&h=36&fit=crop",
+									"width": 137,
+									"height": 36,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "Cohabs Logo",
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"hero_heading",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "heading1",
+											"content": {
+												"text": "Automating Plan Verification with Cohabs"
+											}
+										}
+									]
+								}
+							],
+							[
+								"hero_description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Ensure that architectural layouts comply with accessibility requirements by automatically checking dimensions, clearances, and circulation rules directly on your drawings."
+											}
+										}
+									]
+								}
+							],
+							[
+								"background_image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=524&h=656&fit=crop",
+										"width": 524,
+										"height": 656
+									},
+									"url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=524&h=656&fit=crop",
+									"width": 524,
+									"height": 656,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "Background",
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"foreground_image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=425&h=528&fit=crop",
+										"width": 425,
+										"height": 528
+									},
+									"url": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=425&h=528&fit=crop",
+									"width": 425,
+									"height": 528,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "Foreground",
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"show_metrics",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": true
+								}
+							],
+							[
+								"annual_roi",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "×37",
+									"type": "Text"
+								}
+							],
+							[
+								"productivity_gains",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "23 hours saved per month",
+									"type": "Text"
+								}
+							],
+							[
+								"cities",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "5",
+									"type": "Text"
+								}
+							],
+							[
+								"content_title",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "heading1",
+											"content": {
+												"text": "Automating Plan Verification"
+											}
+										}
+									]
+								}
+							],
+							[
+								"content_description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Ensure that architectural layouts comply with accessibility requirements by automatically checking dimensions, clearances, and circulation rules directly on your drawings."
+											}
+										}
+									]
+								}
+							],
+							[
+								"content_sections",
+								{
+									"__TYPE__": "GroupContentType",
+									"value": [
+										{
+											"__TYPE__": "GroupItemContent",
+											"key": "1e5ad0c0-8c9b-4876-bcad-59db0ca9b666",
+											"value": [
+												[
+													"heading",
+													{
+														"__TYPE__": "StructuredTextContent",
+														"value": [
+															{
+																"type": "heading2",
+																"content": {
+																	"text": "Understanding Cohabs' challenges"
+																}
+															}
+														]
+													}
+												],
+												[
+													"body_text",
+													{
+														"__TYPE__": "StructuredTextContent",
+														"value": [
+															{
+																"type": "paragraph",
+																"content": {
+																	"text": "Freeda worked closely with multiple Cohabs teams across Acquisition, Project Management, and Space & Design to understand the key bottlenecks in their design and review processes."
+																}
+															},
+															{
+																"type": "paragraph",
+																"content": {
+																	"text": "In-person workshops were conducted with teams in Brussels, Paris, and New York to build a comprehensive view of Cohabs' workflows, decision-making constraints, and scale requirements before defining a solution.",
+																	"spans": [
+																		{
+																			"start": 57,
+																			"end": 97,
+																			"type": "strong"
+																		}
+																	]
+																}
+															}
+														]
+													}
+												],
+												[
+													"image",
+													{
+														"origin": {
+															"id": "main",
+															"url": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=523&h=560&fit=crop",
+															"width": 523,
+															"height": 560
+														},
+														"url": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=523&h=560&fit=crop",
+														"width": 523,
+														"height": 560,
+														"edit": {
+															"zoom": 1,
+															"crop": {
+																"x": 0,
+																"y": 0
+															},
+															"background": "transparent"
+														},
+														"alt": "Workshop",
+														"credits": null,
+														"__TYPE__": "ImageContent"
+													}
+												],
+												[
+													"image_position",
+													{
+														"__TYPE__": "FieldContent",
+														"value": "left",
+														"type": "Select"
+													}
+												]
+											]
+										},
+										{
+											"__TYPE__": "GroupItemContent",
+											"key": "a2b3c4d5-e6f7-4a5b-8c9d-0e1f2a3b4c5d",
+											"value": [
+												[
+													"heading",
+													{
+														"__TYPE__": "StructuredTextContent",
+														"value": [
+															{
+																"type": "heading2",
+																"content": {
+																	"text": "Solution development and iteration"
+																}
+															}
+														]
+													}
+												],
+												[
+													"body_text",
+													{
+														"__TYPE__": "StructuredTextContent",
+														"value": [
+															{
+																"type": "paragraph",
+																"content": {
+																	"text": "Based on these insights, Freeda rapidly prototyped solutions aligned with Cohabs' existing workflows to ensure seamless adoption."
+																}
+															},
+															{
+																"type": "paragraph",
+																"content": {
+																	"text": "The highest-impact use cases focused on plan verification, including checking schematic and detailed design plans against internal brand guidelines and local regulations, as well as validating basic quantities and takeoffs across project stakeholders."
+																}
+															}
+														]
+													}
+												],
+												[
+													"image",
+													{
+														"origin": {
+															"id": "main",
+															"url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=523&h=560&fit=crop",
+															"width": 523,
+															"height": 560
+														},
+														"url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=523&h=560&fit=crop",
+														"width": 523,
+														"height": 560,
+														"edit": {
+															"zoom": 1,
+															"crop": {
+																"x": 0,
+																"y": 0
+															},
+															"background": "transparent"
+														},
+														"alt": "Development",
+														"credits": null,
+														"__TYPE__": "ImageContent"
+													}
+												],
+												[
+													"image_position",
+													{
+														"__TYPE__": "FieldContent",
+														"value": "right",
+														"type": "Select"
+													}
+												]
+											]
+										},
+										{
+											"__TYPE__": "GroupItemContent",
+											"key": "b3c4d5e6-f7a8-4b5c-9d0e-1f2a3b4c5d6e",
+											"value": [
+												[
+													"heading",
+													{
+														"__TYPE__": "StructuredTextContent",
+														"value": [
+															{
+																"type": "heading2",
+																"content": {
+																	"text": "Global deployment"
+																}
+															}
+														]
+													}
+												],
+												[
+													"body_text",
+													{
+														"__TYPE__": "StructuredTextContent",
+														"value": [
+															{
+																"type": "paragraph",
+																"content": {
+																	"text": "Following successful deployments on initial projects in Brussels, Freeda is now being rolled out across 35+ projects across London, Brussels, Paris, Madrid, Milan and more.",
+																	"spans": [
+																		{
+																			"start": 110,
+																			"end": 158,
+																			"type": "strong"
+																		}
+																	]
+																}
+															},
+															{
+																"type": "paragraph",
+																"content": {
+																	"text": "The platform integrates smoothly into Cohabs' ways of working by adapting reports, outputs, and spreadsheets to match Cohabs' internal formats and presentation standards."
+																}
+															}
+														]
+													}
+												],
+												[
+													"image",
+													{
+														"origin": {
+															"id": "main",
+															"url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=523&h=560&fit=crop",
+															"width": 523,
+															"height": 560
+														},
+														"url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=523&h=560&fit=crop",
+														"width": 523,
+														"height": 560,
+														"edit": {
+															"zoom": 1,
+															"crop": {
+																"x": 0,
+																"y": 0
+															},
+															"background": "transparent"
+														},
+														"alt": "Global",
+														"credits": null,
+														"__TYPE__": "ImageContent"
+													}
+												],
+												[
+													"image_position",
+													{
+														"__TYPE__": "FieldContent",
+														"value": "left",
+														"type": "Select"
+													}
+												]
+											]
+										}
+									]
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"key": "9d66e79e-1a4c-42d5-9fb4-e083009c183e",
+						"value": [
+							[
+								"image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=524&h=698&fit=crop",
+										"width": 524,
+										"height": 698
+									},
+									"url": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=524&h=698&fit=crop",
+									"width": 524,
+									"height": 698,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "Coming Soon",
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"label",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Coming soon",
+									"type": "Text"
+								}
+							],
+							[
+								"show_details",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": false
+								}
+							],
+							[
+								"application_description",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "",
+									"type": "Text"
+								}
+							],
+							[
+								"document_tags",
+								{
+									"__TYPE__": "GroupContentType",
+									"value": []
+								}
+							],
+							[
+								"logo",
+								{
+									"origin": {
+										"id": "main",
+										"url": "",
+										"width": 200,
+										"height": 100
+									},
+									"url": "",
+									"width": 200,
+									"height": 100,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": null,
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"hero_heading",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": []
+								}
+							],
+							[
+								"hero_description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": []
+								}
+							],
+							[
+								"background_image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "",
+										"width": 524,
+										"height": 656
+									},
+									"url": "",
+									"width": 524,
+									"height": 656,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": null,
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"foreground_image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "",
+										"width": 425,
+										"height": 528
+									},
+									"url": "",
+									"width": 425,
+									"height": 528,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": null,
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"show_metrics",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": false
+								}
+							],
+							[
+								"annual_roi",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "",
+									"type": "Text"
+								}
+							],
+							[
+								"productivity_gains",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "",
+									"type": "Text"
+								}
+							],
+							[
+								"cities",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "",
+									"type": "Text"
+								}
+							],
+							[
+								"content_title",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": []
+								}
+							],
+							[
+								"content_description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": []
+								}
+							],
+							[
+								"content_sections",
+								{
+									"__TYPE__": "GroupContentType",
+									"value": []
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"key": "97288307-a9b8-4ad3-8719-e26b89d09b82",
+						"value": [
+							[
+								"image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=524&h=698&fit=crop",
+										"width": 524,
+										"height": 698
+									},
+									"url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=524&h=698&fit=crop",
+									"width": 524,
+									"height": 698,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "Coming Soon",
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"label",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Coming soon",
+									"type": "Text"
+								}
+							],
+							[
+								"show_details",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": false
+								}
+							],
+							[
+								"application_description",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "",
+									"type": "Text"
+								}
+							],
+							[
+								"document_tags",
+								{
+									"__TYPE__": "GroupContentType",
+									"value": []
+								}
+							],
+							[
+								"logo",
+								{
+									"origin": {
+										"id": "main",
+										"url": "",
+										"width": 200,
+										"height": 100
+									},
+									"url": "",
+									"width": 200,
+									"height": 100,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": null,
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"hero_heading",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": []
+								}
+							],
+							[
+								"hero_description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": []
+								}
+							],
+							[
+								"background_image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "",
+										"width": 524,
+										"height": 656
+									},
+									"url": "",
+									"width": 524,
+									"height": 656,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": null,
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"foreground_image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "",
+										"width": 425,
+										"height": 528
+									},
+									"url": "",
+									"width": 425,
+									"height": 528,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": null,
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"show_metrics",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": false
+								}
+							],
+							[
+								"annual_roi",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "",
+									"type": "Text"
+								}
+							],
+							[
+								"productivity_gains",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "",
+									"type": "Text"
+								}
+							],
+							[
+								"cities",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "",
+									"type": "Text"
+								}
+							],
+							[
+								"content_title",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": []
+								}
+							],
+							[
+								"content_description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": []
+								}
+							],
+							[
+								"content_sections",
+								{
+									"__TYPE__": "GroupContentType",
+									"value": []
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

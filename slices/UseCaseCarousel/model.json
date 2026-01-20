@@ -1,0 +1,175 @@
+{
+  "id": "use_case_carousel",
+  "type": "SharedSlice",
+  "name": "UseCaseCarousel",
+  "description": "Interactive carousel showcasing use cases with detailed process steps",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default variation with carousel cards and step details",
+      "imageUrl": "",
+      "primary": {
+        "section_title": {
+          "type": "Text",
+          "config": {
+            "label": "Section Title",
+            "placeholder": "Use cases"
+          }
+        },
+        "use_cases": {
+          "type": "Group",
+          "config": {
+            "label": "Use Cases",
+            "fields": {
+              "card_title": {
+                "type": "Text",
+                "config": {
+                  "label": "Card Title",
+                  "placeholder": "Accessibility (PMR)"
+                }
+              },
+              "card_image": {
+                "type": "Image",
+                "config": {
+                  "label": "Card Image"
+                }
+              },
+              "application_label": {
+                "type": "Text",
+                "config": {
+                  "label": "Application Label",
+                  "placeholder": "Application"
+                }
+              },
+              "application_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Application Description",
+                  "placeholder": "Detect accessibility non-compliances early..."
+                }
+              },
+              "documents_label": {
+                "type": "Text",
+                "config": {
+                  "label": "Documents Label",
+                  "placeholder": "Documents analysed"
+                }
+              },
+              "documents_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Documents Description",
+                  "placeholder": "Plans (PDF), technical notices..."
+                }
+              },
+              "coming_soon": {
+                "type": "Boolean",
+                "config": {
+                  "label": "Coming Soon Badge"
+                }
+              },
+              "detail_title": {
+                "type": "Text",
+                "config": {
+                  "label": "Detail Title",
+                  "placeholder": "Accessibility (PMR) Compliance Check"
+                }
+              },
+              "detail_description": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Detail Description",
+                  "multi": "paragraph,strong,em"
+                }
+              },
+              "step1_title": {
+                "type": "Text",
+                "config": {
+                  "label": "Step 1 Title",
+                  "placeholder": "Step 1 — Configuration"
+                }
+              },
+              "step1_description": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Step 1 Description",
+                  "multi": "paragraph,strong,em"
+                }
+              },
+              "step1_image": {
+                "type": "Image",
+                "config": {
+                  "label": "Step 1 Image"
+                }
+              },
+              "step1_tags": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Step 1 Tags",
+                  "multi": "list-item"
+                }
+              },
+              "step2_title": {
+                "type": "Text",
+                "config": {
+                  "label": "Step 2 Title",
+                  "placeholder": "Step 2 — Upload your plans"
+                }
+              },
+              "step2_description": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Step 2 Description",
+                  "multi": "paragraph,strong,em"
+                }
+              },
+              "step2_image": {
+                "type": "Image",
+                "config": {
+                  "label": "Step 2 Image"
+                }
+              },
+              "step2_tags": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Step 2 Tags",
+                  "multi": "list-item"
+                }
+              },
+              "step3_title": {
+                "type": "Text",
+                "config": {
+                  "label": "Step 3 Title",
+                  "placeholder": "Step 3 — Receive your reports"
+                }
+              },
+              "step3_description": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Step 3 Description",
+                  "multi": "paragraph,strong,em"
+                }
+              },
+              "step3_image": {
+                "type": "Image",
+                "config": {
+                  "label": "Step 3 Image"
+                }
+              },
+              "step3_tags": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Step 3 Tags",
+                  "multi": "list-item"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

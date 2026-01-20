@@ -1,0 +1,84 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Couple"
+						}
+					}
+				]
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Deserunt cillum tempor et veniam ipsum mollit nisi irure deserunt aliquip sit aute ea aliqua."
+						}
+					}
+				]
+			},
+			"cards_image": {
+				"__TYPE__": "ImageContent",
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a",
+					"width": 3456,
+					"height": 4320
+				},
+				"url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a?rect=0%2C875%2C3456%2C2570&w=706&h=525",
+				"width": 706,
+				"height": 525,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 875
+					},
+					"background": "transparent"
+				},
+				"alt": "story"
+			},
+			"feature_title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading3",
+						"content": {
+							"text": "Thirty"
+						}
+					}
+				]
+			},
+			"feature_description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Tempor minim mollit reprehenderit exercitation cillum esse exercitation nisi elit quis commodo duis labore. Irure amet ut laborum nulla mollit enim irure in pariatur cupidatat."
+						}
+					}
+				]
+			},
+			"feature_2_title": {
+				"__TYPE__": "FieldContent",
+				"value": "spoken",
+				"type": "Text"
+			},
+			"feature_3_title": {
+				"__TYPE__": "FieldContent",
+				"value": "entire",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

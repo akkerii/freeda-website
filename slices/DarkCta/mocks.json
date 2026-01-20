@@ -1,0 +1,127 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "Use Cases & Projects",
+				"type": "Text"
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Concrete applications, real projects\nFreeda is used across a wide range of applications"
+						}
+					}
+				]
+			},
+			"button_text": {
+				"__TYPE__": "FieldContent",
+				"value": "→ Explore use cases & projects",
+				"type": "Text"
+			},
+			"button_link": {
+				"key": "8b6c5caf-88c5-4539-a392-1c5573f24d80",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://example.com/use-cases"
+				}
+			},
+			"image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab",
+					"width": 749,
+					"height": 443
+				},
+				"url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=749&h=443&fit=crop",
+				"width": 749,
+				"height": 443,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "Use cases background",
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"use_case_label",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "Technical\nspecifications",
+							"type": "Text"
+						}
+					]
+				]
+			},
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"use_case_label",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "Building codes &\nregulations",
+							"type": "Text"
+						}
+					]
+				]
+			},
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"use_case_label",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "Certifications &\nlabels",
+							"type": "Text"
+						}
+					]
+				]
+			},
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"use_case_label",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "Accessibility &\ndesign compliance",
+							"type": "Text"
+						}
+					]
+				]
+			},
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"use_case_label",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "Project briefs &\nprograms",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
+	}
+]

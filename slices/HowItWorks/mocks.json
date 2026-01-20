@@ -1,0 +1,168 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "title": {
+        "__TYPE__": "FieldContent",
+        "value": "HOW IT WORKS",
+        "type": "Text"
+      },
+      "button_text": {
+        "__TYPE__": "FieldContent",
+        "value": "\u2192 Learn more about the Freeda approach",
+        "type": "Text"
+      },
+      "button_link": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "https://example.com"
+        }
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "icon",
+            {
+              "__TYPE__": "ImageContent",
+              "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=43&h=43&fit=crop",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+                "width": 43,
+                "height": 43
+              },
+              "width": 43,
+              "height": 43,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "alt": "Define use case icon",
+              "credits": null,
+              "thumbnails": {}
+            }
+          ],
+          [
+            "step_title",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "1 - Define use case",
+              "type": "Text"
+            }
+          ],
+          [
+            "step_description",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "Project type, location, regulations, documents, objectives",
+              "type": "Text"
+            }
+          ]
+        ]
+      },
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "icon",
+            {
+              "__TYPE__": "ImageContent",
+              "url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=43&h=43&fit=crop",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+                "width": 43,
+                "height": 43
+              },
+              "width": 43,
+              "height": 43,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "alt": "Analyse documents icon",
+              "credits": null,
+              "thumbnails": {}
+            }
+          ],
+          [
+            "step_title",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "2 - Analyse documents",
+              "type": "Text"
+            }
+          ],
+          [
+            "step_description",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "Plans and technical files are analysed by Freeda, with expert validation",
+              "type": "Text"
+            }
+          ]
+        ]
+      },
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "icon",
+            {
+              "__TYPE__": "ImageContent",
+              "url": "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=43&h=43&fit=crop",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d",
+                "width": 43,
+                "height": 43
+              },
+              "width": 43,
+              "height": 43,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "alt": "Act with clarity icon",
+              "credits": null,
+              "thumbnails": {}
+            }
+          ],
+          [
+            "step_title",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "3 - Act with clarity",
+              "type": "Text"
+            }
+          ],
+          [
+            "step_description",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "Receive structured, custom reports to support decisions & next steps.",
+              "type": "Text"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

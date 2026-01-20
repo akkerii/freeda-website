@@ -1,0 +1,98 @@
+{
+  "id": "hero",
+  "type": "SharedSlice",
+  "name": "Hero",
+  "description": "Main hero section with headline, description, CTAs and product image",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default hero variation",
+      "imageUrl": "",
+      "primary": {
+        "logo_text": {
+          "type": "Text",
+          "config": {
+            "label": "Logo Text",
+            "placeholder": "Freeda."
+          }
+        },
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "Heading",
+            "placeholder": "You build. We double-check."
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "Hero description text",
+            "allowTargetBlank": true,
+            "multi": "paragraph"
+          }
+        },
+        "primary_button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Primary Button Text",
+            "placeholder": "Discuss a project"
+          }
+        },
+        "primary_button_link": {
+          "type": "Link",
+          "config": {
+            "label": "Primary Button Link",
+            "placeholder": "Link for primary button",
+            "allowTargetBlank": true,
+            "select": null
+          }
+        },
+        "secondary_button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Secondary Button Text",
+            "placeholder": "Explore use cases"
+          }
+        },
+        "secondary_button_link": {
+          "type": "Link",
+          "config": {
+            "label": "Secondary Button Link",
+            "placeholder": "Link for secondary button",
+            "allowTargetBlank": true,
+            "select": null
+          }
+        },
+        "header_button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Header Button Text",
+            "placeholder": "Discuss a project"
+          }
+        },
+        "header_button_link": {
+          "type": "Link",
+          "config": {
+            "label": "Header Button Link",
+            "placeholder": "Link for header button",
+            "allowTargetBlank": true,
+            "select": null
+          }
+        },
+        "hero_image": {
+          "type": "Image",
+          "config": {
+            "label": "Hero Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

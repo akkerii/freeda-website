@@ -1,0 +1,79 @@
+{
+  "id": "working_page",
+  "label": "Working with Freeda Page",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "UID"
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "working_with_freeda": {
+              "type": "SharedSlice"
+            },
+            "features_grid": {
+              "type": "SharedSlice"
+            },
+            "our_ip": {
+              "type": "SharedSlice"
+            },
+            "expertise": {
+              "type": "SharedSlice"
+            },
+            "deep_tech": {
+              "type": "SharedSlice"
+            },
+            "global_presence": {
+              "type": "SharedSlice"
+            },
+            "footer": {
+              "type": "SharedSlice"
+            },
+            "how_it_works": {
+              "type": "SharedSlice"
+            },
+            "technology_cards": {
+              "type": "SharedSlice"
+            },
+            "technology_details": {
+              "type": "SharedSlice"
+            },
+            "ecosystem_partners": {
+              "type": "SharedSlice"
+            },
+            "client_steps": {
+              "type": "SharedSlice"
+            },
+            "construction_expertise": {
+              "type": "SharedSlice"
+            },
+            "latest_use_cases": {
+              "type": "SharedSlice"
+            },
+            "working_hero": {
+              "type": "SharedSlice"
+            },
+            "ecosystem": {
+              "type": "SharedSlice"
+            },
+            "last_case_study": {
+              "type": "SharedSlice"
+            },
+            "join_us": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  },
+  "format": "custom"
+}

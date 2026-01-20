@@ -1,0 +1,79 @@
+{
+  "id": "document_features",
+  "type": "SharedSlice",
+  "name": "DocumentFeatures",
+  "description": "Document features section with left image and content",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default variation",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": "Section title"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "Section description",
+            "multi": "paragraph"
+          }
+        },
+        "left_section_image": {
+          "type": "Image",
+          "config": {
+            "label": "Left Section Image",
+            "constraint": {}
+          }
+        },
+        "main_feature_title": {
+          "type": "Text",
+          "config": {
+            "label": "Main Feature Title",
+            "placeholder": "Main feature headline"
+          }
+        },
+        "main_feature_description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Main Feature Description",
+            "placeholder": "Main feature description",
+            "multi": "paragraph"
+          }
+        }
+      },
+      "items": {
+        "feature_title": {
+          "type": "Text",
+          "config": {
+            "label": "Feature Title",
+            "placeholder": "Secondary feature title"
+          }
+        },
+        "feature_image": {
+          "type": "Image",
+          "config": {
+            "label": "Feature Image",
+            "constraint": {}
+          }
+        },
+        "feature_description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Feature Description",
+            "placeholder": "Feature description text",
+            "multi": "paragraph"
+          }
+        }
+      }
+    }
+  ]
+}

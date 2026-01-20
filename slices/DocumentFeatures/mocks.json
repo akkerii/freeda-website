@@ -1,0 +1,171 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "Most risk originates in plans & documents",
+				"type": "Text"
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "They start in documents: plans, specifications, regulations, guidelines."
+						}
+					}
+				]
+			},
+			"left_section_image": {
+				"__TYPE__": "ImageContent",
+				"url": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=706&h=525&fit=crop",
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1503387762-592deb58ef4e",
+					"width": 706,
+					"height": 525
+				},
+				"width": 706,
+				"height": 525,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "Document composition",
+				"credits": null,
+				"thumbnails": {}
+			},
+			"main_feature_title": {
+				"__TYPE__": "FieldContent",
+				"value": "From plans & documents to decisions",
+				"type": "Text"
+			},
+			"main_feature_description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Freeda analyses plans and cross-references them with technical documents."
+						}
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"feature_title",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "Built on real projects",
+							"type": "Text"
+						}
+					],
+					[
+						"feature_image",
+						{
+							"__TYPE__": "ImageContent",
+							"url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop",
+							"origin": {
+								"id": "main",
+								"url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab",
+								"width": 800,
+								"height": 600
+							},
+							"width": 800,
+							"height": 600,
+							"edit": {
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								},
+								"background": "transparent"
+							},
+							"alt": "Modern architecture interior",
+							"credits": null,
+							"thumbnails": {}
+						}
+					],
+					[
+						"feature_description",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Freeda is deployed on real construction projects worldwide, tested under actual regulatory constraints and operational conditions."
+									}
+								}
+							]
+						}
+					]
+				]
+			},
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"feature_title",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "Human-led AI",
+							"type": "Text"
+						}
+					],
+					[
+						"feature_image",
+						{
+							"__TYPE__": "ImageContent",
+							"url": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&h=600&fit=crop",
+							"origin": {
+								"id": "main",
+								"url": "https://images.unsplash.com/photo-1503387762-592deb58ef4e",
+								"width": 800,
+								"height": 600
+							},
+							"width": 800,
+							"height": 600,
+							"edit": {
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								},
+								"background": "transparent"
+							},
+							"alt": "Architectural workspace",
+							"credits": null,
+							"thumbnails": {}
+						}
+					],
+					[
+						"feature_description",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Our AI is guided by construction industry experts, ensuring accurate analysis and practical recommendations for the built environment."
+									}
+								}
+							]
+						}
+					]
+				]
+			}
+		]
+	}
+]

@@ -1,0 +1,168 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Construction and real estate expertise, grounded in the field"
+						}
+					}
+				]
+			},
+			"subtitle": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Freeda is built by construction and real estate professionals. The team includes former engineers, architects, and urban planners with experience across "
+						}
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Europe, North America, and the Middle East.",
+							"spans": [
+								{
+									"type": "strong",
+									"start": 0,
+									"end": 43
+								}
+							]
+						}
+					}
+				]
+			},
+			"cards": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"card_image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1503387762-592deb58ef4e",
+										"width": 3935,
+										"height": 5894
+									},
+									"url": "https://images.unsplash.com/photo-1503387762-592deb58ef4e",
+									"width": 3935,
+									"height": 5894,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "Architect",
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"card_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Architects",
+									"type": "Text"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"card_image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1581094271901-8022df4466f9",
+										"width": 3935,
+										"height": 5894
+									},
+									"url": "https://images.unsplash.com/photo-1581094271901-8022df4466f9",
+									"width": 3935,
+									"height": 5894,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "Engineer",
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"card_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Engineers",
+									"type": "Text"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"card_image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab",
+										"width": 3935,
+										"height": 5894
+									},
+									"url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab",
+									"width": 3935,
+									"height": 5894,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "Urban planner",
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"card_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Urban planners",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"bottom_text": {
+				"__TYPE__": "FieldContent",
+				"value": "This field expertise ensures a deep understanding of regulations, delivery constraints, and real project workflows — enabling analyses that are credible, applicable, and decision-ready.",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

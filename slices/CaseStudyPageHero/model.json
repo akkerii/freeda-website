@@ -1,0 +1,146 @@
+{
+  "id": "case_study_page_hero",
+  "type": "SharedSlice",
+  "name": "CaseStudyPageHero",
+  "description": "Hero section for individual case study pages with company info sidebar",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Hero with overlapping images, metrics card, and company info sidebar",
+      "imageUrl": "",
+      "primary": {
+        "company_logo": {
+          "type": "Image",
+          "config": {
+            "label": "Company Logo",
+            "constraint": {
+              "width": 200,
+              "height": 60
+            }
+          }
+        },
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": "Automating Plan Verification with Cohabs"
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "Description",
+            "placeholder": "Ensure that architectural layouts comply with accessibility requirements..."
+          }
+        },
+        "background_image": {
+          "type": "Image",
+          "config": {
+            "label": "Background Image (larger, behind)",
+            "constraint": {
+              "width": 524,
+              "height": 656
+            }
+          }
+        },
+        "foreground_image": {
+          "type": "Image",
+          "config": {
+            "label": "Foreground Image (smaller, front)",
+            "constraint": {
+              "width": 425,
+              "height": 528
+            }
+          }
+        },
+        "annual_roi_label": {
+          "type": "Text",
+          "config": {
+            "label": "Annual ROI Label",
+            "placeholder": "Annual ROI:"
+          }
+        },
+        "annual_roi_value": {
+          "type": "Text",
+          "config": {
+            "label": "Annual ROI Value",
+            "placeholder": "×37"
+          }
+        },
+        "productivity_label": {
+          "type": "Text",
+          "config": {
+            "label": "Productivity Label",
+            "placeholder": "Productivity gains:"
+          }
+        },
+        "productivity_value": {
+          "type": "Text",
+          "config": {
+            "label": "Productivity Value",
+            "placeholder": "23 hours saved per month"
+          }
+        },
+        "cities_label": {
+          "type": "Text",
+          "config": {
+            "label": "Cities Label",
+            "placeholder": "Cities:"
+          }
+        },
+        "cities_value": {
+          "type": "Text",
+          "config": {
+            "label": "Cities Value",
+            "placeholder": "5"
+          }
+        },
+        "about_title": {
+          "type": "Text",
+          "config": {
+            "label": "About Section Title",
+            "placeholder": "About the company"
+          }
+        },
+        "about_description": {
+          "type": "Text",
+          "config": {
+            "label": "About Description",
+            "placeholder": "Ensure that architectural layouts comply with accessibility requirements..."
+          }
+        },
+        "industry_title": {
+          "type": "Text",
+          "config": {
+            "label": "Industry Section Title",
+            "placeholder": "Industrie"
+          }
+        },
+        "industry_type": {
+          "type": "Text",
+          "config": {
+            "label": "Industry Type",
+            "placeholder": "Industry type"
+          }
+        },
+        "since_title": {
+          "type": "Text",
+          "config": {
+            "label": "Since Section Title",
+            "placeholder": "With Freeda since"
+          }
+        },
+        "since_description": {
+          "type": "Text",
+          "config": {
+            "label": "Since Description",
+            "placeholder": "Ensure that architectural layouts comply with accessibility requirements..."
+          }
+        }
+      }
+    }
+  ]
+}

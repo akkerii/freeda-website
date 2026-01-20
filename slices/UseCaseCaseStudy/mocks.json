@@ -1,0 +1,135 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "light",
+				"type": "Text"
+			},
+			"subtitle": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Non minim excepteur excepteur."
+						}
+					}
+				]
+			},
+			"main_image": {
+				"__TYPE__": "ImageContent",
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04",
+					"width": 4000,
+					"height": 4000
+				},
+				"url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04",
+				"width": 4000,
+				"height": 4000,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "these",
+				"thumbnails": {}
+			},
+			"secondary_image": {
+				"__TYPE__": "ImageContent",
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c",
+					"width": 3424,
+					"height": 3424
+				},
+				"url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c",
+				"width": 3424,
+				"height": 3424,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "taste",
+				"thumbnails": {}
+			},
+			"tertiary_image": {
+				"__TYPE__": "ImageContent",
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+					"width": 5243,
+					"height": 3495
+				},
+				"url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+				"width": 5243,
+				"height": 3495,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "organized",
+				"thumbnails": {}
+			},
+			"location_label_1": {
+				"__TYPE__": "FieldContent",
+				"value": "future",
+				"type": "Text"
+			},
+			"location_label_2": {
+				"__TYPE__": "FieldContent",
+				"value": "gasoline",
+				"type": "Text"
+			},
+			"case_study_title": {
+				"__TYPE__": "FieldContent",
+				"value": "open",
+				"type": "Text"
+			},
+			"case_study_description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Proident officia veniam id aliquip excepteur officia. Proident do reprehenderit ad cillum velit velit incididunt reprehenderit est sint nulla et incididunt esse."
+						}
+					}
+				]
+			},
+			"button_text": {
+				"__TYPE__": "FieldContent",
+				"value": "everybody",
+				"type": "Text"
+			},
+			"button_link": {
+				"__TYPE__": "LinkContent",
+				"key": "5c19e02f-8a20-41c8-a0fd-6f304498131e",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io"
+				}
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	}
+]

@@ -1,0 +1,63 @@
+{
+  "id": "short_video",
+  "type": "SharedSlice",
+  "name": "ShortVideo",
+  "description": "Short video section with use case cards",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default variation",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": "Short Video"
+          }
+        },
+        "items": {
+          "type": "Group",
+          "config": {
+            "label": "Cards",
+            "fields": {
+              "image": {
+                "type": "Image",
+                "config": {
+                  "label": "Card Image"
+                }
+              },
+              "card_title": {
+                "type": "Text",
+                "config": {
+                  "label": "Card Title",
+                  "placeholder": "Accessibility (PMR)"
+                }
+              },
+              "application": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Application",
+                  "single": "paragraph",
+                  "placeholder": "Detect accessibility non-compliances early..."
+                }
+              },
+              "documents": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Documents analysed",
+                  "single": "paragraph",
+                  "placeholder": "Plans (PDF), technical notices, regulations."
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

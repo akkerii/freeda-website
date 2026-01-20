@@ -1,0 +1,58 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "Most risk originates in plans & documents",
+				"type": "Text"
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "They start in documents: plans, specifications, regulations, guidelines."
+						}
+					}
+				]
+			},
+			"document_image_1": {
+				"__TYPE__": "ImageContent",
+				"url": null
+			},
+			"document_image_2": {
+				"__TYPE__": "ImageContent",
+				"url": null
+			},
+			"main_feature_title": {
+				"__TYPE__": "FieldContent",
+				"value": "From plans & documents to decisions",
+				"type": "Text"
+			},
+			"main_feature_description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Freeda analyses plans and cross-references them with technical documents."
+						}
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					["icon", { "__TYPE__": "ImageContent", "url": null }],
+					["feature_title", { "__TYPE__": "FieldContent", "value": "Built on real projects", "type": "Text" }],
+					["feature_description", { "__TYPE__": "StructuredTextContent", "value": [] }]
+				]
+			}
+		]
+	}
+]

@@ -1,0 +1,58 @@
+{
+  "id": "use_case_hero",
+  "type": "SharedSlice",
+  "name": "UseCaseHero",
+  "description": "Dark hero section with centered content for use case pages",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Dark hero with centered title, description, report card, image and CTA button",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": "Use Cases\n& Cases Study"
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "Description",
+            "placeholder": "Concrete applications, real projects\nFreeda is used across a wide range of applications"
+          }
+        },
+        "background_image": {
+          "type": "Image",
+          "config": {
+            "label": "Background Image (Building)",
+            "constraint": {
+              "width": 523,
+              "height": 558
+            },
+            "thumbnails": []
+          }
+        },
+        "button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Button Text",
+            "placeholder": "→ Explore Use Cases & Cases Study"
+          }
+        },
+        "button_link": {
+          "type": "Link",
+          "config": {
+            "label": "Button Link",
+            "allowTargetBlank": true
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

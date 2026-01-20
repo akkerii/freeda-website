@@ -1,0 +1,74 @@
+{
+  "id": "construction_risks",
+  "type": "SharedSlice",
+  "name": "ConstructionRisks",
+  "description": "Section with centered title and description, two-column layout with image and feature list",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default variation with image left, features right",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "single": "heading2",
+            "placeholder": "Most risk originates in plans & documents - not on site."
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "single": "paragraph",
+            "placeholder": "They start in documents: plans, specifications, regulations, guidelines..."
+          }
+        },
+        "cards_image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {
+              "width": 706,
+              "height": 525
+            }
+          }
+        },
+        "feature_title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Feature Title",
+            "single": "heading3",
+            "placeholder": "From plans & documents to decisions"
+          }
+        },
+        "feature_description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Feature Description",
+            "single": "paragraph",
+            "placeholder": "Freeda analyses plans and cross-references them..."
+          }
+        },
+        "feature_2_title": {
+          "type": "Text",
+          "config": {
+            "label": "Feature 2 Title (Grayed)",
+            "placeholder": "Built on real projects"
+          }
+        },
+        "feature_3_title": {
+          "type": "Text",
+          "config": {
+            "label": "Feature 3 Title (Grayed)",
+            "placeholder": "Human-led AI for the built environment"
+          }
+        }
+      }
+    }
+  ]
+}

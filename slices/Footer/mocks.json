@@ -1,0 +1,708 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"partners_title": {
+				"__TYPE__": "FieldContent",
+				"value": "Technical Partners & Investors",
+				"type": "Text"
+			},
+			"partner_logos": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"logo",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9",
+										"width": 800,
+										"height": 400
+									},
+									"url": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9",
+									"width": 800,
+									"height": 400,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "Partner Logo 1",
+									"credits": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"logo",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9",
+										"width": 800,
+										"height": 400
+									},
+									"url": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9",
+									"width": 800,
+									"height": 400,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "Partner Logo 2",
+									"credits": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"logo",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9",
+										"width": 800,
+										"height": 400
+									},
+									"url": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9",
+									"width": 800,
+									"height": 400,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "Partner Logo 3",
+									"credits": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"logo",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9",
+										"width": 800,
+										"height": 400
+									},
+									"url": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9",
+									"width": 800,
+									"height": 400,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "Partner Logo 4",
+									"credits": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"logo",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9",
+										"width": 800,
+										"height": 400
+									},
+									"url": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9",
+									"width": 800,
+									"height": 400,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "Partner Logo 5",
+									"credits": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"logo",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9",
+										"width": 800,
+										"height": 400
+									},
+									"url": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9",
+									"width": 800,
+									"height": 400,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "Partner Logo 6",
+									"credits": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							]
+						]
+					}
+				]
+			},
+			"company_tagline": {
+				"__TYPE__": "FieldContent",
+				"value": "Descriptive line about what your company does.",
+				"type": "Text"
+			},
+			"social_links": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"platform",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Instagram",
+									"type": "Select"
+								}
+							],
+							[
+								"url",
+								{
+									"key": "fb6fc0fb-745c-41d6-bcb8-cbd7f3664ca8",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://instagram.com/freeda"
+									}
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"platform",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "LinkedIn",
+									"type": "Select"
+								}
+							],
+							[
+								"url",
+								{
+									"key": "d8531176-66e3-47b4-98ea-143ef6d23f7a",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://linkedin.com/company/freeda"
+									}
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"platform",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "X",
+									"type": "Select"
+								}
+							],
+							[
+								"url",
+								{
+									"key": "e369c705-da9c-4b00-9e8e-b80c214e1c9b",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://x.com/freeda"
+									}
+								}
+							]
+						]
+					}
+				]
+			},
+			"nav_links": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"column",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Solutions",
+									"type": "Select"
+								}
+							],
+							[
+								"link_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Plan Verification",
+									"type": "Text"
+								}
+							],
+							[
+								"link_url",
+								{
+									"key": "fb47377f-9d1a-4801-ae84-3041fff4d82a",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "/solutions/plan-verification"
+									}
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"column",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Solutions",
+									"type": "Select"
+								}
+							],
+							[
+								"link_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Cross Document Analysis",
+									"type": "Text"
+								}
+							],
+							[
+								"link_url",
+								{
+									"key": "4a48c700-5a5d-4010-9cb7-4f50f1018b18",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "/solutions/cross-document-analysis"
+									}
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"column",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Solutions",
+									"type": "Select"
+								}
+							],
+							[
+								"link_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Plan Analysis & Extraction",
+									"type": "Text"
+								}
+							],
+							[
+								"link_url",
+								{
+									"key": "156b9583-b79a-4478-b6ac-f51cc471ea84",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "/solutions/plan-analysis"
+									}
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"column",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "For Who",
+									"type": "Select"
+								}
+							],
+							[
+								"link_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Owners & Developers",
+									"type": "Text"
+								}
+							],
+							[
+								"link_url",
+								{
+									"key": "27d8a11d-f5c8-466c-bd04-847a5cd107fa",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "/for/owners-developers"
+									}
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"column",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "For Who",
+									"type": "Select"
+								}
+							],
+							[
+								"link_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Technical Teams, Certifiers & Inspectors",
+									"type": "Text"
+								}
+							],
+							[
+								"link_url",
+								{
+									"key": "d84cd44a-7649-4a3b-a846-3a6fe93157e1",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "/for/technical-teams"
+									}
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"column",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Resources",
+									"type": "Select"
+								}
+							],
+							[
+								"link_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Technical Content",
+									"type": "Text"
+								}
+							],
+							[
+								"link_url",
+								{
+									"key": "fcd1a57e-52c2-420e-ac0e-efed896ef61e",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "/resources/technical-content"
+									}
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"column",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Resources",
+									"type": "Select"
+								}
+							],
+							[
+								"link_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Case Studies",
+									"type": "Text"
+								}
+							],
+							[
+								"link_url",
+								{
+									"key": "faa9faea-85b9-4f72-a220-6fddfd13eab6",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "/resources/case-studies"
+									}
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"column",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Resources",
+									"type": "Select"
+								}
+							],
+							[
+								"link_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Video Series",
+									"type": "Text"
+								}
+							],
+							[
+								"link_url",
+								{
+									"key": "562500be-1e89-4e72-9c4f-54c701eb67b4",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "/resources/videos"
+									}
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"column",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Resources",
+									"type": "Select"
+								}
+							],
+							[
+								"link_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Partners & Integrations",
+									"type": "Text"
+								}
+							],
+							[
+								"link_url",
+								{
+									"key": "5a13daf5-7db5-4e84-b8b8-3c58f5f415f8",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "/resources/partners"
+									}
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"column",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Company",
+									"type": "Select"
+								}
+							],
+							[
+								"link_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "About Us",
+									"type": "Text"
+								}
+							],
+							[
+								"link_url",
+								{
+									"key": "1dbb5d23-ef45-4e1c-85fb-88aaaac1727a",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "/about"
+									}
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"column",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Company",
+									"type": "Select"
+								}
+							],
+							[
+								"link_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Careers",
+									"type": "Text"
+								}
+							],
+							[
+								"link_url",
+								{
+									"key": "b214016d-d764-42b4-9f6b-9983a89a1caa",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "/careers"
+									}
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"column",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Company",
+									"type": "Select"
+								}
+							],
+							[
+								"link_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Press",
+									"type": "Text"
+								}
+							],
+							[
+								"link_url",
+								{
+									"key": "15806fad-d44a-45a3-9dd2-31d35e9f7922",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "/press"
+									}
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"column",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Company",
+									"type": "Select"
+								}
+							],
+							[
+								"link_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Legal",
+									"type": "Text"
+								}
+							],
+							[
+								"link_url",
+								{
+									"key": "fea0d458-15c7-449e-ac6c-4147dc81e859",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "/legal"
+									}
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

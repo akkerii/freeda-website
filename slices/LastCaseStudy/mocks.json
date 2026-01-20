@@ -1,0 +1,107 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"section_title": {
+				"__TYPE__": "FieldContent",
+				"value": "search",
+				"type": "Text"
+			},
+			"cards": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+										"width": 3882,
+										"height": 2584
+									},
+									"url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+									"width": 3882,
+									"height": 2584,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "instrument",
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"label",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "factory",
+									"type": "Text"
+								}
+							],
+							[
+								"application_description",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "adventure",
+									"type": "Text"
+								}
+							],
+							[
+								"document_tags",
+								{
+									"__TYPE__": "GroupContentType",
+									"value": [
+										{
+											"__TYPE__": "GroupItemContent",
+											"value": [
+												[
+													"icon_type",
+													{
+														"__TYPE__": "FieldContent",
+														"value": "file",
+														"type": "Select"
+													}
+												],
+												[
+													"tag_text",
+													{
+														"__TYPE__": "FieldContent",
+														"value": "raise",
+														"type": "Text"
+													}
+												]
+											]
+										}
+									]
+								}
+							]
+						]
+					}
+				]
+			},
+			"button_text": {
+				"__TYPE__": "FieldContent",
+				"value": "production",
+				"type": "Text"
+			},
+			"button_link": {
+				"key": "7ca910a1-b486-4140-9b4b-9d25e8433380",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev"
+				}
+			}
+		},
+		"items": []
+	}
+]

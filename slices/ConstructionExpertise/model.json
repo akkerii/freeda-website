@@ -1,0 +1,62 @@
+{
+  "id": "construction_expertise",
+  "type": "SharedSlice",
+  "name": "ConstructionExpertise",
+  "description": "Construction and real estate expertise section",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default variation",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "single": "heading1",
+            "placeholder": "Construction and real estate expertise, grounded in the field"
+          }
+        },
+        "subtitle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Subtitle",
+            "multi": "paragraph,strong,em",
+            "placeholder": "Description with emphasis support"
+          }
+        },
+        "cards": {
+          "type": "Group",
+          "config": {
+            "label": "Cards",
+            "fields": {
+              "card_image": {
+                "type": "Image",
+                "config": {
+                  "label": "Card Image"
+                }
+              },
+              "card_title": {
+                "type": "Text",
+                "config": {
+                  "label": "Card Title",
+                  "placeholder": "Architects"
+                }
+              }
+            }
+          }
+        },
+        "bottom_text": {
+          "type": "Text",
+          "config": {
+            "label": "Bottom Text",
+            "placeholder": "This field expertise ensures..."
+          }
+        }
+      }
+    }
+  ]
+}

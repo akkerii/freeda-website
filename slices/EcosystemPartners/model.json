@@ -1,0 +1,54 @@
+{
+  "id": "ecosystem_partners",
+  "type": "SharedSlice",
+  "name": "EcosystemPartners",
+  "description": "Ecosystem partners section with logos and CTA button",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default variation",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": "Freeda is part of a recognised deeptech ecosystem:"
+          }
+        },
+        "button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Button Text",
+            "placeholder": "→ Explore Use Cases"
+          }
+        },
+        "button_link": {
+          "type": "Link",
+          "config": {
+            "label": "Button Link",
+            "allowText": false,
+            "select": null
+          }
+        },
+        "logos": {
+          "type": "Group",
+          "config": {
+            "label": "Partner Logos",
+            "fields": {
+              "logo": {
+                "type": "Image",
+                "config": {
+                  "label": "Logo"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

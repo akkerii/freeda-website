@@ -1,0 +1,70 @@
+{
+  "id": "homepage",
+  "label": "Homepage",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "UID"
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "hero": {
+              "type": "SharedSlice"
+            },
+            "logo_cloud": {
+              "type": "SharedSlice"
+            },
+            "features": {
+              "type": "SharedSlice"
+            },
+            "dark_cta": {
+              "type": "SharedSlice"
+            },
+            "testimonials": {
+              "type": "SharedSlice"
+            },
+            "join_us": {
+              "type": "SharedSlice"
+            },
+            "footer": {
+              "type": "SharedSlice"
+            },
+            "construction_risks": {
+              "type": "SharedSlice"
+            },
+            "document_features": {
+              "type": "SharedSlice"
+            },
+            "how_it_works": {
+              "type": "SharedSlice"
+            },
+            "global_presence": {
+              "type": "SharedSlice"
+            },
+            "value_proposition": {
+              "type": "SharedSlice"
+            },
+            "key_metrics": {
+              "type": "SharedSlice"
+            },
+            "working_with_freeda": {
+              "type": "SharedSlice"
+            },
+            "stats_by_numbers": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  },
+  "format": "custom"
+}

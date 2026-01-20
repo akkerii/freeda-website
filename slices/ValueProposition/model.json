@@ -1,0 +1,67 @@
+{
+  "id": "value_proposition",
+  "type": "SharedSlice",
+  "name": "ValueProposition",
+  "description": "Interactive tabbed cards section showing value propositions with images",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default variation with interactive cards",
+      "imageUrl": "",
+      "primary": {
+        "section_heading": {
+          "type": "Text",
+          "config": {
+            "label": "Section Heading",
+            "placeholder": "From plans & documents to decisions"
+          }
+        },
+        "section_description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Section Description",
+            "placeholder": "Section description text",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em"
+          }
+        },
+        "cards": {
+          "type": "Group",
+          "config": {
+            "label": "Cards",
+            "fields": {
+              "card_title": {
+                "type": "Text",
+                "config": {
+                  "label": "Card Title",
+                  "placeholder": "From plans & documents to decisions"
+                }
+              },
+              "card_description": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Card Description",
+                  "placeholder": "Description of this value proposition",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,strong,em"
+                }
+              },
+              "card_image": {
+                "type": "Image",
+                "config": {
+                  "label": "Card Image",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

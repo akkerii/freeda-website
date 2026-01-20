@@ -1,0 +1,288 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "Short Video",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"image",
+						{
+							"origin": {
+								"id": "main",
+								"url": "https://images.unsplash.com/photo-1589395937759-1f18f5c9b6dc",
+								"width": 524,
+								"height": 698
+							},
+							"url": "https://images.unsplash.com/photo-1589395937759-1f18f5c9b6dc",
+							"width": 524,
+							"height": 698,
+							"edit": {
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								},
+								"background": "transparent"
+							},
+							"alt": "Accessibility compliance visualization",
+							"credits": null,
+							"__TYPE__": "ImageContent"
+						}
+					],
+					[
+						"card_title",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "Accessibility (PMR)",
+							"type": "Text"
+						}
+					],
+					[
+						"description",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Application",
+										"spans": [
+											{
+												"start": 0,
+												"end": 11,
+												"type": "strong"
+											}
+										]
+									}
+								},
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Detect accessibility non-compliances early, before permits or construction."
+									}
+								},
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Documents analysed",
+										"spans": [
+											{
+												"start": 0,
+												"end": 18,
+												"type": "strong"
+											}
+										]
+									}
+								},
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Plans (PDF), technical notices, regulations."
+									}
+								}
+							]
+						}
+					],
+					[
+						"is_large",
+						{
+							"__TYPE__": "BooleanContent",
+							"value": true
+						}
+					]
+				]
+			},
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"image",
+						{
+							"origin": {
+								"id": "main",
+								"url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab",
+								"width": 343,
+								"height": 456
+							},
+							"url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab",
+							"width": 343,
+							"height": 456,
+							"edit": {
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								},
+								"background": "transparent"
+							},
+							"alt": "Real estate development",
+							"credits": null,
+							"__TYPE__": "ImageContent"
+						}
+					],
+					[
+						"card_title",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "Real estate programmes",
+							"type": "Text"
+						}
+					],
+					[
+						"description",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Application",
+										"spans": [
+											{
+												"start": 0,
+												"end": 11,
+												"type": "strong"
+											}
+										]
+									}
+								},
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Ensure consistency and compliance across large, multi-phase developments."
+									}
+								},
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Documents analysed",
+										"spans": [
+											{
+												"start": 0,
+												"end": 18,
+												"type": "strong"
+											}
+										]
+									}
+								},
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Plans, CCTP, specifications, internal guidelines."
+									}
+								}
+							]
+						}
+					],
+					[
+						"is_large",
+						{
+							"__TYPE__": "BooleanContent",
+							"value": false
+						}
+					]
+				]
+			},
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"image",
+						{
+							"origin": {
+								"id": "main",
+								"url": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40",
+								"width": 343,
+								"height": 483
+							},
+							"url": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40",
+							"width": 343,
+							"height": 483,
+							"edit": {
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								},
+								"background": "transparent"
+							},
+							"alt": "Technical documents analysis",
+							"credits": null,
+							"__TYPE__": "ImageContent"
+						}
+					],
+					[
+						"card_title",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "CCTP analysis",
+							"type": "Text"
+						}
+					],
+					[
+						"description",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Application",
+										"spans": [
+											{
+												"start": 0,
+												"end": 11,
+												"type": "strong"
+											}
+										]
+									}
+								},
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Identify contradictions, missing requirements and unclear scopes."
+									}
+								},
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Documents analysed",
+										"spans": [
+											{
+												"start": 0,
+												"end": 18,
+												"type": "strong"
+											}
+										]
+									}
+								},
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "CCTP, plans, technical notices."
+									}
+								}
+							]
+						}
+					],
+					[
+						"is_large",
+						{
+							"__TYPE__": "BooleanContent",
+							"value": false
+						}
+					]
+				]
+			}
+		]
+	}
+]

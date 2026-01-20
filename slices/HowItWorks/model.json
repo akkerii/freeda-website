@@ -1,0 +1,74 @@
+{
+  "id": "how_it_works",
+  "type": "SharedSlice",
+  "name": "HowItWorks",
+  "description": "How it works section with step cards",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default variation",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": "HOW IT WORKS"
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "Description",
+            "placeholder": "A human-led, deeptech approach — tailored to each client and context."
+          }
+        },
+        "button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Button Text",
+            "placeholder": "Learn more about the Freeda approach"
+          }
+        },
+        "button_link": {
+          "type": "Link",
+          "config": {
+            "label": "Button Link"
+          }
+        }
+      },
+      "items": {
+        "icon": {
+          "type": "Image",
+          "config": {
+            "label": "Icon"
+          }
+        },
+        "step_title": {
+          "type": "Text",
+          "config": {
+            "label": "Step Title",
+            "placeholder": "1 - Define use case"
+          }
+        },
+        "step_description": {
+          "type": "Text",
+          "config": {
+            "label": "Step Description",
+            "placeholder": "Project type, location, regulations..."
+          }
+        },
+        "bullet_points": {
+          "type": "Text",
+          "config": {
+            "label": "Bullet Points",
+            "placeholder": "Point 1\nPoint 2\nPoint 3 (separate with new lines)"
+          }
+        }
+      }
+    }
+  ]
+}

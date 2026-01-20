@@ -1,0 +1,34 @@
+{
+  "id": "use_case_process",
+  "type": "SharedSlice",
+  "name": "UseCaseProcess",
+  "description": "Process section with tabs showing step-by-step workflow for use cases",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default process section with 3 steps",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": "Verify accessibility compliance early — directly from your plans"
+          }
+        },
+        "subtitle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Subtitle",
+            "placeholder": "Description text",
+            "multi": "paragraph"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

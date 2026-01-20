@@ -1,0 +1,122 @@
+{
+  "id": "testimonials",
+  "type": "SharedSlice",
+  "name": "Testimonials",
+  "description": "Testimonials section with featured quote and company logos",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default variation",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": "Testimonials"
+          }
+        },
+        "featured_quote": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Featured Quote",
+            "placeholder": "Enter the main testimonial quote...",
+            "multi": "paragraph"
+          }
+        },
+        "featured_logo": {
+          "type": "Image",
+          "config": {
+            "label": "Featured Company Logo",
+            "constraint": {}
+          }
+        },
+        "author_image": {
+          "type": "Image",
+          "config": {
+            "label": "Author Image",
+            "constraint": {}
+          }
+        },
+        "author_name": {
+          "type": "Text",
+          "config": {
+            "label": "Author Name",
+            "placeholder": "My Hoa"
+          }
+        },
+        "author_title": {
+          "type": "Text",
+          "config": {
+            "label": "Author Title",
+            "placeholder": "Head of Design"
+          }
+        },
+        "youtube_url": {
+          "type": "Text",
+          "config": {
+            "label": "YouTube Video URL",
+            "placeholder": "https://www.youtube.com/watch?v=..."
+          }
+        }
+      },
+      "items": {
+        "company_logo": {
+          "type": "Image",
+          "config": {
+            "label": "Company Logo",
+            "constraint": {}
+          }
+        },
+        "quote": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Quote",
+            "placeholder": "Enter testimonial quote...",
+            "multi": "paragraph"
+          }
+        },
+        "author_image": {
+          "type": "Image",
+          "config": {
+            "label": "Author Image",
+            "constraint": {}
+          }
+        },
+        "author_name": {
+          "type": "Text",
+          "config": {
+            "label": "Author Name",
+            "placeholder": "John Doe"
+          }
+        },
+        "author_title": {
+          "type": "Text",
+          "config": {
+            "label": "Author Title",
+            "placeholder": "CEO"
+          }
+        },
+        "youtube_url": {
+          "type": "Text",
+          "config": {
+            "label": "YouTube Video URL",
+            "placeholder": "https://www.youtube.com/watch?v=..."
+          }
+        },
+        "is_coming_soon": {
+          "type": "Boolean",
+          "config": {
+            "label": "Coming Soon",
+            "default_value": false,
+            "placeholder_true": "Coming Soon",
+            "placeholder_false": "Active"
+          }
+        }
+      }
+    }
+  ]
+}

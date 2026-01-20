@@ -1,0 +1,33 @@
+{
+  "id": "latest_use_cases",
+  "type": "SharedSlice",
+  "name": "LatestUseCases",
+  "description": "Display latest use case cards without steps",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default variation",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Section Title",
+            "placeholder": "Latest USE CASES"
+          }
+        },
+        "use_cases_page": {
+          "type": "Link",
+          "config": {
+            "label": "Use Cases Page",
+            "select": "document",
+            "customtypes": ["use_cases_page"]
+          }
+        }
+      }
+    }
+  ]
+}

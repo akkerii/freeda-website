@@ -1,0 +1,61 @@
+{
+  "id": "use_cases_page",
+  "label": "Use Cases Page",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "UID"
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "hero": {
+              "type": "SharedSlice"
+            },
+            "use_case_hero": {
+              "type": "SharedSlice"
+            },
+            "use_case_cards": {
+              "type": "SharedSlice"
+            },
+            "how_it_works": {
+              "type": "SharedSlice"
+            },
+            "projects": {
+              "type": "SharedSlice"
+            },
+            "construction_risks": {
+              "type": "SharedSlice"
+            },
+            "global_presence": {
+              "type": "SharedSlice"
+            },
+            "footer": {
+              "type": "SharedSlice"
+            },
+            "use_case_process": {
+              "type": "SharedSlice"
+            },
+            "use_case_carousel": {
+              "type": "SharedSlice"
+            },
+            "key_metrics": {
+              "type": "SharedSlice"
+            },
+            "logo_cloud": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  },
+  "format": "custom"
+}

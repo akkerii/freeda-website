@@ -1,0 +1,80 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "Proprietary deeptech, guided by human expertise",
+				"type": "Text"
+			},
+			"subtitle": {
+				"__TYPE__": "FieldContent",
+				"value": "Freeda develops and operates a proprietary deeptech foundation designed to be configured by experts, based on each client's context, geography, and regulatory environment.",
+				"type": "Text"
+			},
+			"cards": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"key": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
+						"value": [
+							[
+								"card_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Artificial intelligence and large language models",
+									"type": "Text"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"key": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e",
+						"value": [
+							[
+								"card_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Machine Learning & Deep Learning",
+									"type": "Text"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"key": "8effa07b-7a7e-4f54-9ca7-0c229726dae7",
+						"value": [
+							[
+								"card_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Computer Vision applied to plans and technical documentation",
+									"type": "Text"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"key": "9d6d7fcd-c146-43b7-9ef7-201322f0b2fe",
+						"value": [
+							[
+								"card_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Orchestration of specialised analysis agents",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

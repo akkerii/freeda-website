@@ -1,0 +1,178 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "Key metrics",
+				"type": "Text"
+			},
+			"metrics": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"metric_value",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "x200",
+									"type": "Text"
+								}
+							],
+							[
+								"metric_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Define use case",
+									"type": "Text"
+								}
+							],
+							[
+								"metric_description",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Project type, location, regulations, documents, objectives",
+									"type": "Text"
+								}
+							],
+							[
+								"metric_image",
+								{
+									"__TYPE__": "ImageContent",
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&h=200&fit=crop",
+										"width": 400,
+										"height": 200
+									},
+									"url": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&h=200&fit=crop",
+									"width": 400,
+									"height": 200,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"thumbnails": {}
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"metric_value",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "x200",
+									"type": "Text"
+								}
+							],
+							[
+								"metric_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Analyse documents",
+									"type": "Text"
+								}
+							],
+							[
+								"metric_description",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Plans and technical files are analysed by Freeda, with expert validation",
+									"type": "Text"
+								}
+							],
+							[
+								"metric_image",
+								{
+									"__TYPE__": "ImageContent",
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=200&fit=crop",
+										"width": 400,
+										"height": 200
+									},
+									"url": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=200&fit=crop",
+									"width": 400,
+									"height": 200,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"thumbnails": {}
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"metric_value",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "x200",
+									"type": "Text"
+								}
+							],
+							[
+								"metric_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Act with clarity",
+									"type": "Text"
+								}
+							],
+							[
+								"metric_description",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Receive structured, custom reports to support decisions & next steps.",
+									"type": "Text"
+								}
+							],
+							[
+								"metric_image",
+								{
+									"__TYPE__": "ImageContent",
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop",
+										"width": 400,
+										"height": 200
+									},
+									"url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop",
+									"width": 400,
+									"height": 200,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"thumbnails": {}
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

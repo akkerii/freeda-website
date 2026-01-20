@@ -1,0 +1,71 @@
+{
+  "id": "join_us",
+  "type": "SharedSlice",
+  "name": "JoinUs",
+  "description": "Join us / careers section",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Join us section with images",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": "Join us"
+          }
+        },
+        "button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Button Text",
+            "placeholder": "View Careers"
+          }
+        },
+        "button_link": {
+          "type": "Link",
+          "config": {
+            "label": "Button Link",
+            "allowTargetBlank": true,
+            "select": null
+          }
+        },
+        "image_1": {
+          "type": "Image",
+          "config": {
+            "label": "Image 1",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "image_2": {
+          "type": "Image",
+          "config": {
+            "label": "Image 2",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "card_title": {
+          "type": "Text",
+          "config": {
+            "label": "Card Title",
+            "placeholder": "Explain the idea"
+          }
+        },
+        "card_description": {
+          "type": "Text",
+          "config": {
+            "label": "Card Description",
+            "placeholder": "Writing for websites is both simple and complex..."
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

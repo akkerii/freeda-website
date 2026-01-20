@@ -1,0 +1,976 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"section_title": {
+				"__TYPE__": "FieldContent",
+				"value": "Use cases",
+				"type": "Text"
+			},
+			"use_cases": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"key": "af8a6498-0586-4311-aa2f-da9e1c318a5e",
+						"value": [
+							[
+								"card_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Accessibility (PMR)",
+									"type": "Text"
+								}
+							],
+							[
+								"card_image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
+										"width": 6597,
+										"height": 4398
+									},
+									"url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
+									"width": 6597,
+									"height": 4398,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "Modern architecture building",
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"application_label",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Application",
+									"type": "Text"
+								}
+							],
+							[
+								"application_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Detect accessibility non-compliances early, before permits or construction.",
+									"type": "Text"
+								}
+							],
+							[
+								"documents_label",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Documents analysed",
+									"type": "Text"
+								}
+							],
+							[
+								"documents_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Plans (PDF), technical notices, regulations.",
+									"type": "Text"
+								}
+							],
+							[
+								"coming_soon",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": false
+								}
+							],
+							[
+								"detail_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Accessibility (PMR) Compliance Check",
+									"type": "Text"
+								}
+							],
+							[
+								"detail_description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Ensure that architectural layouts comply with accessibility requirements by automatically checking dimensions, clearances, and circulation rules directly on your drawings."
+											}
+										}
+									]
+								}
+							],
+							[
+								"step1_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Step 1 — Configuration",
+									"type": "Text"
+								}
+							],
+							[
+								"step1_description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Our team works with you to understand your exact needs and project context before running any checks."
+											}
+										},
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "This setup phase includes:"
+											}
+										}
+									]
+								}
+							],
+							[
+								"step1_image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88",
+										"width": 3168,
+										"height": 4752
+									},
+									"url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88",
+									"width": 3168,
+									"height": 4752,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "Configuration setup",
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"step1_tags",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "list-item",
+											"content": {
+												"text": "Applicable accessibility"
+											}
+										},
+										{
+											"type": "list-item",
+											"content": {
+												"text": "Building type"
+											}
+										},
+										{
+											"type": "list-item",
+											"content": {
+												"text": "Areas to be checked"
+											}
+										},
+										{
+											"type": "list-item",
+											"content": {
+												"text": "Specific interpretations"
+											}
+										},
+										{
+											"type": "list-item",
+											"content": {
+												"text": "Expected level of detail in the results"
+											}
+										},
+										{
+											"type": "list-item",
+											"content": {
+												"text": "Report format and structure"
+											}
+										}
+									]
+								}
+							],
+							[
+								"step2_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Step 2 — Upload your plans and documents",
+									"type": "Text"
+								}
+							],
+							[
+								"step2_description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Upload the documents required for the accessibility review, including:"
+											}
+										},
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Freeda analyses plans directly in their native format — no model conversion or manual preparation required."
+											}
+										}
+									]
+								}
+							],
+							[
+								"step2_image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1587905069134-008460d7a636",
+										"width": 3935,
+										"height": 5894
+									},
+									"url": "https://images.unsplash.com/photo-1587905069134-008460d7a636",
+									"width": 3935,
+									"height": 5894,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "Document upload",
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"step2_tags",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "list-item",
+											"content": {
+												"text": "Architectural plans"
+											}
+										},
+										{
+											"type": "list-item",
+											"content": {
+												"text": "Parking and circulation plans"
+											}
+										},
+										{
+											"type": "list-item",
+											"content": {
+												"text": "Relevant technical notes"
+											}
+										},
+										{
+											"type": "list-item",
+											"content": {
+												"text": "Applicable regulatory texts"
+											}
+										}
+									]
+								}
+							],
+							[
+								"step3_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Step 3 — Receive your accessibility reports",
+									"type": "Text"
+								}
+							],
+							[
+								"step3_description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Freeda delivers structured, traceable, and actionable results, including:"
+											}
+										},
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Results are available:"
+											}
+										}
+									]
+								}
+							],
+							[
+								"step3_image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db",
+										"width": 4380,
+										"height": 2895
+									},
+									"url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db",
+									"width": 4380,
+									"height": 2895,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "Results report",
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"step3_tags",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "list-item",
+											"content": {
+												"text": "Missing accessibility elements"
+											}
+										},
+										{
+											"type": "list-item",
+											"content": {
+												"text": "Annotated plans highlighting each issue"
+											}
+										},
+										{
+											"type": "list-item",
+											"content": {
+												"text": "Directly within the platform"
+											}
+										},
+										{
+											"type": "list-item",
+											"content": {
+												"text": "As exportable PDF reports"
+											}
+										}
+									]
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"key": "499b62b8-b123-4e26-94e5-6eb11cff1490",
+						"value": [
+							[
+								"card_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Project Brief",
+									"type": "Text"
+								}
+							],
+							[
+								"card_image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
+										"width": 6597,
+										"height": 4398
+									},
+									"url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
+									"width": 6597,
+									"height": 4398,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "Project brief building",
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"application_label",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Application",
+									"type": "Text"
+								}
+							],
+							[
+								"application_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Ensure design alignment with the project brief from day one",
+									"type": "Text"
+								}
+							],
+							[
+								"documents_label",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Documents analysed",
+									"type": "Text"
+								}
+							],
+							[
+								"documents_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Verify that architectural plans comply with the project brief by checking areas",
+									"type": "Text"
+								}
+							],
+							[
+								"coming_soon",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": false
+								}
+							],
+							[
+								"detail_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Project Brief Compliance Check",
+									"type": "Text"
+								}
+							],
+							[
+								"detail_description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Automatically verify that your architectural designs align with project brief requirements from the earliest stages."
+											}
+										}
+									]
+								}
+							],
+							[
+								"step1_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Step 1 — Configuration",
+									"type": "Text"
+								}
+							],
+							[
+								"step1_description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Define the key requirements from your project brief that need to be verified against the architectural plans."
+											}
+										}
+									]
+								}
+							],
+							[
+								"step1_image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88",
+										"width": 3168,
+										"height": 4752
+									},
+									"url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88",
+									"width": 3168,
+									"height": 4752,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "Configuration",
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"step1_tags",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "list-item",
+											"content": {
+												"text": "Area requirements"
+											}
+										},
+										{
+											"type": "list-item",
+											"content": {
+												"text": "Room specifications"
+											}
+										},
+										{
+											"type": "list-item",
+											"content": {
+												"text": "Functional relationships"
+											}
+										}
+									]
+								}
+							],
+							[
+								"step2_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Step 2 — Upload your documents",
+									"type": "Text"
+								}
+							],
+							[
+								"step2_description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Upload both your project brief and architectural plans for automated comparison."
+											}
+										}
+									]
+								}
+							],
+							[
+								"step2_image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1587905069134-008460d7a636",
+										"width": 3935,
+										"height": 5894
+									},
+									"url": "https://images.unsplash.com/photo-1587905069134-008460d7a636",
+									"width": 3935,
+									"height": 5894,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "Upload",
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"step2_tags",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "list-item",
+											"content": {
+												"text": "Project brief document"
+											}
+										},
+										{
+											"type": "list-item",
+											"content": {
+												"text": "Architectural plans"
+											}
+										}
+									]
+								}
+							],
+							[
+								"step3_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Step 3 — Receive compliance report",
+									"type": "Text"
+								}
+							],
+							[
+								"step3_description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Get detailed compliance reports showing alignment between your brief and designs."
+											}
+										}
+									]
+								}
+							],
+							[
+								"step3_image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db",
+										"width": 4380,
+										"height": 2895
+									},
+									"url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db",
+									"width": 4380,
+									"height": 2895,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "Report",
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"step3_tags",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "list-item",
+											"content": {
+												"text": "Compliance status"
+											}
+										},
+										{
+											"type": "list-item",
+											"content": {
+												"text": "Detailed findings"
+											}
+										}
+									]
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"key": "09b352fb-6143-458e-8616-d167cd13490d",
+						"value": [
+							[
+								"card_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "CCTP analysis",
+									"type": "Text"
+								}
+							],
+							[
+								"card_image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
+										"width": 6597,
+										"height": 4398
+									},
+									"url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
+									"width": 6597,
+									"height": 4398,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "CCTP analysis building",
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"application_label",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Application",
+									"type": "Text"
+								}
+							],
+							[
+								"application_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Identify contradictions, missing requirements and unclear scopes.",
+									"type": "Text"
+								}
+							],
+							[
+								"documents_label",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Documents analysed",
+									"type": "Text"
+								}
+							],
+							[
+								"documents_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "CCTP, plans, technical notices.",
+									"type": "Text"
+								}
+							],
+							[
+								"coming_soon",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": true
+								}
+							],
+							[
+								"detail_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "CCTP Document Analysis",
+									"type": "Text"
+								}
+							],
+							[
+								"detail_description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Automatically analyze CCTP documents to identify contradictions and missing requirements."
+											}
+										}
+									]
+								}
+							],
+							[
+								"step1_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Step 1 — Configuration",
+									"type": "Text"
+								}
+							],
+							[
+								"step1_description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Coming soon - configure your CCTP analysis parameters."
+											}
+										}
+									]
+								}
+							],
+							[
+								"step1_image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88",
+										"width": 3168,
+										"height": 4752
+									},
+									"url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88",
+									"width": 3168,
+									"height": 4752,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "Configuration",
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"step1_tags",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "list-item",
+											"content": {
+												"text": "Analysis scope"
+											}
+										}
+									]
+								}
+							],
+							[
+								"step2_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Step 2 — Upload CCTP",
+									"type": "Text"
+								}
+							],
+							[
+								"step2_description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Coming soon - upload your CCTP documents."
+											}
+										}
+									]
+								}
+							],
+							[
+								"step2_image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1587905069134-008460d7a636",
+										"width": 3935,
+										"height": 5894
+									},
+									"url": "https://images.unsplash.com/photo-1587905069134-008460d7a636",
+									"width": 3935,
+									"height": 5894,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "Upload",
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"step2_tags",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "list-item",
+											"content": {
+												"text": "CCTP documents"
+											}
+										}
+									]
+								}
+							],
+							[
+								"step3_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Step 3 — Receive analysis",
+									"type": "Text"
+								}
+							],
+							[
+								"step3_description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Coming soon - receive detailed CCTP analysis."
+											}
+										}
+									]
+								}
+							],
+							[
+								"step3_image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db",
+										"width": 4380,
+										"height": 2895
+									},
+									"url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db",
+									"width": 4380,
+									"height": 2895,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "Report",
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"step3_tags",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "list-item",
+											"content": {
+												"text": "Contradictions found"
+											}
+										}
+									]
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

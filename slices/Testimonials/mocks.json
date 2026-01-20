@@ -1,0 +1,218 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "title": {
+        "__TYPE__": "FieldContent",
+        "value": "Testimonials",
+        "type": "Text"
+      },
+      "featured_quote": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "\"With Freeda, we can carry out plan checks in just a few clicks—tasks that would normally take us hours. It's a solution that provides real, day-to-day support and helps identify errors before they become costly for the company. A great team and a promising project—I'm very happy to contribute to the development of such a strong solution.\""
+            }
+          }
+        ]
+      },
+      "featured_logo": {
+        "__TYPE__": "ImageContent",
+        "url": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=200&h=50&fit=crop",
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9",
+          "width": 200,
+          "height": 50
+        },
+        "width": 200,
+        "height": 50,
+        "edit": {
+          "zoom": 1,
+          "crop": {"x": 0, "y": 0},
+          "background": "transparent"
+        },
+        "alt": "Company logo"
+      },
+      "author_image": {
+        "__TYPE__": "ImageContent",
+        "url": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+          "width": 100,
+          "height": 100
+        },
+        "width": 100,
+        "height": 100,
+        "edit": {
+          "zoom": 1,
+          "crop": {"x": 0, "y": 0},
+          "background": "transparent"
+        },
+        "alt": "Author photo"
+      },
+      "author_name": {
+        "__TYPE__": "FieldContent",
+        "value": "My Hoa",
+        "type": "Text"
+      },
+      "author_title": {
+        "__TYPE__": "FieldContent",
+        "value": "Head of Design",
+        "type": "Text"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          ["company_logo", {
+            "__TYPE__": "ImageContent",
+            "url": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=150&h=50&fit=crop",
+            "origin": {
+              "id": "main",
+              "url": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9",
+              "width": 150,
+              "height": 50
+            },
+            "width": 150,
+            "height": 50,
+            "edit": {
+              "zoom": 1,
+              "crop": {"x": 0, "y": 0},
+              "background": "transparent"
+            },
+            "alt": "Company logo"
+          }],
+          ["quote", {
+            "__TYPE__": "StructuredTextContent",
+            "value": [
+              {
+                "type": "paragraph",
+                "content": {
+                  "text": "Freeda has transformed how we manage our construction projects. The automation saves us countless hours every week."
+                }
+              }
+            ]
+          }],
+          ["author_image", {
+            "__TYPE__": "ImageContent",
+            "url": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop",
+            "origin": {
+              "id": "main",
+              "url": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
+              "width": 100,
+              "height": 100
+            },
+            "width": 100,
+            "height": 100,
+            "edit": {
+              "zoom": 1,
+              "crop": {"x": 0, "y": 0},
+              "background": "transparent"
+            },
+            "alt": "Author photo"
+          }],
+          ["author_name", {
+            "__TYPE__": "FieldContent",
+            "value": "John Smith",
+            "type": "Text"
+          }],
+          ["author_title", {
+            "__TYPE__": "FieldContent",
+            "value": "Project Manager",
+            "type": "Text"
+          }],
+          ["video_url", {
+            "__TYPE__": "LinkContent",
+            "value": {
+              "link_type": "Media"
+            }
+          }],
+          ["is_coming_soon", {
+            "__TYPE__": "FieldContent",
+            "value": true,
+            "type": "Boolean"
+          }]
+        ]
+      },
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          ["company_logo", {
+            "__TYPE__": "ImageContent",
+            "url": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=150&h=50&fit=crop",
+            "origin": {
+              "id": "main",
+              "url": "https://images.unsplash.com/photo-1560179707-f14e90ef3623",
+              "width": 150,
+              "height": 50
+            },
+            "width": 150,
+            "height": 50,
+            "edit": {
+              "zoom": 1,
+              "crop": {"x": 0, "y": 0},
+              "background": "transparent"
+            },
+            "alt": "Company logo"
+          }],
+          ["quote", {
+            "__TYPE__": "StructuredTextContent",
+            "value": [
+              {
+                "type": "paragraph",
+                "content": {
+                  "text": "The precision and speed of Freeda's compliance checking is remarkable. It's become an essential part of our workflow."
+                }
+              }
+            ]
+          }],
+          ["author_image", {
+            "__TYPE__": "ImageContent",
+            "url": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop",
+            "origin": {
+              "id": "main",
+              "url": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
+              "width": 100,
+              "height": 100
+            },
+            "width": 100,
+            "height": 100,
+            "edit": {
+              "zoom": 1,
+              "crop": {"x": 0, "y": 0},
+              "background": "transparent"
+            },
+            "alt": "Author photo"
+          }],
+          ["author_name", {
+            "__TYPE__": "FieldContent",
+            "value": "Sarah Johnson",
+            "type": "Text"
+          }],
+          ["author_title", {
+            "__TYPE__": "FieldContent",
+            "value": "Head of Operations",
+            "type": "Text"
+          }],
+          ["video_url", {
+            "__TYPE__": "LinkContent",
+            "value": {
+              "link_type": "Media"
+            }
+          }],
+          ["is_coming_soon", {
+            "__TYPE__": "FieldContent",
+            "value": true,
+            "type": "Boolean"
+          }]
+        ]
+      }
+    ]
+  }
+]

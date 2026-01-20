@@ -1,0 +1,54 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"background_image": {
+				"origin": {
+					"id": "main",
+					"url": "https://s3-alpha-sig.figma.com/img/97d4/1875/267f39073dc9a881fe4b87cefa2cdabe",
+					"width": 1512,
+					"height": 982
+				},
+				"url": "https://s3-alpha-sig.figma.com/img/97d4/1875/267f39073dc9a881fe4b87cefa2cdabe",
+				"width": 1512,
+				"height": 982,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "Working with Freeda background",
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "Working with Freeda",
+				"type": "Text"
+			},
+			"description": {
+				"__TYPE__": "FieldContent",
+				"value": "Freeda is designed for teams dealing with complex projects, multiple stakeholders and regulatory constraints. We don't just deliver analyses. We help structure how risk is managed at the design stage.",
+				"type": "Text"
+			},
+			"button_text": {
+				"__TYPE__": "FieldContent",
+				"value": "→ Read More",
+				"type": "Text"
+			},
+			"button_link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"link_type": "Web",
+					"url": "#"
+				}
+			}
+		},
+		"items": []
+	}
+]

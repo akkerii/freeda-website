@@ -1,0 +1,364 @@
+@import "tailwindcss";
+
+/* Trap Font - Local font files */
+@font-face {
+  font-family: 'Trap';
+  src: url('/fonts/Trap-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Trap';
+  src: url('/fonts/Trap-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Trap';
+  src: url('/fonts/Trap-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Trap';
+  src: url('/fonts/Trap-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Trap';
+  src: url('/fonts/Trap-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Trap';
+  src: url('/fonts/Trap-ExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Trap';
+  src: url('/fonts/Trap-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* PP Mori Font - Custom font */
+@font-face {
+  font-family: 'PP Mori';
+  src: url('https://cdn.jsdelivr.net/gh/amaralbruno9/pp-mori-font@latest/PPMori-Regular.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/amaralbruno9/pp-mori-font@latest/PPMori-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* PP Fragment Font - Local font file (replaces broken PP Frama CDN) */
+@font-face {
+  font-family: 'PP Frama';
+  src: url('/fonts/PPFragment-SansRegular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* Brand Colors */
+  --freeda-red: #F02C2C;
+  --freeda-gray: #EDEDED;
+
+  /* Font Families */
+  --font-trap: 'Trap', system-ui, -apple-system, sans-serif;
+  --font-inter: var(--font-inter), 'Inter', system-ui, sans-serif;
+  --font-space-mono: var(--font-space-mono), 'Space Mono', monospace;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-freeda-red: var(--freeda-red);
+  --color-freeda-gray: var(--freeda-gray);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-space-mono);
+  --font-heading: var(--font-trap);
+}
+
+html {
+  background: var(--background);
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter);
+  overflow-x: hidden;
+  min-width: 111.11vw; /* Compensate for zoom */
+  zoom: 0.9;
+}
+
+/* Hide scrollbar but allow scrolling */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Utility classes for fonts */
+.font-trap {
+  font-family: 'Trap', system-ui, -apple-system, sans-serif !important;
+}
+
+.font-space-mono {
+  font-family: var(--font-space-mono);
+}
+
+.font-frama {
+  font-family: 'PP Frama', system-ui, -apple-system, sans-serif;
+}
+
+.font-mori {
+  font-family: 'PP Mori', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom utility for hero heading */
+.hero-heading {
+  font-family: var(--font-trap);
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 110%;
+  letter-spacing: -1.6px;
+}
+
+/* Custom button styles */
+.btn-primary {
+  background-color: var(--freeda-red);
+  color: white;
+  font-family: var(--font-space-mono);
+  font-size: 18px;
+  padding: 12px 16px;
+  border-radius: 9px;
+  transition: opacity 0.2s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  color: black;
+  font-family: var(--font-space-mono);
+  font-size: 18px;
+  padding: 12px 16px;
+  border-radius: 9px;
+  transition: border-color 0.2s ease;
+}
+
+.btn-secondary:hover {
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Logo Marquee Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Global Presence - Radar Animations */
+@keyframes radar {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+@keyframes buttonRadar {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.3);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-radar {
+  animation: radar 2.5s ease-out infinite !important;
+}
+
+.animate-radar-delayed-1 {
+  animation: radar 2.5s ease-out 0.8s infinite !important;
+}
+
+.animate-radar-delayed-2 {
+  animation: radar 2.5s ease-out 1.6s infinite !important;
+}
+
+.animate-button-radar {
+  animation: buttonRadar 2s ease-out infinite !important;
+}
+
+.animate-button-radar-delayed-1 {
+  animation: buttonRadar 2s ease-out 0.5s infinite !important;
+}
+
+.animate-button-radar-delayed-2 {
+  animation: buttonRadar 2s ease-out 1s infinite !important;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.3s ease-out !important;
+}
+
+/* Hero Decorative Numbers Animations */
+@keyframes heroFadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes heroFadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Left side numbers - fade in only */
+.hero-number-left-1 {
+  opacity: 0;
+  animation: heroFadeInLeft 0.6s ease-out 0s forwards;
+}
+
+.hero-number-left-2 {
+  opacity: 0;
+  animation: heroFadeInLeft 0.6s ease-out 0.15s forwards;
+}
+
+.hero-number-left-3 {
+  opacity: 0;
+  animation: heroFadeInLeft 0.6s ease-out 0.3s forwards;
+}
+
+.hero-number-left-4 {
+  opacity: 0;
+  animation: heroFadeInLeft 0.6s ease-out 0.45s forwards;
+}
+
+/* Right side numbers - fade in only */
+.hero-number-right-1 {
+  opacity: 0;
+  animation: heroFadeInRight 0.6s ease-out 0.1s forwards;
+}
+
+.hero-number-right-2 {
+  opacity: 0;
+  animation: heroFadeInRight 0.6s ease-out 0.25s forwards;
+}
+
+.hero-number-right-3 {
+  opacity: 0;
+  animation: heroFadeInRight 0.6s ease-out 0.4s forwards;
+}
+
+/* Hero Vertical Lines - LED Animation */
+@keyframes ledLineDown {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 200%;
+  }
+}
+
+@keyframes ledLineUp {
+  0% {
+    background-position: 0% 200%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.hero-line-left {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(236, 6, 6, 0.3) 20%,
+    #EC0606 50%,
+    rgba(236, 6, 6, 0.3) 80%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  background-size: 100% 200%;
+  animation: ledLineUp 3s ease-in-out infinite;
+}
+
+.hero-line-right {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(236, 6, 6, 0.3) 20%,
+    #EC0606 50%,
+    rgba(236, 6, 6, 0.3) 80%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  background-size: 100% 200%;
+  animation: ledLineDown 3s ease-in-out infinite;
+}

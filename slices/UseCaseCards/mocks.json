@@ -1,0 +1,348 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "section_title": {
+        "__TYPE__": "FieldContent",
+        "value": "Use cases",
+        "type": "Text"
+      },
+      "steps": [
+        {
+          "__TYPE__": "GroupItemContent",
+          "value": [
+            ["card_id", { "__TYPE__": "FieldContent", "value": "accessibility", "type": "Text" }],
+            ["step_title", { "__TYPE__": "FieldContent", "value": "Step 1 — Configuration", "type": "Text" }],
+            ["step_description", {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                { "type": "paragraph", "text": "Define project parameters for accessibility compliance verification." },
+                { "type": "list-item", "text": "Select applicable accessibility standards and regulations" },
+                { "type": "list-item", "text": "Specify building type and usage categories" },
+                { "type": "list-item", "text": "Define areas and zones to be checked" }
+              ]
+            }],
+            ["step_image", {
+              "__TYPE__": "ImageContent",
+              "origin": { "id": "main", "url": "/images/77f02970f9c0a5d12fb706a8c7efc4d21843ed67.png", "width": 523, "height": 560 },
+              "url": "/images/77f02970f9c0a5d12fb706a8c7efc4d21843ed67.png",
+              "width": 523,
+              "height": 560,
+              "edit": { "zoom": 1, "crop": { "x": 0, "y": 0 }, "background": "transparent" },
+              "alt": "Configuration step",
+              "thumbnails": {}
+            }],
+            ["use_lottie", { "__TYPE__": "BooleanContent", "value": true }],
+            ["lottie_url", { "__TYPE__": "FieldContent", "value": "/animations/step1-config.json", "type": "Text" }],
+            ["use_composition", { "__TYPE__": "BooleanContent", "value": false }],
+            ["composition_main_image", {
+              "__TYPE__": "ImageContent",
+              "origin": { "id": "main", "url": "/images/use-cases/main-screenshot.png", "width": 860, "height": 483 },
+              "url": "/images/use-cases/main-screenshot.png",
+              "width": 860,
+              "height": 483,
+              "edit": { "zoom": 1, "crop": { "x": 0, "y": 0 }, "background": "transparent" },
+              "alt": "Main screenshot",
+              "thumbnails": {}
+            }],
+            ["composition_card_image", {
+              "__TYPE__": "ImageContent",
+              "origin": { "id": "main", "url": "/images/use-cases/card-requirements.png", "width": 258, "height": 166 },
+              "url": "/images/use-cases/card-requirements.png",
+              "width": 258,
+              "height": 166,
+              "edit": { "zoom": 1, "crop": { "x": 0, "y": 0 }, "background": "transparent" },
+              "alt": "Card requirements",
+              "thumbnails": {}
+            }],
+            ["composition_small_image", {
+              "__TYPE__": "ImageContent",
+              "origin": { "id": "main", "url": "/images/use-cases/small-frame.png", "width": 239, "height": 192 },
+              "url": "/images/use-cases/small-frame.png",
+              "width": 239,
+              "height": 192,
+              "edit": { "zoom": 1, "crop": { "x": 0, "y": 0 }, "background": "transparent" },
+              "alt": "Small frame",
+              "thumbnails": {}
+            }],
+            ["tags_section1", { "__TYPE__": "FieldContent", "value": "Applicable accessibility, Building type, Areas to be checked, Compliance standards", "type": "Text" }]
+          ]
+        },
+        {
+          "__TYPE__": "GroupItemContent",
+          "value": [
+            ["card_id", { "__TYPE__": "FieldContent", "value": "accessibility", "type": "Text" }],
+            ["step_title", { "__TYPE__": "FieldContent", "value": "Step 2 — Upload your plans and documents", "type": "Text" }],
+            ["step_description", {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                { "type": "paragraph", "text": "Upload architectural plans and supporting documentation for analysis." },
+                { "type": "list-item", "text": "Architectural floor plans (PDF format)" },
+                { "type": "list-item", "text": "Technical notices and specifications" }
+              ]
+            }],
+            ["step_image", {
+              "__TYPE__": "ImageContent",
+              "origin": { "id": "main", "url": "/images/1242fd273713a96bad4fa72ed79548811c93d07a.png", "width": 523, "height": 560 },
+              "url": "/images/1242fd273713a96bad4fa72ed79548811c93d07a.png",
+              "width": 523,
+              "height": 560,
+              "edit": { "zoom": 1, "crop": { "x": 0, "y": 0 }, "background": "transparent" },
+              "alt": "Upload documents step",
+              "thumbnails": {}
+            }],
+            ["tags_section1", { "__TYPE__": "FieldContent", "value": "Plans (PDF), Technical notices, Regulations", "type": "Text" }]
+          ]
+        },
+        {
+          "__TYPE__": "GroupItemContent",
+          "value": [
+            ["card_id", { "__TYPE__": "FieldContent", "value": "accessibility", "type": "Text" }],
+            ["step_title", { "__TYPE__": "FieldContent", "value": "Step 3 — Receive your accessibility reports", "type": "Text" }],
+            ["step_description", {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                { "type": "paragraph", "text": "Get comprehensive accessibility compliance reports with actionable insights." },
+                { "type": "list-item", "text": "Detailed PDF reports with non-compliance findings" },
+                { "type": "list-item", "text": "Data export for further analysis" }
+              ]
+            }],
+            ["step_image", {
+              "__TYPE__": "ImageContent",
+              "origin": { "id": "main", "url": "/images/370f85517c81803d1293774686c5306e46e8b037.png", "width": 523, "height": 560 },
+              "url": "/images/370f85517c81803d1293774686c5306e46e8b037.png",
+              "width": 523,
+              "height": 560,
+              "edit": { "zoom": 1, "crop": { "x": 0, "y": 0 }, "background": "transparent" },
+              "alt": "Reports delivery step",
+              "thumbnails": {}
+            }],
+            ["tags_section1", { "__TYPE__": "FieldContent", "value": "PDF Report, Data Export, API Integration", "type": "Text" }]
+          ]
+        },
+        {
+          "__TYPE__": "GroupItemContent",
+          "value": [
+            ["card_id", { "__TYPE__": "FieldContent", "value": "project_brief", "type": "Text" }],
+            ["step_title", { "__TYPE__": "FieldContent", "value": "Step 1 — Define requirements", "type": "Text" }],
+            ["step_description", {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                { "type": "paragraph", "text": "Set up project brief parameters and requirements." },
+                { "type": "list-item", "text": "Define key project requirements" },
+                { "type": "list-item", "text": "Specify area requirements" }
+              ]
+            }],
+            ["step_image", {
+              "__TYPE__": "ImageContent",
+              "origin": { "id": "main", "url": "/images/370f85517c81803d1293774686c5306e46e8b037.png", "width": 523, "height": 560 },
+              "url": "/images/370f85517c81803d1293774686c5306e46e8b037.png",
+              "width": 523,
+              "height": 560,
+              "edit": { "zoom": 1, "crop": { "x": 0, "y": 0 }, "background": "transparent" },
+              "alt": "Define requirements",
+              "thumbnails": {}
+            }],
+            ["tags_section1", { "__TYPE__": "FieldContent", "value": "Project requirements, Areas, Constraints", "type": "Text" }]
+          ]
+        },
+        {
+          "__TYPE__": "GroupItemContent",
+          "value": [
+            ["card_id", { "__TYPE__": "FieldContent", "value": "project_brief", "type": "Text" }],
+            ["step_title", { "__TYPE__": "FieldContent", "value": "Step 2 — Get compliance report", "type": "Text" }],
+            ["step_description", {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                { "type": "paragraph", "text": "Receive detailed compliance analysis." },
+                { "type": "list-item", "text": "Compliance verification reports" },
+                { "type": "list-item", "text": "Area variance analysis" }
+              ]
+            }],
+            ["step_image", {
+              "__TYPE__": "ImageContent",
+              "origin": { "id": "main", "url": "/images/b0fd009b3497315fc6627f3d9aa2d883f879ecc2.png", "width": 523, "height": 560 },
+              "url": "/images/b0fd009b3497315fc6627f3d9aa2d883f879ecc2.png",
+              "width": 523,
+              "height": 560,
+              "edit": { "zoom": 1, "crop": { "x": 0, "y": 0 }, "background": "transparent" },
+              "alt": "Compliance report",
+              "thumbnails": {}
+            }],
+            ["tags_section1", { "__TYPE__": "FieldContent", "value": "Reports, Analysis, Recommendations", "type": "Text" }]
+          ]
+        },
+        {
+          "__TYPE__": "GroupItemContent",
+          "value": [
+            ["card_id", { "__TYPE__": "FieldContent", "value": "cctp", "type": "Text" }],
+            ["step_title", { "__TYPE__": "FieldContent", "value": "Step 1 — Setup CCTP parameters", "type": "Text" }],
+            ["step_description", {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                { "type": "paragraph", "text": "Configure CCTP analysis parameters." },
+                { "type": "list-item", "text": "Define technical specifications" }
+              ]
+            }],
+            ["step_image", {
+              "__TYPE__": "ImageContent",
+              "origin": { "id": "main", "url": "/images/b0fd009b3497315fc6627f3d9aa2d883f879ecc2.png", "width": 523, "height": 560 },
+              "url": "/images/b0fd009b3497315fc6627f3d9aa2d883f879ecc2.png",
+              "width": 523,
+              "height": 560,
+              "edit": { "zoom": 1, "crop": { "x": 0, "y": 0 }, "background": "transparent" },
+              "alt": "CCTP setup",
+              "thumbnails": {}
+            }],
+            ["tags_section1", { "__TYPE__": "FieldContent", "value": "Technical specs, Parameters", "type": "Text" }]
+          ]
+        },
+        {
+          "__TYPE__": "GroupItemContent",
+          "value": [
+            ["card_id", { "__TYPE__": "FieldContent", "value": "cctp", "type": "Text" }],
+            ["step_title", { "__TYPE__": "FieldContent", "value": "Step 2 — Upload CCTP documents", "type": "Text" }],
+            ["step_description", {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                { "type": "paragraph", "text": "Submit CCTP and related documentation." },
+                { "type": "list-item", "text": "CCTP files" }
+              ]
+            }],
+            ["step_image", {
+              "__TYPE__": "ImageContent",
+              "origin": { "id": "main", "url": "/images/1242fd273713a96bad4fa72ed79548811c93d07a.png", "width": 523, "height": 560 },
+              "url": "/images/1242fd273713a96bad4fa72ed79548811c93d07a.png",
+              "width": 523,
+              "height": 560,
+              "edit": { "zoom": 1, "crop": { "x": 0, "y": 0 }, "background": "transparent" },
+              "alt": "Upload CCTP",
+              "thumbnails": {}
+            }],
+            ["tags_section1", { "__TYPE__": "FieldContent", "value": "CCTP, Documents", "type": "Text" }]
+          ]
+        },
+        {
+          "__TYPE__": "GroupItemContent",
+          "value": [
+            ["card_id", { "__TYPE__": "FieldContent", "value": "cctp", "type": "Text" }],
+            ["step_title", { "__TYPE__": "FieldContent", "value": "Step 3 — Review findings", "type": "Text" }],
+            ["step_description", {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                { "type": "paragraph", "text": "Analyze contradictions and gaps." }
+              ]
+            }],
+            ["step_image", {
+              "__TYPE__": "ImageContent",
+              "origin": { "id": "main", "url": "/images/370f85517c81803d1293774686c5306e46e8b037.png", "width": 523, "height": 560 },
+              "url": "/images/370f85517c81803d1293774686c5306e46e8b037.png",
+              "width": 523,
+              "height": 560,
+              "edit": { "zoom": 1, "crop": { "x": 0, "y": 0 }, "background": "transparent" },
+              "alt": "Review",
+              "thumbnails": {}
+            }],
+            ["tags_section1", { "__TYPE__": "FieldContent", "value": "Findings, Analysis", "type": "Text" }]
+          ]
+        },
+        {
+          "__TYPE__": "GroupItemContent",
+          "value": [
+            ["card_id", { "__TYPE__": "FieldContent", "value": "cctp", "type": "Text" }],
+            ["step_title", { "__TYPE__": "FieldContent", "value": "Step 4 — Receive final report", "type": "Text" }],
+            ["step_description", {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                { "type": "paragraph", "text": "Get comprehensive CCTP analysis report." }
+              ]
+            }],
+            ["step_image", {
+              "__TYPE__": "ImageContent",
+              "origin": { "id": "main", "url": "/images/77f02970f9c0a5d12fb706a8c7efc4d21843ed67.png", "width": 523, "height": 560 },
+              "url": "/images/77f02970f9c0a5d12fb706a8c7efc4d21843ed67.png",
+              "width": 523,
+              "height": 560,
+              "edit": { "zoom": 1, "crop": { "x": 0, "y": 0 }, "background": "transparent" },
+              "alt": "Final report",
+              "thumbnails": {}
+            }],
+            ["tags_section1", { "__TYPE__": "FieldContent", "value": "Report, Results", "type": "Text" }]
+          ]
+        }
+      ]
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "key": "a1b2c3d4-e5f6-4789-a012-3456789abcde",
+        "value": [
+          ["card_id", { "__TYPE__": "FieldContent", "value": "accessibility", "type": "Text" }],
+          ["card_image", {
+            "__TYPE__": "ImageContent",
+            "origin": { "id": "main", "url": "/images/1242fd273713a96bad4fa72ed79548811c93d07a.png", "width": 628, "height": 791 },
+            "url": "/images/1242fd273713a96bad4fa72ed79548811c93d07a.png",
+            "width": 628,
+            "height": 791,
+            "edit": { "zoom": 1, "crop": { "x": 0, "y": 0 }, "background": "transparent" },
+            "alt": "Modern architecture with vertical slats",
+            "thumbnails": {}
+          }],
+          ["card_title", { "__TYPE__": "FieldContent", "value": "Accessibility (PMR)", "type": "Text" }],
+          ["application_text", { "__TYPE__": "FieldContent", "value": "Detect accessibility non-compliances early, before permits or construction.", "type": "Text" }],
+          ["documents_text", { "__TYPE__": "FieldContent", "value": "Plans (PDF), technical notices, regulations.", "type": "Text" }],
+          ["is_selected", { "__TYPE__": "BooleanContent", "value": true }],
+          ["coming_soon", { "__TYPE__": "BooleanContent", "value": false }],
+          ["detail_title", { "__TYPE__": "FieldContent", "value": "Accessibility (PMR) Compliance Check", "type": "Text" }]
+        ]
+      },
+      {
+        "__TYPE__": "GroupItemContent",
+        "key": "f7e8d9c0-b1a2-4567-8901-23456789bcde",
+        "value": [
+          ["card_id", { "__TYPE__": "FieldContent", "value": "project_brief", "type": "Text" }],
+          ["card_image", {
+            "__TYPE__": "ImageContent",
+            "origin": { "id": "main", "url": "/images/370f85517c81803d1293774686c5306e46e8b037.png", "width": 343, "height": 456 },
+            "url": "/images/370f85517c81803d1293774686c5306e46e8b037.png",
+            "width": 343,
+            "height": 456,
+            "edit": { "zoom": 1, "crop": { "x": 0, "y": 0 }, "background": "transparent" },
+            "alt": "Concrete interior architecture",
+            "thumbnails": {}
+          }],
+          ["card_title", { "__TYPE__": "FieldContent", "value": "Project Brief", "type": "Text" }],
+          ["application_text", { "__TYPE__": "FieldContent", "value": "Ensure design alignment with the project brief from day one", "type": "Text" }],
+          ["documents_text", { "__TYPE__": "FieldContent", "value": "Verify that architectural plans comply with the project brief by checking areas", "type": "Text" }],
+          ["is_selected", { "__TYPE__": "BooleanContent", "value": false }],
+          ["coming_soon", { "__TYPE__": "BooleanContent", "value": false }],
+          ["detail_title", { "__TYPE__": "FieldContent", "value": "Project Brief Compliance Verification", "type": "Text" }]
+        ]
+      },
+      {
+        "__TYPE__": "GroupItemContent",
+        "key": "c4d5e6f7-a8b9-4012-3456-789abcdef012",
+        "value": [
+          ["card_id", { "__TYPE__": "FieldContent", "value": "cctp", "type": "Text" }],
+          ["card_image", {
+            "__TYPE__": "ImageContent",
+            "origin": { "id": "main", "url": "/images/b0fd009b3497315fc6627f3d9aa2d883f879ecc2.png", "width": 343, "height": 456 },
+            "url": "/images/b0fd009b3497315fc6627f3d9aa2d883f879ecc2.png",
+            "width": 343,
+            "height": 456,
+            "edit": { "zoom": 1, "crop": { "x": 0, "y": 0 }, "background": "transparent" },
+            "alt": "Modern building facade",
+            "thumbnails": {}
+          }],
+          ["card_title", { "__TYPE__": "FieldContent", "value": "CCTP analysis", "type": "Text" }],
+          ["application_text", { "__TYPE__": "FieldContent", "value": "Identify contradictions, missing requirements and unclear scopes.", "type": "Text" }],
+          ["documents_text", { "__TYPE__": "FieldContent", "value": "CCTP, plans, technical notices.", "type": "Text" }],
+          ["is_selected", { "__TYPE__": "BooleanContent", "value": false }],
+          ["coming_soon", { "__TYPE__": "BooleanContent", "value": true }],
+          ["detail_title", { "__TYPE__": "FieldContent", "value": "CCTP Analysis and Verification", "type": "Text" }]
+        ]
+      }
+    ]
+  }
+]

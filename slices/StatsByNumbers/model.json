@@ -1,0 +1,48 @@
+{
+  "id": "stats_by_numbers",
+  "type": "SharedSlice",
+  "name": "StatsByNumbers",
+  "description": "Statistics section displaying key metrics with numbers",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default variation",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": "Freeda by the numbers"
+          }
+        }
+      },
+      "items": {
+        "stat_value": {
+          "type": "Text",
+          "config": {
+            "label": "Stat Value",
+            "placeholder": "$20B"
+          }
+        },
+        "stat_label": {
+          "type": "Text",
+          "config": {
+            "label": "Stat Label",
+            "placeholder": "In Project Value Analysed"
+          }
+        },
+        "stat_description": {
+          "type": "Text",
+          "config": {
+            "label": "Stat Description",
+            "placeholder": "Across thousands of projects worldwide"
+          }
+        }
+      }
+    }
+  ]
+}

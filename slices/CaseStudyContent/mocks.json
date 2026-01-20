@@ -1,0 +1,77 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "sections": {
+        "__TYPE__": "GroupContentType",
+        "value": [
+          {
+            "__TYPE__": "GroupItemContent",
+            "value": [
+              ["section_type", { "__TYPE__": "FieldContent", "type": "Select", "value": "text_with_heading" }],
+              ["heading", { "__TYPE__": "FieldContent", "type": "Text", "value": "Understanding Cohabs' challenges" }],
+              ["body_text", { "__TYPE__": "StructuredTextContent", "value": [{ "type": "paragraph", "content": { "text": "Freeda worked closely with multiple Cohabs teams across Acquisition, Project Management, and Space & Design to understand the key bottlenecks in their design and review processes. In-person workshops were conducted with teams in Brussels, Paris, and New York to build a comprehensive view of Cohabs' workflows, decision-making constraints, and scale requirements before defining a solution." } }] }],
+              ["image", { "__TYPE__": "ImageContent", "url": null }]
+            ]
+          },
+          {
+            "__TYPE__": "GroupItemContent",
+            "value": [
+              ["section_type", { "__TYPE__": "FieldContent", "type": "Select", "value": "text_only" }],
+              ["heading", { "__TYPE__": "FieldContent", "type": "Text", "value": "" }],
+              ["body_text", { "__TYPE__": "StructuredTextContent", "value": [{ "type": "paragraph", "content": { "text": "Freeda worked closely with multiple Cohabs teams across Acquisition, Project Management, and Space & Design to understand the key bottlenecks in their design and review processes. In-person workshops were conducted with teams in Brussels, Paris, and New York to build a comprehensive view of Cohabs' workflows, decision-making constraints, and scale requirements before defining a solution." } }] }],
+              ["image", { "__TYPE__": "ImageContent", "url": null }]
+            ]
+          },
+          {
+            "__TYPE__": "GroupItemContent",
+            "value": [
+              ["section_type", { "__TYPE__": "FieldContent", "type": "Select", "value": "text_only" }],
+              ["heading", { "__TYPE__": "FieldContent", "type": "Text", "value": "" }],
+              ["body_text", { "__TYPE__": "StructuredTextContent", "value": [{ "type": "paragraph", "content": { "text": "Freeda worked closely with multiple Cohabs teams across Acquisition, Project Management, and Space & Design to understand the key bottlenecks in their design and review processes. In-person workshops were conducted with teams in Brussels, Paris, and New York to build a comprehensive view of Cohabs' workflows, decision-making constraints, and scale requirements before defining a solution." } }] }],
+              ["image", { "__TYPE__": "ImageContent", "url": null }]
+            ]
+          },
+          {
+            "__TYPE__": "GroupItemContent",
+            "value": [
+              ["section_type", { "__TYPE__": "FieldContent", "type": "Select", "value": "image" }],
+              ["heading", { "__TYPE__": "FieldContent", "type": "Text", "value": "" }],
+              ["body_text", { "__TYPE__": "StructuredTextContent", "value": [] }],
+              ["image", { "__TYPE__": "ImageContent", "url": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=880&h=560&fit=crop", "alt": "Office workspace", "dimensions": { "width": 880, "height": 560 } }]
+            ]
+          },
+          {
+            "__TYPE__": "GroupItemContent",
+            "value": [
+              ["section_type", { "__TYPE__": "FieldContent", "type": "Select", "value": "text_with_heading" }],
+              ["heading", { "__TYPE__": "FieldContent", "type": "Text", "value": "Understanding Cohabs' challenges" }],
+              ["body_text", { "__TYPE__": "StructuredTextContent", "value": [{ "type": "paragraph", "content": { "text": "Freeda worked closely with multiple Cohabs teams across Acquisition, Project Management, and Space & Design to understand the key bottlenecks in their design and review processes. In-person workshops were conducted with teams in Brussels, Paris, and New York to build a comprehensive view of Cohabs' workflows, decision-making constraints, and scale requirements before defining a solution." } }] }],
+              ["image", { "__TYPE__": "ImageContent", "url": null }]
+            ]
+          },
+          {
+            "__TYPE__": "GroupItemContent",
+            "value": [
+              ["section_type", { "__TYPE__": "FieldContent", "type": "Select", "value": "text_with_heading" }],
+              ["heading", { "__TYPE__": "FieldContent", "type": "Text", "value": "Understanding Cohabs' challenges" }],
+              ["body_text", { "__TYPE__": "StructuredTextContent", "value": [{ "type": "paragraph", "content": { "text": "Freeda worked closely with multiple Cohabs teams across Acquisition, Project Management, and Space & Design to understand the key bottlenecks in their design and review processes. In-person workshops were conducted with teams in Brussels, Paris, and New York to build a comprehensive view of Cohabs' workflows, decision-making constraints, and scale requirements before defining a solution." } }] }],
+              ["image", { "__TYPE__": "ImageContent", "url": null }]
+            ]
+          },
+          {
+            "__TYPE__": "GroupItemContent",
+            "value": [
+              ["section_type", { "__TYPE__": "FieldContent", "type": "Select", "value": "image" }],
+              ["heading", { "__TYPE__": "FieldContent", "type": "Text", "value": "" }],
+              ["body_text", { "__TYPE__": "StructuredTextContent", "value": [] }],
+              ["image", { "__TYPE__": "ImageContent", "url": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=880&h=560&fit=crop", "alt": "Office workspace", "dimensions": { "width": 880, "height": 560 } }]
+            ]
+          }
+        ]
+      }
+    },
+    "items": []
+  }
+]

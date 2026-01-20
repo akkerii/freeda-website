@@ -1,0 +1,49 @@
+{
+  "id": "resources_page",
+  "label": "Resources Page",
+  "repeatable": false,
+  "status": true,
+  "format": "custom",
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "UID"
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "resources_hero": {
+              "type": "SharedSlice"
+            },
+            "short_video": {
+              "type": "SharedSlice"
+            },
+            "articles": {
+              "type": "SharedSlice"
+            },
+            "newsroom": {
+              "type": "SharedSlice"
+            },
+            "join_us": {
+              "type": "SharedSlice"
+            },
+            "global_presence": {
+              "type": "SharedSlice"
+            },
+            "footer": {
+              "type": "SharedSlice"
+            },
+            "logo_cloud": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}

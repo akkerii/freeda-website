@@ -1,0 +1,74 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "west",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"image",
+						{
+							"origin": {
+								"id": "main",
+								"url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43",
+								"width": 4024,
+								"height": 4024
+							},
+							"url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43",
+							"width": 4024,
+							"height": 4024,
+							"edit": {
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								},
+								"background": "transparent"
+							},
+							"alt": "pipe",
+							"credits": null,
+							"__TYPE__": "ImageContent"
+						}
+					],
+					[
+						"card_title",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "chest",
+							"type": "Text"
+						}
+					],
+					[
+						"description",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Enim do elit aute voluptate veniam eu et ipsum minim ullamco cillum anim ipsum consequat duis. Ut eiusmod nulla occaecat non consectetur commodo elit ipsum in. Excepteur eu adipisicing ut officia labore dolore veniam irure ut sunt exercitation proident sunt sunt nulla."
+									}
+								}
+							]
+						}
+					],
+					[
+						"is_large",
+						{
+							"__TYPE__": "BooleanContent",
+							"value": false
+						}
+					]
+				]
+			}
+		]
+	}
+]

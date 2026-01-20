@@ -1,0 +1,48 @@
+{
+  "id": "key_metrics",
+  "type": "SharedSlice",
+  "name": "KeyMetrics",
+  "description": "Key metrics section with text-based icon boxes",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default variation",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": "Key metrics"
+          }
+        }
+      },
+      "items": {
+        "icon_text": {
+          "type": "Text",
+          "config": {
+            "label": "Icon Text",
+            "placeholder": "x200"
+          }
+        },
+        "step_title": {
+          "type": "Text",
+          "config": {
+            "label": "Step Title",
+            "placeholder": "Define use case"
+          }
+        },
+        "step_description": {
+          "type": "Text",
+          "config": {
+            "label": "Step Description",
+            "placeholder": "Description text"
+          }
+        }
+      }
+    }
+  ]
+}

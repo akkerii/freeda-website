@@ -1,0 +1,39 @@
+{
+  "id": "technology_details",
+  "type": "SharedSlice",
+  "name": "TechnologyDetails",
+  "description": "Technology details section with images and descriptive text",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default variation",
+      "imageUrl": "",
+      "primary": {
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "multi": "paragraph,strong,em,hyperlink"
+          }
+        },
+        "images": {
+          "type": "Group",
+          "config": {
+            "label": "Images",
+            "fields": {
+              "image": {
+                "type": "Image",
+                "config": {
+                  "label": "Image"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

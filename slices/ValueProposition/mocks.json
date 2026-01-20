@@ -1,0 +1,189 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"section_heading": {
+				"__TYPE__": "FieldContent",
+				"value": "Most risk originates in plans & documents - not on site.",
+				"type": "Text"
+			},
+			"section_description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "They start in documents: plans, specifications, regulations, guidelines - often unstructured, often inconsistent."
+						}
+					}
+				]
+			},
+			"cards": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"card_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "From plans & documents to decisions",
+									"type": "Text"
+								}
+							],
+							[
+								"card_description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Freeda reads construction plans, structural calculations, specs and contracts. It detects inconsistencies and omissions that lead to costly errors."
+											}
+										}
+									]
+								}
+							],
+							[
+								"card_image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1504307651254-35680f356dfd",
+										"width": 800,
+										"height": 600
+									},
+									"url": "https://images.unsplash.com/photo-1504307651254-35680f356dfd",
+									"width": 800,
+									"height": 600,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "Construction plans analysis",
+									"credits": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"card_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Built on real projects",
+									"type": "Text"
+								}
+							],
+							[
+								"card_description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Trained on thousands of construction documents, Freeda understands how plans, calculations, and contracts relate - and where they don't."
+											}
+										}
+									]
+								}
+							],
+							[
+								"card_image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5",
+										"width": 800,
+										"height": 600
+									},
+									"url": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5",
+									"width": 800,
+									"height": 600,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "Real construction project",
+									"credits": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"card_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Human-led AI for the built environment",
+									"type": "Text"
+								}
+							],
+							[
+								"card_description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Freeda assists project managers, engineers and developers. It highlights risks, flags issues, and supports better decisions - without replacing human judgment."
+											}
+										}
+									]
+								}
+							],
+							[
+								"card_image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1581092160562-40aa08e78837",
+										"width": 800,
+										"height": 600
+									},
+									"url": "https://images.unsplash.com/photo-1581092160562-40aa08e78837",
+									"width": 800,
+									"height": 600,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "AI assisted construction",
+									"credits": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]
