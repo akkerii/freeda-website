@@ -18,7 +18,7 @@ const UseCaseHero: FC<UseCaseHeroProps> = ({ slice }) => {
       <Navigation theme="dark" />
 
       {/* Desktop layout (xl+) */}
-      <div className="hidden xl:block h-[982px]">
+      <div className="hidden xl:block h-[1050px]">
         {/* Background floor plan image */}
         <div className="absolute left-0 mix-blend-lighten size-[712px] top-[131px]">
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -27,7 +27,7 @@ const UseCaseHero: FC<UseCaseHeroProps> = ({ slice }) => {
         </div>
 
         {/* Images wrapper - both images scale together as one unit */}
-        <div className="absolute left-[-400px] top-[232px] w-[1200px] h-[674px] origin-top-left scale-[0.85] min-[1400px]:scale-[0.95] min-[1500px]:scale-100 min-[1600px]:scale-105 min-[1800px]:scale-110">
+        <div className="absolute left-[-400px] top-[250px] w-[1200px] h-[674px] origin-top-left scale-[0.85] min-[1400px]:scale-[0.95] min-[1500px]:scale-100 min-[1600px]:scale-105 min-[1800px]:scale-110">
           {/* Large grayscale report screenshot - back */}
           <div className="absolute h-[674px] left-0 top-0 pointer-events-none rounded-[10px] w-[1138.935px] grayscale">
             <img alt="" className="absolute inset-0 max-w-none object-center object-cover rounded-[10px] size-full" src="/images/6478d52c5db017fb5e4c6a867bd0123e67f6bc69.png" />
@@ -35,7 +35,7 @@ const UseCaseHero: FC<UseCaseHeroProps> = ({ slice }) => {
           </div>
 
           {/* Small color screenshot - front, fixed position relative to back */}
-          <div className="absolute h-[553px] left-[777px] rounded-[10px] top-[60px] w-[407px]">
+          <div className="absolute h-[553px] left-[777px] rounded-[10px] top-[55px] w-[407px]">
             <img alt="" className="absolute inset-0 max-w-none object-center object-cover pointer-events-none rounded-[10px] size-full" src="/images/67b9bbfe06c9bbfdd83967f7ba2e655e69ba1480.png" />
           </div>
         </div>
@@ -71,8 +71,8 @@ const UseCaseHero: FC<UseCaseHeroProps> = ({ slice }) => {
           <p className="leading-[normal]">1345</p>
         </div>
 
-        {/* Text content - vertically centered */}
-        <div className="absolute content-stretch flex flex-col gap-[29px] items-start left-[900px] top-1/2 -translate-y-1/2 w-[523px]">
+        {/* Text content - vertically centered, responsive positioning */}
+        <div className="absolute content-stretch flex flex-col gap-[29px] items-start left-[700px] min-[1400px]:left-[820px] min-[1500px]:left-[900px] min-[1600px]:left-[980px] min-[1800px]:left-[1080px] top-1/2 -translate-y-1/2 w-[420px] min-[1400px]:w-[480px] min-[1500px]:w-[523px]">
           {/* Badge */}
           <div className="bg-[#555] content-stretch flex gap-[10px] items-center justify-center overflow-clip px-[16px] py-[7px] relative rounded-[5px] shrink-0">
             <div className="relative shrink-0 size-[8px]">

@@ -113,8 +113,8 @@
               "tags_section1": {
                 "type": "Text",
                 "config": {
-                  "label": "Tag Section 1 Tags (comma-separated)",
-                  "placeholder": "Tag1, Tag2, Tag3"
+                  "label": "Tag Section 1 Tags (semicolon-separated)",
+                  "placeholder": "Tag1; Tag2; Tag3"
                 }
               },
               "tags_section2_title": {
@@ -127,8 +127,8 @@
               "tags_section2": {
                 "type": "Text",
                 "config": {
-                  "label": "Tag Section 2 Tags (comma-separated)",
-                  "placeholder": "Tag1, Tag2, Tag3"
+                  "label": "Tag Section 2 Tags (semicolon-separated)",
+                  "placeholder": "Tag1; Tag2; Tag3"
                 }
               },
               "tags_section3_title": {
@@ -141,8 +141,8 @@
               "tags_section3": {
                 "type": "Text",
                 "config": {
-                  "label": "Tag Section 3 Tags (comma-separated)",
-                  "placeholder": "Tag1, Tag2, Tag3"
+                  "label": "Tag Section 3 Tags (semicolon-separated)",
+                  "placeholder": "Tag1; Tag2; Tag3"
                 }
               }
             }

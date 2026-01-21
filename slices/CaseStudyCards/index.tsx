@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, useState } from "react";
+import { FC, useState, useRef } from "react";
 import { Content, isFilled } from "@prismicio/client";
 import { SliceComponentProps, PrismicRichText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
@@ -84,13 +84,31 @@ const getIcon = (iconType: string) => {
 const CaseStudyCards: FC<CaseStudyCardsProps> = ({ slice }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const cards = slice.primary.cards as any[] || [];
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const cardRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
   if (cards.length === 0) return null;
 
   const selectedCard = cards[selectedIndex] as any;
 
-  const handleCardClick = (index: number) => {
+  const handleCardClick = (index: number, cardElement: HTMLButtonElement | null) => {
     setSelectedIndex(index);
+
+    // Scroll the clicked card into view smoothly
+    if (cardElement && scrollContainerRef.current) {
+      const container = scrollContainerRef.current;
+      const cardRect = cardElement.getBoundingClientRect();
+      const containerRect = container.getBoundingClientRect();
+
+      // Check if card is partially hidden on the right
+      if (cardRect.right > containerRect.right) {
+        cardElement.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
+      // Check if card is partially hidden on the left
+      else if (cardRect.left < containerRect.left) {
+        cardElement.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
+    }
   };
 
   return (
@@ -107,105 +125,106 @@ const CaseStudyCards: FC<CaseStudyCardsProps> = ({ slice }) => {
           </h1>
         )}
 
-        {/* Carousel Container */}
+        {/* Carousel Container - shows 2 cards + peek of third */}
         <div className="relative w-full">
           {/* Cards Container - Native horizontal scroll */}
           <div
+            ref={scrollContainerRef}
             className="overflow-x-auto scrollbar-hide pb-4"
             style={{
               scrollbarWidth: 'none',
               msOverflowStyle: 'none',
             }}
           >
-            <div className="flex gap-5">
+            <div className="flex gap-5 pr-[200px]">
               {cards.map((card: any, index: number) => {
                 const isSelected = index === selectedIndex;
 
                 return (
                   <button
                     key={index}
-                    onClick={() => handleCardClick(index)}
-                    className="flex flex-col items-start shrink-0 w-[420px] cursor-pointer hover:opacity-90 transition-opacity"
+                    ref={(el) => { cardRefs.current[index] = el; }}
+                    onClick={(e) => handleCardClick(index, e.currentTarget)}
+                    className="flex flex-col items-start shrink-0 w-[380px] md:w-[450px] lg:w-[524px] cursor-pointer hover:opacity-90 transition-opacity text-left"
                   >
-                <div className="h-[560px] relative shrink-0 w-full overflow-hidden">
-                  {/* Main Card Container */}
-                  <div className="absolute h-[560px] left-0 overflow-hidden rounded-[10px] top-0 w-[420px]">
-                    {/* Card Image */}
-                    {isFilled.image(card.image) && (
-                      <div className="absolute inset-0">
-                        <PrismicNextImage
-                          field={card.image}
-                          fill
-                          className="object-cover"
-                          fallbackAlt=""
-                        />
-                      </div>
-                    )}
+                    <div className="h-[560px] md:h-[650px] lg:h-[750px] relative shrink-0 w-full overflow-hidden">
+                      {/* Main Card Container */}
+                      <div className="absolute inset-0 overflow-hidden rounded-[10px]">
+                        {/* Card Image */}
+                        {isFilled.image(card.image) && (
+                          <div className="absolute inset-0">
+                            <PrismicNextImage
+                              field={card.image}
+                              fill
+                              className="object-cover"
+                              fallbackAlt=""
+                            />
+                          </div>
+                        )}
 
-                    {/* Label Section (top-right overlay) */}
-                    <div className="absolute bg-[#f2f2f2] h-[100px] left-[220px] overflow-hidden rounded-bl-[10px] rounded-tr-[10px] top-0 w-[200px]">
-                      {/* Red Dot - always show */}
-                      <div className="absolute left-[90px] w-[16px] h-[16px] top-[20px]">
-                        <svg
-                          className="block size-full"
-                          fill="none"
-                          preserveAspectRatio="none"
-                          viewBox="0 0 16 16"
-                        >
-                          <circle cx="8" cy="8" fill="#F02C2C" r="8" />
-                        </svg>
-                      </div>
+                        {/* Label Section (top-right overlay) */}
+                        <div className="absolute bg-[#f2f2f2] h-[80px] md:h-[100px] right-0 overflow-hidden rounded-bl-[10px] rounded-tr-[10px] top-0 w-[160px] md:w-[200px]">
+                          {/* Red Dot - always show */}
+                          <div className="absolute left-1/2 -translate-x-1/2 w-[14px] md:w-[16px] h-[14px] md:h-[16px] top-[16px] md:top-[20px]">
+                            <svg
+                              className="block size-full"
+                              fill="none"
+                              preserveAspectRatio="none"
+                              viewBox="0 0 16 16"
+                            >
+                              <circle cx="8" cy="8" fill="#F02C2C" r="8" />
+                            </svg>
+                          </div>
 
-                      {/* Label Text */}
-                      <div className="absolute flex flex-col font-mono justify-center leading-[1.2] left-[100px] text-[20px] text-black text-center top-[60px] -translate-x-1/2 -translate-y-1/2 w-[180px]">
-                        <p className="m-0">{card.label}</p>
+                          {/* Label Text */}
+                          <div className="absolute flex flex-col font-mono justify-center leading-[1.2] left-1/2 -translate-x-1/2 text-[16px] md:text-[20px] text-black text-center top-[50px] md:top-[60px] w-[150px] md:w-[180px]">
+                            <p className="m-0">{card.label}</p>
+                          </div>
+                        </div>
+
+                        {/* Application Section (bottom overlay) - only show on selected card with details */}
+                        {isSelected && card.show_details && (
+                          <div className="absolute bottom-0 left-0 w-full bg-[#f2f2f2] rounded-b-[10px] overflow-hidden">
+                            <div className="flex flex-col gap-4 p-6 md:p-8">
+                              {/* Application Text */}
+                              {card.application_description && (
+                                <div className="flex flex-col font-inter text-[16px] md:text-[18px] text-[rgba(0,0,0,0.55)]">
+                                  <p className="font-bold mb-2 text-black">Application</p>
+                                  <p className="font-normal mb-0 leading-[1.6]">
+                                    {card.application_description}
+                                  </p>
+                                </div>
+                              )}
+
+                              {/* Document Tags */}
+                              {card.document_tags && card.document_tags.length > 0 && (
+                                <div className="flex flex-col gap-3">
+                                  <p className="font-inter font-bold text-[16px] md:text-[18px] text-black m-0">Document analysed</p>
+                                  <div className="flex flex-col gap-2 md:gap-3">
+                                    {card.document_tags.map((tag: any, tagIndex: number) => (
+                                      <div
+                                        key={tagIndex}
+                                        className="bg-white flex gap-[10px] items-center px-3 md:px-4 py-2 rounded-[5px] w-fit"
+                                      >
+                                        <div className="shrink-0 w-5 h-5 md:w-6 md:h-6">
+                                          {getIcon(tag.icon_type)}
+                                        </div>
+                                        <p className="font-mono text-[16px] md:text-[18px] text-[rgba(0,0,0,0.55)] m-0 whitespace-nowrap leading-normal">
+                                          {tag.tag_text}
+                                        </p>
+                                      </div>
+                                    ))}
+                                  </div>
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                        )}
                       </div>
                     </div>
-
-                    {/* Application Section (bottom overlay) - only show on selected card with details - HIDDEN FOR NOW (uncomment to re-enable) */}
-                    {false && isSelected && card.show_details && (
-                      <div className="absolute bottom-0 left-0 w-full bg-[#f2f2f2] rounded-b-[10px] overflow-hidden">
-                        <div className="flex flex-col gap-4 p-8">
-                          {/* Application Text */}
-                          {card.application_description && (
-                            <div className="flex flex-col font-inter text-[18px] text-[rgba(0,0,0,0.55)]">
-                              <p className="font-bold mb-2 text-black">Application</p>
-                              <p className="font-normal mb-0 leading-[1.6]">
-                                {card.application_description}
-                              </p>
-                            </div>
-                          )}
-
-                          {/* Document Tags - HIDDEN FOR NOW (uncomment to re-enable)
-                          {card.document_tags && card.document_tags.length > 0 && (
-                            <div className="flex flex-col gap-3">
-                              <p className="font-inter font-bold text-[18px] text-black m-0">Document analysed</p>
-                              <div className="flex flex-wrap gap-3">
-                                {card.document_tags.map((tag: any, tagIndex: number) => (
-                                  <div
-                                    key={tagIndex}
-                                    className="bg-white flex gap-[10px] items-center px-4 py-2 rounded-[5px]"
-                                  >
-                                    <div className="shrink-0 w-6 h-6">
-                                      {getIcon(tag.icon_type)}
-                                    </div>
-                                    <p className="font-mono text-[18px] text-[rgba(0,0,0,0.55)] m-0 whitespace-nowrap leading-normal">
-                                      {tag.tag_text}
-                                    </p>
-                                  </div>
-                                ))}
-                              </div>
-                            </div>
-                          )}
-                          */}
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </button>
-            );
-          })}
+                  </button>
+                );
+              })}
             </div>
           </div>
         </div>

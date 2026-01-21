@@ -24,82 +24,89 @@ const Articles: FC<ArticlesProps> = ({ slice }) => {
   ] : [];
 
   return (
-    <div className="content-stretch flex flex-col gap-[40px] items-center relative w-full px-8 py-16">
-      <div className="w-full max-w-[1250px] mx-auto">
-        {/* Title */}
-        <div className="flex flex-col font-['Trap:Semi_Bold',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[64px] text-black mb-[40px]">
-          <h1 className="block leading-[1.1] whitespace-nowrap">{slice.primary.title}</h1>
-        </div>
+    <section
+      data-slice-type={slice.slice_type}
+      data-slice-variation={slice.variation}
+      className="w-full bg-white py-12 md:py-16 lg:py-20"
+    >
+      <div className="w-full max-w-[1250px] mx-auto px-5 md:px-10">
+        {/* Title - Responsive font sizes */}
+        <h2 className="font-trap text-3xl sm:text-4xl md:text-5xl lg:text-[64px] font-semibold leading-[1.1] text-black mb-8 md:mb-10 lg:mb-12">
+          {slice.primary.title}
+        </h2>
 
-        {/* Cards Container */}
-        <div className="content-stretch flex gap-[20px] items-start relative shrink-0 w-full">
-        {reorderedItems.map((item, displayIndex) => {
-          const originalIndex = displayIndex === 0 ? activeIndex :
-            displayIndex <= activeIndex ? displayIndex - 1 : displayIndex;
+        {/* Cards Container - Stack on mobile, row on desktop */}
+        <div className="flex flex-col lg:flex-row gap-5 lg:gap-6 items-stretch">
+          {reorderedItems.map((item, displayIndex) => {
+            const originalIndex = displayIndex === 0 ? activeIndex :
+              displayIndex <= activeIndex ? displayIndex - 1 : displayIndex;
 
-          return (
-            <div
-              key={originalIndex}
-              onClick={() => setActiveIndex(originalIndex)}
-              className={`content-stretch flex flex-col gap-[32px] items-start relative shrink-0 cursor-pointer transition-all duration-300 ${
-                displayIndex === 0 ? "w-[524px]" : "max-w-[388px] min-w-[336px] w-[343px]"
-              }`}
-            >
-            {/* Card Image */}
-            <div
-              className={`overflow-clip relative shrink-0 w-full transition-all duration-300 ${
-                displayIndex === 0 ? "h-[698px]" : "aspect-[362.667/483]"
-              }`}
-            >
-              <div className="absolute h-full left-0 overflow-clip rounded-[10px] top-0 w-full">
-                {item.image.url ? (
-                  <PrismicNextImage
-                    field={item.image}
-                    className="absolute inset-0 object-cover size-full"
-                    fallbackAlt=""
-                  />
-                ) : (
-                  <div className="absolute bg-[#202020] size-full" />
-                )}
+            const isActive = displayIndex === 0;
+
+            return (
+              <div
+                key={originalIndex}
+                onClick={() => setActiveIndex(originalIndex)}
+                className={`flex flex-col gap-6 md:gap-8 cursor-pointer transition-all duration-300 ${
+                  isActive
+                    ? "w-full lg:w-[524px] lg:flex-shrink-0"
+                    : "w-full lg:flex-1 lg:min-w-[280px] lg:max-w-[388px]"
+                }`}
+              >
+                {/* Card Image - Responsive heights */}
+                <div
+                  className={`relative w-full overflow-hidden rounded-[10px] transition-all duration-300 ${
+                    isActive
+                      ? "h-[350px] sm:h-[450px] md:h-[550px] lg:h-[698px]"
+                      : "h-[280px] sm:h-[350px] md:h-[400px] lg:h-[483px]"
+                  }`}
+                >
+                  {item.image?.url ? (
+                    <PrismicNextImage
+                      field={item.image}
+                      className="absolute inset-0 object-cover w-full h-full"
+                      fallbackAlt=""
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-[#202020]" />
+                  )}
+                </div>
+
+                {/* Card Text - Responsive typography */}
+                <div className="flex flex-col gap-3 md:gap-4">
+                  {/* Card Title */}
+                  <h3 className="font-trap text-xl md:text-2xl font-semibold leading-[1.2] text-black">
+                    {item.card_title}
+                  </h3>
+
+                  {/* Card Description */}
+                  <div className="flex flex-col font-inter text-base md:text-lg text-black/55">
+                    <p className="font-bold mb-0">Application</p>
+                    <PrismicRichText
+                      field={item.application}
+                      components={{
+                        paragraph: ({ children }) => (
+                          <p className="leading-[1.5] mb-0">{children}</p>
+                        ),
+                      }}
+                    />
+                    <p className="leading-[normal] mb-0 mt-4 font-bold">Documents analysed</p>
+                    <PrismicRichText
+                      field={item.documents}
+                      components={{
+                        paragraph: ({ children }) => (
+                          <p className="leading-[1.5] mb-0">{children}</p>
+                        ),
+                      }}
+                    />
+                  </div>
+                </div>
               </div>
-            </div>
-
-            {/* Card Text */}
-            <div className="content-stretch flex flex-col gap-[16px] items-start leading-[0] not-italic relative shrink-0 w-full">
-              {/* Card Title */}
-              <div className="flex flex-col font-['Trap:Semi_Bold',sans-serif] justify-center relative shrink-0 text-[24px] text-black w-full">
-                <h5 className="block leading-[1.2]">{item.card_title}</h5>
-              </div>
-
-              {/* Card Description */}
-              <div className="flex flex-col font-['Inter:Regular',sans-serif] font-normal justify-center relative shrink-0 text-[18px] text-[rgba(0,0,0,0.55)] w-full">
-                <p className="font-['Inter:Bold',sans-serif] font-bold leading-[normal] mb-0 not-italic">Application</p>
-                <PrismicRichText
-                  field={item.application}
-                  components={{
-                    paragraph: ({ children }) => (
-                      <p className="leading-[normal] mb-0">{children}</p>
-                    ),
-                  }}
-                />
-                <p className="leading-[normal] mb-0">&nbsp;</p>
-                <p className="font-['Inter:Bold',sans-serif] font-bold leading-[normal] mb-0 not-italic">Documents analysed</p>
-                <PrismicRichText
-                  field={item.documents}
-                  components={{
-                    paragraph: ({ children }) => (
-                      <p className="leading-[normal] mb-0">{children}</p>
-                    ),
-                  }}
-                />
-              </div>
-            </div>
-          </div>
-          );
-        })}
+            );
+          })}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -75,12 +75,12 @@ const HowItWorks = ({ slice }: HowItWorksProps) => {
           </div>
         ) : (
           // Grid Layout for 4 items (OUR METHOD style)
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full max-w-[1100px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full max-w-[1100px] auto-rows-fr">
             {slice.items.map((item, index) => (
-              <FadeIn key={index} delay={100 + index * 100}>
-                <article className="relative w-full min-h-[361px] bg-black/5 rounded-[10px] flex flex-col overflow-hidden">
+              <FadeIn key={index} delay={100 + index * 100} className="h-full">
+                <article className="relative w-full h-full min-h-[361px] bg-black/5 rounded-[10px] flex flex-col overflow-hidden">
                   {/* Text Content */}
-                  <div className="flex flex-col gap-2 p-8 pb-[140px]">
+                  <div className="flex flex-col gap-2 p-6 md:p-8 pb-[140px] flex-1">
                     {/* Step Title */}
                     {item.step_title && (
                       <h3 className="font-trap text-xl md:text-2xl font-semibold leading-[1.2] tracking-[-0.48px] text-black m-0 max-w-[402px]">
@@ -107,7 +107,7 @@ const HowItWorks = ({ slice }: HowItWorksProps) => {
                     )}
 
                     {/* Red Dot */}
-                    <div className="absolute right-[15px] top-[15px] w-[17px] h-[17px]">
+                    <div className="absolute right-4 md:right-[15px] top-4 md:top-[15px] w-[17px] h-[17px]">
                       <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 17 17">
                         <circle cx="8.5" cy="8.5" fill="#F02C2C" r="8.5" />
                       </svg>
@@ -119,7 +119,7 @@ const HowItWorks = ({ slice }: HowItWorksProps) => {
                     <div className="absolute bottom-0 left-0">
                       <PrismicNextImage
                         field={item.icon}
-                        className="w-[120px] h-[120px] object-contain"
+                        className="w-[100px] h-[100px] md:w-[120px] md:h-[120px] object-contain"
                         fallbackAlt=""
                         style={{ filter: 'none' }}
                       />

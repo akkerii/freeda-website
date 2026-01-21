@@ -124,12 +124,12 @@ const LastCaseStudy: FC<LastCaseStudyProps> = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="w-full py-16"
+      className="w-full py-12 md:py-16 lg:py-20"
     >
-      <div className="flex flex-col gap-16 items-start mx-auto max-w-[1500px] px-5 md:px-8 lg:px-[40px]">
+      <div className="max-w-[1250px] mx-auto px-5 md:px-10">
         {/* Section Title */}
         {slice.primary.title && (
-          <h2 className="font-trap text-3xl md:text-4xl lg:text-[50px] font-semibold text-black mb-10 md:mb-16 leading-[1.1]">
+          <h2 className="font-trap text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-semibold text-black mb-8 md:mb-12 lg:mb-16 leading-[1.1]">
             {slice.primary.title}
           </h2>
         )}
@@ -138,13 +138,13 @@ const LastCaseStudy: FC<LastCaseStudyProps> = ({ slice }) => {
         <div className="relative w-full">
           {/* Cards Container - Native horizontal scroll */}
           <div
-            className="overflow-x-auto scrollbar-hide pb-4"
+            className="overflow-x-auto scrollbar-hide pb-4 -mx-5 md:-mx-10 px-5 md:px-10"
             style={{
               scrollbarWidth: "none",
               msOverflowStyle: "none",
             }}
           >
-            <div className="flex gap-5">
+            <div className="flex gap-4 md:gap-5">
               {caseStudyCards.map((card: any, index: number) => {
                 const isSelected = index === selectedIndex;
 
@@ -152,11 +152,11 @@ const LastCaseStudy: FC<LastCaseStudyProps> = ({ slice }) => {
                   <button
                     key={index}
                     onClick={() => handleCardClick(index)}
-                    className="flex flex-col items-start shrink-0 w-[420px] cursor-pointer hover:opacity-90 transition-opacity"
+                    className="flex flex-col items-start shrink-0 w-[280px] sm:w-[320px] md:w-[380px] lg:w-[420px] cursor-pointer hover:opacity-90 transition-opacity"
                   >
-                    <div className="h-[560px] relative shrink-0 w-full overflow-hidden">
+                    <div className="h-[380px] sm:h-[450px] md:h-[520px] lg:h-[560px] relative shrink-0 w-full overflow-hidden">
                       {/* Main Card Container */}
-                      <div className="absolute h-[560px] left-0 overflow-hidden rounded-[10px] top-0 w-[420px]">
+                      <div className="absolute inset-0 overflow-hidden rounded-[10px]">
                         {/* Card Image */}
                         {isFilled.image(card.image) && (
                           <div className="absolute inset-0">
@@ -170,9 +170,9 @@ const LastCaseStudy: FC<LastCaseStudyProps> = ({ slice }) => {
                         )}
 
                         {/* Label Section (top-right overlay) */}
-                        <div className="absolute bg-[#f2f2f2] h-[100px] left-[220px] overflow-hidden rounded-bl-[10px] rounded-tr-[10px] top-0 w-[200px]">
+                        <div className="absolute bg-[#f2f2f2] h-[70px] sm:h-[80px] md:h-[90px] lg:h-[100px] right-0 overflow-hidden rounded-bl-[10px] rounded-tr-[10px] top-0 w-[140px] sm:w-[160px] md:w-[180px] lg:w-[200px]">
                           {/* Red Dot - always show */}
-                          <div className="absolute left-[90px] w-[16px] h-[16px] top-[20px]">
+                          <div className="absolute left-1/2 -translate-x-1/2 w-[12px] md:w-[16px] h-[12px] md:h-[16px] top-3 md:top-[20px]">
                             <svg
                               className="block size-full"
                               fill="none"
@@ -184,7 +184,7 @@ const LastCaseStudy: FC<LastCaseStudyProps> = ({ slice }) => {
                           </div>
 
                           {/* Label Text */}
-                          <div className="absolute flex flex-col font-mono justify-center leading-[1.2] left-[100px] text-[20px] text-black text-center top-[60px] -translate-x-1/2 -translate-y-1/2 w-[180px]">
+                          <div className="absolute flex flex-col font-mono justify-center leading-[1.2] left-1/2 text-sm md:text-lg lg:text-[20px] text-black text-center top-[55%] md:top-[60%] -translate-x-1/2 -translate-y-1/2 w-full px-2">
                             <p className="m-0">{card.label}</p>
                           </div>
                         </div>
@@ -192,11 +192,11 @@ const LastCaseStudy: FC<LastCaseStudyProps> = ({ slice }) => {
                         {/* Application Section (bottom overlay) - only show on selected card */}
                         {isSelected && (
                           <div className="absolute bottom-0 left-0 w-full bg-[#f2f2f2] rounded-b-[10px] overflow-hidden">
-                            <div className="flex flex-col gap-4 p-8">
+                            <div className="flex flex-col gap-3 md:gap-4 p-4 md:p-6 lg:p-8">
                               {/* Application Text */}
                               {card.application_description && (
-                                <div className="flex flex-col font-inter text-[18px] text-[rgba(0,0,0,0.55)]">
-                                  <p className="font-bold mb-2 text-black">
+                                <div className="flex flex-col font-inter text-sm md:text-base lg:text-[18px] text-[rgba(0,0,0,0.55)]">
+                                  <p className="font-bold mb-1 md:mb-2 text-black">
                                     Application
                                   </p>
                                   <p className="font-normal mb-0 leading-[1.6]">
@@ -208,21 +208,21 @@ const LastCaseStudy: FC<LastCaseStudyProps> = ({ slice }) => {
                               {/* Document Tags */}
                               {card.document_tags &&
                                 card.document_tags.length > 0 && (
-                                  <div className="flex flex-col gap-3">
-                                    <p className="font-inter font-bold text-[18px] text-black m-0">
+                                  <div className="flex flex-col gap-2 md:gap-3">
+                                    <p className="font-inter font-bold text-sm md:text-base lg:text-[18px] text-black m-0">
                                       Document analysed
                                     </p>
-                                    <div className="flex flex-wrap gap-3">
+                                    <div className="flex flex-wrap gap-2 md:gap-3">
                                       {card.document_tags.map(
                                         (tag: any, tagIndex: number) => (
                                           <div
                                             key={tagIndex}
-                                            className="bg-white flex gap-[10px] items-center px-4 py-2 rounded-[5px]"
+                                            className="bg-white flex gap-2 items-center px-2 md:px-4 py-1 md:py-2 rounded-[5px]"
                                           >
-                                            <div className="shrink-0 w-6 h-6">
+                                            <div className="shrink-0 w-4 h-4 md:w-6 md:h-6">
                                               {getIcon(tag.icon_type)}
                                             </div>
-                                            <p className="font-mono text-[18px] text-[rgba(0,0,0,0.55)] m-0 whitespace-nowrap leading-normal">
+                                            <p className="font-mono text-xs md:text-sm lg:text-[18px] text-[rgba(0,0,0,0.55)] m-0 whitespace-nowrap leading-normal">
                                               {tag.tag_text}
                                             </p>
                                           </div>

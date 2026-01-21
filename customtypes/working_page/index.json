@@ -69,6 +69,9 @@
             },
             "join_us": {
               "type": "SharedSlice"
+            },
+            "logo_cloud": {
+              "type": "SharedSlice"
             }
           }
         }

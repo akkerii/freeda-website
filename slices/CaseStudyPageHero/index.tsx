@@ -1,7 +1,7 @@
 // @ts-nocheck
 "use client";
 
-import { FC } from "react";
+import { FC, useState } from "react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
@@ -12,6 +12,7 @@ export type CaseStudyPageHeroProps =
 
 const CaseStudyPageHero: FC<CaseStudyPageHeroProps> = ({ slice }) => {
   const { primary } = slice;
+  const [isExpanded, setIsExpanded] = useState(true);
 
   return (
     <section
@@ -127,90 +128,111 @@ const CaseStudyPageHero: FC<CaseStudyPageHeroProps> = ({ slice }) => {
 
           {/* Right Sidebar - Company Info Panel (Figma: 343px, bg #F2F2F2, padding 16px, radius 5px) */}
           <FadeIn delay={300} direction="right" className="w-full lg:w-[343px] flex-shrink-0">
-            <div className="bg-[#F2F2F2] rounded-[5px] p-4">
-              {/* Inner content container (Figma: 309px width, gap 24px) */}
-              <div className="flex flex-col gap-6 relative w-full max-w-[309px]">
-                {/* Dropdown arrow - absolute top right (Figma: 24x24px) */}
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  className="absolute -top-0 -right-4 text-black"
+            <div className="bg-[#F2F2F2] rounded-[5px] p-[16px] overflow-hidden">
+              {/* Inner content container (Figma: 309px width) */}
+              <div className="flex flex-col w-full max-w-[309px]">
+                {/* Header - Logo and arrow on same line */}
+                <div className="flex items-center justify-between">
+                  {/* Company Logo (Figma: 137.25x36px) */}
+                  <div className="flex items-center h-[36px]">
+                    {primary.company_logo?.url ? (
+                      <PrismicNextImage
+                        field={primary.company_logo}
+                        className="h-[36px] w-auto max-w-[137px] object-contain"
+                        fallbackAlt=""
+                      />
+                    ) : (
+                      <div className="h-[36px] w-[137px] bg-gray-300 rounded" />
+                    )}
+                  </div>
+
+                  {/* Dropdown arrow - toggles section (Figma: 24x24px) */}
+                  <button
+                    onClick={() => setIsExpanded(!isExpanded)}
+                    className="w-[32px] h-[32px] flex items-center justify-center text-black/60 hover:text-black hover:bg-black/5 rounded-full transition-all duration-200 cursor-pointer"
+                    aria-label={isExpanded ? "Collapse section" : "Expand section"}
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      className={`transition-transform duration-300 ease-out ${isExpanded ? '' : 'rotate-180'}`}
+                    >
+                      <path
+                        d="M6.75 9.25L12 14.75L17.25 9.25"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+
+                {/* Collapsible content with smooth animation */}
+                <div
+                  className="grid transition-all duration-300 ease-out"
+                  style={{
+                    gridTemplateRows: isExpanded ? '1fr' : '0fr',
+                  }}
                 >
-                  <path
-                    d="M6.75 9.25L12 14.75L17.25 9.25"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+                  <div className="overflow-hidden">
+                    <div className="flex flex-col gap-[24px] pt-[24px]">
+                      {/* About the company section */}
+                      <div className="flex flex-col">
+                        {/* Title (Figma: Inter 18px, regular, black, line-height 27px/150%) */}
+                        {primary.about_title && (
+                          <p className="font-inter text-[18px] font-normal text-black leading-[1.5] m-0">
+                            {primary.about_title}
+                          </p>
+                        )}
+                        {/* Description (Figma: Inter 18px, regular, black/55%, line-height 27px, width 287px) */}
+                        {primary.about_description && (
+                          <p className="font-inter text-[18px] font-normal text-black/55 leading-[1.5] w-[287px] m-0">
+                            {primary.about_description}
+                          </p>
+                        )}
+                      </div>
 
-                {/* Company Logo (Figma: 137.25x36px) */}
-                <div className="flex items-center h-9">
-                  {primary.company_logo?.url ? (
-                    <PrismicNextImage
-                      field={primary.company_logo}
-                      className="h-9 w-auto max-w-[137px] object-contain"
-                      fallbackAlt=""
-                    />
-                  ) : (
-                    <div className="h-9 w-[137px] bg-gray-300 rounded" />
-                  )}
-                </div>
+                      {/* Industrie Section */}
+                      <div className="flex flex-col gap-[8px]">
+                        {/* Title (Figma: Inter 18px, regular, black, line-height 27px) */}
+                        {primary.industry_title && (
+                          <p className="font-inter text-[18px] font-normal text-black leading-[1.5] m-0">
+                            {primary.industry_title}
+                          </p>
+                        )}
+                        {/* Industry badge (Figma: white bg, radius 5px, padding 10px, gap 10px) */}
+                        {primary.industry_type && (
+                          <div className="inline-flex items-center gap-[10px] bg-white rounded-[5px] p-[10px] w-fit">
+                            {/* Red dot (Figma: 8x8px, #F02C2C) */}
+                            <div className="w-[8px] h-[8px] rounded-full bg-[#F02C2C] flex-shrink-0" />
+                            {/* Text (Figma: Inter 18px, regular, black, tracking -0.09px, line-height 145%) */}
+                            <span className="font-inter text-[18px] font-normal text-black leading-[1.45] tracking-[-0.09px]">
+                              {primary.industry_type}
+                            </span>
+                          </div>
+                        )}
+                      </div>
 
-                {/* About the company section */}
-                <div className="flex flex-col gap-0">
-                  {/* Title (Figma: Inter 18px, regular, black, line-height 27px/150%) */}
-                  {primary.about_title && (
-                    <p className="font-inter text-[18px] font-normal text-black leading-[27px] mb-0">
-                      {primary.about_title}
-                    </p>
-                  )}
-                  {/* Description (Figma: Inter 18px, regular, black/55%, line-height 27px, width 287px) */}
-                  {primary.about_description && (
-                    <p className="font-inter text-[18px] font-normal text-black/55 leading-[27px] max-w-[287px] mt-0">
-                      {primary.about_description}
-                    </p>
-                  )}
-                </div>
-
-                {/* Industrie Section */}
-                <div className="flex flex-col gap-0">
-                  {/* Title (Figma: Inter 18px, regular, black, line-height 27px) */}
-                  {primary.industry_title && (
-                    <p className="font-inter text-[18px] font-normal text-black leading-[27px] mb-0">
-                      {primary.industry_title}
-                    </p>
-                  )}
-                  {/* Industry badge (Figma: white bg, radius 5px, padding 10px, gap 10px) */}
-                  {primary.industry_type && (
-                    <div className="inline-flex items-center gap-[10px] bg-white rounded-[5px] px-[10px] py-[10px] w-fit mt-0">
-                      {/* Red dot (Figma: 8x8px, #F02C2C) */}
-                      <div className="w-2 h-2 rounded-full bg-[#F02C2C] flex-shrink-0" />
-                      {/* Text (Figma: Inter 18px, regular, black, tracking -0.09px, line-height 26.1px/145%) */}
-                      <span className="font-inter text-[18px] font-normal text-black leading-[26px] tracking-[-0.09px]">
-                        {primary.industry_type}
-                      </span>
+                      {/* With Freeda since section */}
+                      <div className="flex flex-col gap-[8px]">
+                        {/* Title (Figma: Inter 18px, regular, black, line-height 27px) */}
+                        {primary.since_title && (
+                          <p className="font-inter text-[18px] font-normal text-black leading-[1.5] m-0">
+                            {primary.since_title}
+                          </p>
+                        )}
+                        {/* Description (Figma: Inter 18px, regular, black/55%, line-height 27px, width 287px) */}
+                        {primary.since_description && (
+                          <p className="font-inter text-[18px] font-normal text-black/55 leading-[1.5] w-[287px] m-0">
+                            {primary.since_description}
+                          </p>
+                        )}
+                      </div>
                     </div>
-                  )}
-                </div>
-
-                {/* With Freeda since section */}
-                <div className="flex flex-col gap-0">
-                  {/* Title (Figma: Inter 18px, regular, black, line-height 27px) */}
-                  {primary.since_title && (
-                    <p className="font-inter text-[18px] font-normal text-black leading-[27px] mb-0">
-                      {primary.since_title}
-                    </p>
-                  )}
-                  {/* Description (Figma: Inter 18px, regular, black/55%, line-height 27px, width 287px) */}
-                  {primary.since_description && (
-                    <p className="font-inter text-[18px] font-normal text-black/55 leading-[27px] max-w-[287px] mt-0">
-                      {primary.since_description}
-                    </p>
-                  )}
+                  </div>
                 </div>
               </div>
             </div>

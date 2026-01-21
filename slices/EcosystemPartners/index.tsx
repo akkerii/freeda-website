@@ -15,46 +15,48 @@ const EcosystemPartners: FC<EcosystemPartnersProps> = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="bg-white flex flex-col gap-[24px] items-center w-[1152px] mx-auto py-16 lg:py-20"
+      className="bg-white w-full py-12 md:py-16 lg:py-20"
     >
-      {/* Title */}
-      {slice.primary.title && (
-        <p className="font-heading text-[20px] font-semibold leading-[145%] tracking-[-0.1px] text-black/55 text-center m-0">
-          {slice.primary.title}
-        </p>
-      )}
-
-      {/* Partner Logos */}
-      <div className="flex gap-[60px] items-center justify-center">
-        {slice.primary.logos.map((item: any, index: number) => (
-          <div
-            key={index}
-            className="h-[120px] w-[360px] overflow-hidden relative flex items-center justify-center"
-          >
-            {item.logo?.url && (
-              <PrismicNextImage
-                field={item.logo}
-                className={`object-contain w-full h-full scale-125 ${
-                  index === 0 || index === 2 ? "grayscale" : ""
-                }`}
-                fallbackAlt=""
-              />
-            )}
-          </div>
-        ))}
-      </div>
-
-      {/* CTA Button */}
-      {slice.primary.button_link && slice.primary.button_text && (
-        <PrismicLink
-          field={slice.primary.button_link}
-          className="bg-[#f02c2c] flex items-center justify-center px-[16px] py-[12px] rounded-[9px] no-underline"
-        >
-          <p className="font-mono text-[18px] font-bold leading-[145%] text-center text-white m-0">
-            {slice.primary.button_text}
+      <div className="max-w-[1250px] mx-auto px-5 md:px-10 flex flex-col gap-6 md:gap-8 items-center">
+        {/* Title */}
+        {slice.primary.title && (
+          <p className="font-trap text-lg md:text-xl font-semibold leading-[145%] tracking-[-0.1px] text-black/55 text-center m-0">
+            {slice.primary.title}
           </p>
-        </PrismicLink>
-      )}
+        )}
+
+        {/* Partner Logos - Single row on desktop, all same size */}
+        <div className="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16 items-center justify-center w-full">
+          {slice.primary.logos?.map((item: any, index: number) => (
+            <div
+              key={index}
+              className="h-[60px] md:h-[80px] lg:h-[100px] w-[180px] md:w-[220px] lg:w-[280px] overflow-hidden relative flex items-center justify-center shrink-0"
+            >
+              {item.logo?.url && (
+                <PrismicNextImage
+                  field={item.logo}
+                  className={`object-contain w-full h-full ${
+                    index === 0 || index === 2 ? "grayscale" : ""
+                  }`}
+                  fallbackAlt=""
+                />
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* CTA Button */}
+        {slice.primary.button_link && slice.primary.button_text && (
+          <PrismicLink
+            field={slice.primary.button_link}
+            className="bg-[#f02c2c] flex items-center justify-center px-4 py-3 rounded-[9px] no-underline hover:bg-[#d92626] transition-colors"
+          >
+            <p className="font-mono text-base md:text-lg font-bold leading-[145%] text-center text-white m-0">
+              {slice.primary.button_text}
+            </p>
+          </PrismicLink>
+        )}
+      </div>
     </section>
   );
 };

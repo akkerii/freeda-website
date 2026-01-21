@@ -30,11 +30,11 @@ const LogoCloud = ({ slice }: LogoCloudProps) => {
             {[0, 1, 2, 3].map((setIndex) => (
               <div key={`set-${setIndex}`} className="flex items-center gap-12 md:gap-[72px] shrink-0 pr-12 md:pr-[72px]">
                 {slice.items.map((item, index) => (
-                  <div key={`${setIndex}-${index}`} className="shrink-0 flex items-center justify-center h-8 md:h-10">
+                  <div key={`${setIndex}-${index}`} className="shrink-0 flex items-center justify-center h-10 md:h-14 lg:h-16">
                     {item.logo?.url && (
                       <PrismicNextImage
                         field={item.logo}
-                        className="h-full w-auto max-w-[120px] md:max-w-[140px] object-contain grayscale opacity-70"
+                        className="h-full w-auto max-w-[150px] md:max-w-[180px] lg:max-w-[200px] object-contain grayscale opacity-70"
                         fallbackAlt=""
                       />
                     )}
