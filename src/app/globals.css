@@ -110,8 +110,8 @@ body {
   color: var(--foreground);
   font-family: var(--font-inter);
   overflow-x: hidden;
-  min-width: 111.11vw; /* Compensate for zoom */
-  zoom: 0.9;
+  width: 100%;
+  max-width: 100vw;
 }
 
 /* Hide scrollbar but allow scrolling */

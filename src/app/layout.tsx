@@ -29,8 +29,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="overflow-x-hidden">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <script
           async
           defer
@@ -38,7 +39,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} ${spaceMono.variable} antialiased`}
+        className={`${inter.variable} ${spaceMono.variable} antialiased overflow-x-hidden`}
         suppressHydrationWarning
       >
         {children}
