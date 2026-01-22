@@ -118,7 +118,7 @@ const GlobalPresence = ({ slice }: GlobalPresenceProps) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="relative bg-white w-full py-[60px] md:py-[80px] overflow-hidden"
+      className="relative bg-white w-full py-[60px] md:py-[80px] overflow-visible"
     >
       <div className="max-w-[1512px] mx-auto px-5 md:px-[64px]">
         {/* Header */}
@@ -139,7 +139,7 @@ const GlobalPresence = ({ slice }: GlobalPresenceProps) => {
 
         {/* Map Section */}
         <FadeIn delay={200}>
-          <div ref={containerRef} className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[593px]">
+          <div ref={containerRef} className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[593px] overflow-visible">
             {/* SVG World Map from Figma */}
             <div className="absolute inset-0">
               <Image
@@ -169,7 +169,7 @@ const GlobalPresence = ({ slice }: GlobalPresenceProps) => {
             {/* Info Card - Shows when a marker is clicked */}
             {activeLocation !== null && slice.items && slice.items[activeLocation] && (
               <div
-                className="absolute z-30 w-[300px] sm:w-[320px] md:w-[343px] bg-[#F2F2F2] rounded-[10px] overflow-hidden shadow-xl animate-fade-in-up"
+                className="absolute z-[100] w-[300px] sm:w-[320px] md:w-[343px] bg-[#F2F2F2] rounded-[10px] overflow-hidden shadow-xl animate-fade-in-up"
                 style={{
                   left: "3%",
                   top: "3%",
