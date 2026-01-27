@@ -187,8 +187,8 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
                 ),
                 hyperlink: ({ children, node }) => (
                   <a
-                    href={node.data.url}
-                    target={node.data.target || "_self"}
+                    href={(node.data as any).url}
+                    target={(node.data as any).target || "_self"}
                     className="text-[#F02C2C] hover:underline"
                   >
                     {children}
