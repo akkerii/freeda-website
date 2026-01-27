@@ -19,6 +19,9 @@ const routes: prismic.ClientConfig["routes"] = [
   { type: "working_page", path: "/working-with-freeda" },
   { type: "resources_page", path: "/resources" },
   { type: "project_page", path: "/project" },
+  // Uncomment after pushing blog custom types to Prismic:
+  // { type: "blog_page", path: "/blog" },
+  // { type: "blog_post", path: "/blog/:uid" },
 ];
 
 /**

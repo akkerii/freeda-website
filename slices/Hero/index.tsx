@@ -122,6 +122,9 @@ const Hero = ({ slice }: HeroProps) => {
           <a href="/resources" className="font-mono text-[16px] leading-[145%] text-black no-underline hover:opacity-70 transition-opacity">
             Resources
           </a>
+          <a href="/blog" className="font-mono text-[16px] leading-[145%] text-black no-underline hover:opacity-70 transition-opacity">
+            Blog
+          </a>
         </nav>
 
         {/* Center: Logo */}

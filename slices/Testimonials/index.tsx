@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import type { Content } from "@prismicio/client";
 import { isFilled } from "@prismicio/client";
 import { SliceComponentProps, PrismicRichText } from "@prismicio/react";
@@ -9,31 +9,100 @@ import FadeIn from "@/components/FadeIn";
 
 export type TestimonialsProps = SliceComponentProps<Content.TestimonialsSlice>;
 
-// Helper function to convert YouTube URL to embed URL
-function getYouTubeEmbedUrl(url: string): string | null {
+// Helper function to extract YouTube video ID
+function getYouTubeVideoId(url: string): string | null {
   if (!url) return null;
-
-  // Match various YouTube URL formats
   const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
   const match = url.match(regExp);
-  const videoId = match && match[2].length === 11 ? match[2] : null;
+  return match && match[2].length === 11 ? match[2] : null;
+}
 
-  if (!videoId) return null;
+// Helper function to extract Google Drive file ID
+function getGoogleDriveFileId(url: string): string | null {
+  if (!url) return null;
+  // Match patterns like:
+  // https://drive.google.com/file/d/FILE_ID/view
+  // https://drive.google.com/file/d/FILE_ID/preview
+  // https://drive.google.com/open?id=FILE_ID
+  const regExp = /drive\.google\.com\/(?:file\/d\/|open\?id=)([a-zA-Z0-9_-]+)/;
+  const match = url.match(regExp);
+  return match ? match[1] : null;
+}
 
-  // Check for timestamp parameter (t= or start=)
-  const timeMatch = url.match(/[?&](t|start)=(\d+)/);
-  const startTime = timeMatch ? timeMatch[2] : null;
+// Helper function to check if URL is a direct video file
+function isDirectVideoUrl(url: string): boolean {
+  if (!url) return false;
+  const videoExtensions = /\.(mp4|webm|ogg|mov|m4v)(\?.*)?$/i;
+  return videoExtensions.test(url);
+}
 
-  return `https://www.youtube.com/embed/${videoId}${startTime ? `?start=${startTime}` : ''}`;
+// Helper function to get video embed URL (supports YouTube and Google Drive)
+function getVideoEmbedUrl(url: string, autoplay: boolean = false): string | null {
+  if (!url) return null;
+
+  // Check YouTube
+  const youtubeId = getYouTubeVideoId(url);
+  if (youtubeId) {
+    // Check for timestamp parameter (t= or start=)
+    const timeMatch = url.match(/[?&](t|start)=(\d+)/);
+    const startTime = timeMatch ? timeMatch[2] : null;
+    const params = new URLSearchParams();
+    if (startTime) params.set('start', startTime);
+    if (autoplay) {
+      params.set('autoplay', '1');
+      params.set('mute', '1'); // Required for autoplay in most browsers
+    }
+    const paramString = params.toString();
+    return `https://www.youtube.com/embed/${youtubeId}${paramString ? `?${paramString}` : ''}`;
+  }
+
+  // Check Google Drive
+  const googleDriveId = getGoogleDriveFileId(url);
+  if (googleDriveId) {
+    return `https://drive.google.com/file/d/${googleDriveId}/preview`;
+  }
+
+  // Return original URL if already an embed URL
+  return url;
 }
 
 const Testimonials = ({ slice }: TestimonialsProps) => {
   // Track which testimonial is selected (0 = first card by default)
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
+  // Track if video is playing
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const videoContainerRef = useRef<HTMLElement>(null);
 
   // Get the active testimonial data
   const items = (slice.items || []) as any[];
   const primary = slice.primary as any;
+
+  // Get YouTube thumbnail if available
+  const youtubeId = primary.youtube_url ? getYouTubeVideoId(primary.youtube_url) : null;
+  const videoThumbnail = youtubeId ? `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg` : null;
+  const isDirectVideo = primary.youtube_url ? isDirectVideoUrl(primary.youtube_url) : false;
+
+  // Autoplay on scroll for direct video files
+  useEffect(() => {
+    if (!isDirectVideo || !videoRef.current || !videoContainerRef.current) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            videoRef.current?.play();
+          } else {
+            videoRef.current?.pause();
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(videoContainerRef.current);
+    return () => observer.disconnect();
+  }, [isDirectVideo]);
 
   // Get active testimonial - ensure we have items and valid index
   const activeItem = items[selectedIndex];
@@ -124,19 +193,71 @@ const Testimonials = ({ slice }: TestimonialsProps) => {
 
           {/* Video - Center */}
           <FadeIn delay={200} className="w-full lg:flex-1">
-            <article className="relative h-[250px] md:h-[350px] lg:h-[427px] bg-[#F2F2F2] rounded-[10px] overflow-hidden">
-              {/* YouTube Video Embed */}
-              {primary.youtube_url && getYouTubeEmbedUrl(primary.youtube_url) ? (
-                <div className="absolute inset-0">
-                  <iframe
-                    src={getYouTubeEmbedUrl(primary.youtube_url)!}
-                    title="Testimonial Video"
-                    className="w-full h-full"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
+            <article
+              ref={videoContainerRef}
+              className="relative h-[250px] md:h-[350px] lg:h-[427px] bg-[#1a1a1a] rounded-[10px] overflow-hidden"
+            >
+              {primary.youtube_url ? (
+                /* Direct video file - autoplay on scroll */
+                isDirectVideo ? (
+                  <video
+                    ref={videoRef}
+                    src={primary.youtube_url}
+                    className="w-full h-full object-cover"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    controls
                   />
-                </div>
+                ) : getGoogleDriveFileId(primary.youtube_url) ? (
+                  /* Google Drive: show embed directly */
+                  <div className="absolute inset-0">
+                    <iframe
+                      src={getVideoEmbedUrl(primary.youtube_url)!}
+                      title="Testimonial Video"
+                      className="w-full h-full"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    />
+                  </div>
+                ) : isVideoPlaying ? (
+                  /* YouTube/Vimeo playing state */
+                  <div className="absolute inset-0">
+                    <iframe
+                      src={getVideoEmbedUrl(primary.youtube_url, true)!}
+                      title="Testimonial Video"
+                      className="w-full h-full"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    />
+                  </div>
+                ) : (
+                  /* YouTube/Vimeo thumbnail with play button */
+                  <div
+                    className="absolute inset-0 cursor-pointer group"
+                    onClick={() => setIsVideoPlaying(true)}
+                  >
+                    {/* Thumbnail */}
+                    {videoThumbnail && (
+                      <img
+                        src={videoThumbnail}
+                        alt="Video thumbnail"
+                        className="w-full h-full object-cover"
+                      />
+                    )}
+                    {/* Play button - YouTube style */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-[68px] h-[48px] bg-[#FF0000] rounded-[12px] flex items-center justify-center group-hover:bg-[#cc0000] transition-colors">
+                        <svg className="w-[24px] h-[24px] text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                )
               ) : (
                 <div className="absolute inset-0 flex items-center justify-center">
                   <svg className="w-20 h-20 text-[#F02C2C]" viewBox="0 0 100 100" fill="currentColor">

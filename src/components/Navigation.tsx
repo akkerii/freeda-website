@@ -56,6 +56,9 @@ export default function Navigation({ theme = "light" }: NavigationProps) {
         <a href="/resources" className={`font-mono text-[16px] leading-[145%] ${textColor} no-underline hover:opacity-70 transition-opacity`}>
           Resources
         </a>
+        <a href="/blog" className={`font-mono text-[16px] leading-[145%] ${textColor} no-underline hover:opacity-70 transition-opacity`}>
+          Blog
+        </a>
       </nav>
 
       {/* Center: Logo */}

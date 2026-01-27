@@ -18,7 +18,7 @@ const UseCaseHero: FC<UseCaseHeroProps> = ({ slice }) => {
       <Navigation theme="dark" />
 
       {/* Desktop layout (xl+) */}
-      <div className="hidden xl:block h-[1050px]">
+      <div className="hidden xl:block h-[1050px] max-w-[1512px] mx-auto relative">
         {/* Background floor plan image */}
         <div className="absolute left-0 mix-blend-lighten size-[712px] top-[131px]">
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -27,21 +27,21 @@ const UseCaseHero: FC<UseCaseHeroProps> = ({ slice }) => {
         </div>
 
         {/* Images wrapper - both images scale together as one unit */}
-        <div className="absolute left-[-400px] top-[250px] w-[1200px] h-[674px] origin-top-left scale-[0.85] min-[1400px]:scale-[0.95] min-[1500px]:scale-100 min-[1600px]:scale-105 min-[1800px]:scale-110">
+        <div className="absolute left-[-200px] top-[250px] w-[1000px] h-[674px] origin-top-left">
           {/* Large grayscale report screenshot - back */}
-          <div className="absolute h-[674px] left-0 top-0 pointer-events-none rounded-[10px] w-[1138.935px] grayscale">
+          <div className="absolute h-[674px] left-0 top-0 pointer-events-none rounded-[10px] w-[900px] grayscale">
             <img alt="" className="absolute inset-0 max-w-none object-center object-cover rounded-[10px] size-full" src="/images/6478d52c5db017fb5e4c6a867bd0123e67f6bc69.png" />
             <div aria-hidden="true" className="absolute border-8 border-[rgba(0,0,0,0.02)] border-solid inset-[-8px] rounded-[18px]" />
           </div>
 
           {/* Small color screenshot - front, fixed position relative to back */}
-          <div className="absolute h-[553px] left-[777px] rounded-[10px] top-[55px] w-[407px]">
+          <div className="absolute h-[553px] left-[600px] rounded-[10px] top-[55px] w-[407px]">
             <img alt="" className="absolute inset-0 max-w-none object-center object-cover pointer-events-none rounded-[10px] size-full" src="/images/67b9bbfe06c9bbfdd83967f7ba2e655e69ba1480.png" />
           </div>
         </div>
 
         {/* Red vertical line with gradient */}
-        <div className="absolute flex h-[982px] items-center justify-center left-[559.52px] top-0 w-0">
+        <div className="absolute flex h-[982px] items-center justify-center left-[45%] top-0 w-0">
           <div className="flex-none rotate-[180deg] scale-y-[-100%]">
             <div className="h-[977.217px] relative w-0">
               <div className="absolute inset-[0_-0.63px]">
@@ -60,19 +60,19 @@ const UseCaseHero: FC<UseCaseHeroProps> = ({ slice }) => {
         </div>
 
         {/* Red dot on line */}
-        <div className="absolute left-[557px] size-[5.037px] top-[404.75px]">
+        <div className="absolute left-[calc(45%-3px)] size-[5.037px] top-[404.75px]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 5.0372 5.0372">
             <circle cx="2.5186" cy="2.5186" fill="#EC0606" r="2.5186" />
           </svg>
         </div>
 
         {/* 1345 text */}
-        <div className="absolute flex flex-col font-mono justify-center leading-[0] left-[579.67px] not-italic text-[#ec0606] text-[20px] top-[406px] tracking-[-1px] -translate-y-1/2 uppercase">
+        <div className="absolute flex flex-col font-mono justify-center leading-[0] left-[calc(45%+20px)] not-italic text-[#ec0606] text-[20px] top-[406px] tracking-[-1px] -translate-y-1/2 uppercase">
           <p className="leading-[normal]">1345</p>
         </div>
 
         {/* Text content - vertically centered, responsive positioning */}
-        <div className="absolute content-stretch flex flex-col gap-[29px] items-start left-[700px] min-[1400px]:left-[820px] min-[1500px]:left-[900px] min-[1600px]:left-[980px] min-[1800px]:left-[1080px] top-1/2 -translate-y-1/2 w-[420px] min-[1400px]:w-[480px] min-[1500px]:w-[523px]">
+        <div className="absolute content-stretch flex flex-col gap-[29px] items-start right-[5%] top-1/2 -translate-y-1/2 w-[480px] max-w-[523px]">
           {/* Badge */}
           <div className="bg-[#555] content-stretch flex gap-[10px] items-center justify-center overflow-clip px-[16px] py-[7px] relative rounded-[5px] shrink-0">
             <div className="relative shrink-0 size-[8px]">

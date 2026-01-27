@@ -2,14 +2,14 @@
   "id": "case_study_content",
   "type": "SharedSlice",
   "name": "CaseStudyContent",
-  "description": "Case study content sections with text blocks and images",
+  "description": "Case study content sections with text blocks, images, and videos",
   "variations": [
     {
       "id": "default",
       "name": "Default",
       "docURL": "...",
       "version": "initial",
-      "description": "Stacked content sections with headings, paragraphs, and images",
+      "description": "Stacked content sections with headings, paragraphs, images, and videos",
       "imageUrl": "",
       "primary": {
         "sections": {
@@ -21,7 +21,7 @@
                 "type": "Select",
                 "config": {
                   "label": "Section Type",
-                  "options": ["text_with_heading", "text_only", "image"],
+                  "options": ["text_with_heading", "text_only", "image", "video"],
                   "default_value": "text_with_heading"
                 }
               },
@@ -48,6 +48,40 @@
                     "width": 880,
                     "height": 560
                   }
+                }
+              },
+              "video_url": {
+                "type": "Text",
+                "config": {
+                  "label": "Video URL",
+                  "placeholder": "https://www.youtube.com/watch?v=... or https://vimeo.com/..."
+                }
+              },
+              "video_thumbnail": {
+                "type": "Image",
+                "config": {
+                  "label": "Video Thumbnail (optional)",
+                  "constraint": {
+                    "width": 880,
+                    "height": 560
+                  }
+                }
+              },
+              "video_company_logo": {
+                "type": "Image",
+                "config": {
+                  "label": "Company Logo (for video badge)",
+                  "constraint": {
+                    "width": 200,
+                    "height": 60
+                  }
+                }
+              },
+              "video_company_name": {
+                "type": "Text",
+                "config": {
+                  "label": "Company Name (for video badge)",
+                  "placeholder": "COHABS"
                 }
               }
             }

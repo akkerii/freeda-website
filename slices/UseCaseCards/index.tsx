@@ -146,7 +146,7 @@ const UseCaseCards: FC<UseCaseCardsProps> = ({ slice }) => {
         </div>
       )}
 
-      <div className="max-w-[1400px] mx-auto pl-5 md:pl-10 lg:pl-[67px]">
+      <div className="max-w-[1512px] mx-auto px-5 md:px-10 lg:px-[64px]">
         {/* Section Title */}
         {slice.primary.section_title && (
           <h2 className="font-trap text-3xl md:text-4xl lg:text-[50px] font-semibold text-black mb-10 md:mb-16 leading-[1.1] pr-5 md:pr-10 lg:pr-[67px]">
@@ -159,7 +159,7 @@ const UseCaseCards: FC<UseCaseCardsProps> = ({ slice }) => {
           {/* Scroll container */}
           <div
             ref={scrollContainerRef}
-            className="flex gap-5 items-start overflow-x-auto pb-4 pr-5 md:pr-10 lg:pr-[67px] scrollbar-hide"
+            className="flex gap-5 items-start overflow-x-auto pb-4 scrollbar-hide"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             {/* Reorder cards so selected is always first */}
