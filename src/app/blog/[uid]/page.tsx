@@ -13,8 +13,8 @@ export async function generateStaticParams() {
   const client = createClient();
 
   try {
-    const posts = await client.getAllByType("blog_post");
-    return posts.map((post) => ({ uid: post.uid }));
+    const posts = await (client as any).getAllByType("blog_post");
+    return posts.map((post: any) => ({ uid: post.uid }));
   } catch {
     return [];
   }
@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }) 
   const client = createClient();
 
   try {
-    const post = await client.getByUID("blog_post", uid);
+    const post = await (client as any).getByUID("blog_post", uid);
     return {
       title: post.data.meta_title || post.data.title || "Blog Post",
       description: post.data.meta_description || post.data.excerpt || "",
@@ -46,7 +46,7 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
   let blogPage = null;
 
   try {
-    post = await client.getByUID("blog_post", uid);
+    post = await (client as any).getByUID("blog_post", uid);
   } catch {
     notFound();
   }
@@ -57,18 +57,18 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
 
   // Fetch related posts (same category or just recent)
   try {
-    const allPosts = await client.getAllByType("blog_post", {
+    const allPosts = await (client as any).getAllByType("blog_post", {
       orderings: [{ field: "my.blog_post.publication_date", direction: "desc" }],
       limit: 4,
     });
-    relatedPosts = allPosts.filter((p) => p.uid !== uid).slice(0, 3);
+    relatedPosts = allPosts.filter((p: any) => p.uid !== uid).slice(0, 3);
   } catch {
     // No related posts
   }
 
   // Try to get blog page for footer
   try {
-    blogPage = await client.getSingle("blog_page");
+    blogPage = await (client as any).getSingle("blog_page");
   } catch {
     // No blog page
   }

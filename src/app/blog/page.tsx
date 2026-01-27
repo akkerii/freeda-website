@@ -12,13 +12,13 @@ export default async function BlogPage() {
   let blogPosts: any[] = [];
 
   try {
-    pageData = await client.getSingle("blog_page");
+    pageData = await (client as any).getSingle("blog_page");
   } catch {
     // Blog page not created in Prismic yet
   }
 
   try {
-    const posts = await client.getAllByType("blog_post", {
+    const posts = await (client as any).getAllByType("blog_post", {
       orderings: [{ field: "my.blog_post.publication_date", direction: "desc" }],
     });
     blogPosts = posts;
