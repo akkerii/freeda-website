@@ -85,46 +85,34 @@ const Footer = ({ slice }: FooterProps) => {
               </FadeIn>
 
               {/* Right content - Nav columns */}
-              <FadeIn delay={200} direction="right" className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-6 lg:gap-8 xl:gap-[40px] flex-1 lg:-mt-8 xl:-mt-12" data-name="Nav">
-                {/* Column 1 - Solutions */}
+              <FadeIn delay={200} direction="right" className="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-[40px] flex-1 lg:-mt-8 xl:-mt-12" data-name="Nav">
+                {/* Column 1 - Applications */}
                 <nav className="flex flex-col gap-2 sm:gap-[8px]" data-name="Column 1">
                   <div className="pb-3 sm:pb-4 lg:pb-[16px]">
-                    <p className="font-trap font-semibold text-[20px] sm:text-[24px] md:text-[26px] lg:text-[28px] xl:text-[30px] text-black leading-[1.2]">Solutions</p>
+                    <p className="font-trap font-semibold text-[20px] sm:text-[24px] text-black leading-[1.2] capitalize">Applications</p>
                   </div>
-                  <p className="font-inter font-medium text-[14px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[20px] text-black/55 leading-[1.45] tracking-[-0.11px]">Plan Verification</p>
-                  <p className="font-inter font-medium text-[14px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[20px] text-black/55 leading-[1.45] tracking-[-0.11px]">Cross Document Analysis</p>
-                  <p className="font-inter font-medium text-[14px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[20px] text-black/55 leading-[1.45] tracking-[-0.11px]">{`Plan Analysis & Extraction`}</p>
+                  <a href="/use-cases" className="font-inter font-medium text-[14px] sm:text-[16px] text-black/55 leading-[1.45] tracking-[-0.08px] hover:text-black transition-colors">Use Cases</a>
+                  <a href="/case-study" className="font-inter font-medium text-[14px] sm:text-[16px] text-black/55 leading-[1.45] tracking-[-0.08px] hover:text-black transition-colors">Case Study</a>
                 </nav>
 
-                {/* Column 2 - For Who */}
+                {/* Column 2 - Resources */}
                 <nav className="flex flex-col gap-2 sm:gap-[8px]" data-name="Column 2">
                   <div className="pb-3 sm:pb-4 lg:pb-[16px]">
-                    <p className="font-trap font-semibold text-[20px] sm:text-[24px] md:text-[26px] lg:text-[28px] xl:text-[30px] text-black leading-[1.2]">For Who</p>
+                    <p className="font-trap font-semibold text-[20px] sm:text-[24px] text-black leading-[1.2] capitalize">Resources</p>
                   </div>
-                  <p className="font-inter font-medium text-[14px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[20px] text-black/55 leading-[1.45] tracking-[-0.11px]">{`Owners & Developers`}</p>
-                  <p className="font-inter font-medium text-[14px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[20px] text-black/55 leading-[1.45] tracking-[-0.11px]">{`Technical Teams, Certifiers & Inspectors`}</p>
+                  <a href="/resources#video" className="font-inter font-medium text-[14px] sm:text-[16px] text-black/55 leading-[1.45] tracking-[-0.08px] hover:text-black transition-colors">Short Video</a>
+                  <a href="/blog" className="font-inter font-medium text-[14px] sm:text-[16px] text-black/55 leading-[1.45] tracking-[-0.08px] hover:text-black transition-colors">Articles</a>
+                  <a href="/resources#news" className="font-inter font-medium text-[14px] sm:text-[16px] text-black/55 leading-[1.45] tracking-[-0.08px] hover:text-black transition-colors">News Room</a>
                 </nav>
 
-                {/* Column 3 - Resources */}
+                {/* Column 3 - Company */}
                 <nav className="flex flex-col gap-2 sm:gap-[8px]" data-name="Column 3">
                   <div className="pb-3 sm:pb-4 lg:pb-[16px]">
-                    <p className="font-trap font-semibold text-[20px] sm:text-[24px] md:text-[26px] lg:text-[28px] xl:text-[30px] text-black leading-[1.2]">Resources</p>
+                    <p className="font-trap font-semibold text-[20px] sm:text-[24px] text-black leading-[1.2] capitalize">Company</p>
                   </div>
-                  <p className="font-inter font-medium text-[14px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[20px] text-black/55 leading-[1.45] tracking-[-0.11px]">Technical Content</p>
-                  <p className="font-inter font-medium text-[14px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[20px] text-black/55 leading-[1.45] tracking-[-0.11px]">Case Studies</p>
-                  <p className="font-inter font-medium text-[14px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[20px] text-black/55 leading-[1.45] tracking-[-0.11px]">Video Series</p>
-                  <p className="font-inter font-medium text-[14px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[20px] text-black/55 leading-[1.45] tracking-[-0.11px]">{`Partners & Integrations`}</p>
-                </nav>
-
-                {/* Column 4 - Company */}
-                <nav className="flex flex-col gap-2 sm:gap-[8px]" data-name="Column 4">
-                  <div className="pb-3 sm:pb-4 lg:pb-[16px]">
-                    <p className="font-trap font-semibold text-[20px] sm:text-[24px] md:text-[26px] lg:text-[28px] xl:text-[30px] text-black leading-[1.2]">Company</p>
-                  </div>
-                  <p className="font-inter font-medium text-[14px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[20px] text-black/55 leading-[1.45] tracking-[-0.11px]">About Us</p>
-                  <p className="font-inter font-medium text-[14px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[20px] text-black/55 leading-[1.45] tracking-[-0.11px]">Careers</p>
-                  <p className="font-inter font-medium text-[14px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[20px] text-black/55 leading-[1.45] tracking-[-0.11px]">Press</p>
-                  <p className="font-inter font-medium text-[14px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[20px] text-black/55 leading-[1.45] tracking-[-0.11px]">Legal</p>
+                  <a href="/working-with-freeda" className="font-inter font-medium text-[14px] sm:text-[16px] text-black/55 leading-[1.45] tracking-[-0.08px] hover:text-black transition-colors">Working with Freeda</a>
+                  <a href="/careers" className="font-inter font-medium text-[14px] sm:text-[16px] text-black/55 leading-[1.45] tracking-[-0.08px] hover:text-black transition-colors">Careers</a>
+                  <a href="/legal" className="font-inter font-medium text-[14px] sm:text-[16px] text-black/55 leading-[1.45] tracking-[-0.08px] hover:text-black transition-colors">Legal</a>
                 </nav>
               </FadeIn>
             </div>

@@ -23,13 +23,12 @@ const DocumentFeatures = ({ slice }: DocumentFeaturesProps) => {
   // Get the currently active feature data
   const primary = slice.primary as any;
   const items = slice.items as any[];
-  const activeFeature = selectedIndex !== null
-    ? items[selectedIndex]
-    : {
-        feature_title: primary.main_feature_title,
-        feature_description: primary.main_feature_description,
-        feature_image: primary.left_section_image,
-      };
+
+  // Build array of all features for image stacking
+  const allFeatures = [
+    { feature_image: primary.left_section_image, index: null },
+    ...items.map((item: any, idx: number) => ({ feature_image: item.feature_image, index: idx }))
+  ];
 
   return (
     <section
@@ -56,15 +55,25 @@ const DocumentFeatures = ({ slice }: DocumentFeaturesProps) => {
 
         {/* Two Column Layout */}
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-10">
-          {/* Left - Image Section */}
-          <FadeIn delay={100} direction="left" className="w-full lg:w-[702px] flex-shrink-0">
-            {activeFeature.feature_image?.url && (
-              <PrismicNextImage
-                field={activeFeature.feature_image}
-                className="w-full h-auto rounded-[10px]"
-                fallbackAlt=""
-              />
-            )}
+          {/* Left - Image Section with Crossfade */}
+          <FadeIn delay={100} direction="left" className="w-full lg:w-[702px] flex-shrink-0 relative">
+            <div className="relative overflow-hidden rounded-[10px]">
+              {/* Stack all images - control visibility with opacity */}
+              {allFeatures.map((feature, i) => (
+                feature.feature_image?.url && (
+                  <PrismicNextImage
+                    key={i}
+                    field={feature.feature_image}
+                    className={`w-full h-auto transition-opacity duration-500 ease-in-out ${
+                      i === 0 ? "" : "absolute inset-0"
+                    } ${
+                      feature.index === selectedIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+                    }`}
+                    fallbackAlt=""
+                  />
+                )
+              ))}
+            </div>
           </FadeIn>
 
           {/* Vertical Red Line with Dynamic Gradient */}
@@ -83,40 +92,52 @@ const DocumentFeatures = ({ slice }: DocumentFeaturesProps) => {
           {/* Right - Content */}
           <FadeIn delay={200} direction="right" className="w-full lg:flex-1 flex flex-col gap-8 lg:gap-10 overflow-hidden">
             {/* Main Feature - Clickable */}
-            <div className="flex flex-col gap-4 md:gap-6">
+            <div className="flex flex-col">
               {primary.main_feature_title && (
                 <button
                   onClick={() => setSelectedIndex(null)}
-                  className={`font-trap text-left text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-semibold leading-[1.2] tracking-[-2px] m-0 whitespace-pre-line transition-colors cursor-pointer hover:text-black ${
+                  className={`font-trap text-left text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-semibold leading-[1.2] tracking-[-2px] m-0 whitespace-pre-line transition-all duration-300 ease-out cursor-pointer hover:text-black ${
                     selectedIndex === null ? "text-black" : "text-[#8B9187]"
                   }`}
                 >
                   {primary.main_feature_title}
                 </button>
               )}
-              {selectedIndex === null && primary.main_feature_description && (
-                <div className="text-base sm:text-lg md:text-xl lg:text-2xl text-black/55 tracking-[-0.12px] [&_p]:m-0">
-                  <PrismicRichText field={primary.main_feature_description} />
-                </div>
-              )}
+              <div
+                className={`overflow-hidden transition-all duration-500 ease-out ${
+                  selectedIndex === null ? "max-h-[500px] opacity-100 mt-4 md:mt-6" : "max-h-0 opacity-0 mt-0"
+                }`}
+              >
+                {primary.main_feature_description && (
+                  <div className="text-base sm:text-lg md:text-xl lg:text-2xl text-black/55 tracking-[-0.12px] [&_p]:m-0">
+                    <PrismicRichText field={primary.main_feature_description} />
+                  </div>
+                )}
+              </div>
             </div>
 
             {/* Secondary Features - Clickable */}
             {items.map((item: any, index: number) => (
-              <div key={index} className="flex flex-col gap-4 md:gap-6">
+              <div key={index} className="flex flex-col">
                 <button
                   onClick={() => setSelectedIndex(index)}
-                  className={`font-trap text-left text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-semibold leading-[1.2] tracking-[-2px] m-0 transition-colors cursor-pointer hover:text-black ${
+                  className={`font-trap text-left text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-semibold leading-[1.2] tracking-[-2px] m-0 transition-all duration-300 ease-out cursor-pointer hover:text-black ${
                     selectedIndex === index ? "text-black" : "text-[#8B9187]"
                   }`}
                 >
                   {item.feature_title}
                 </button>
-                {selectedIndex === index && item.feature_description && (
-                  <div className="text-base sm:text-lg md:text-xl lg:text-2xl text-black/55 tracking-[-0.12px] [&_p]:m-0">
-                    <PrismicRichText field={item.feature_description} />
-                  </div>
-                )}
+                <div
+                  className={`overflow-hidden transition-all duration-500 ease-out ${
+                    selectedIndex === index ? "max-h-[500px] opacity-100 mt-4 md:mt-6" : "max-h-0 opacity-0 mt-0"
+                  }`}
+                >
+                  {item.feature_description && (
+                    <div className="text-base sm:text-lg md:text-xl lg:text-2xl text-black/55 tracking-[-0.12px] [&_p]:m-0">
+                      <PrismicRichText field={item.feature_description} />
+                    </div>
+                  )}
+                </div>
               </div>
             ))}
           </FadeIn>

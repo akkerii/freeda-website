@@ -5,6 +5,8 @@ import type { HeroSlice } from "@/prismicio-types";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import FadeIn from "@/components/FadeIn";
+import Lottie from "lottie-react";
+import heroFloorPlanAnimation from "../../public/animations/hero-floor-plan.json";
 
 export type HeroProps = SliceComponentProps<HeroSlice>;
 
@@ -194,102 +196,13 @@ const Hero = ({ slice }: HeroProps) => {
         <div className="relative bg-white rounded-[10px] border-[8px] border-[#F2F2F2] shadow-[0px_4px_4px_7px_rgba(0,0,0,0.1)] px-4 sm:px-8 md:px-16 lg:px-[155px] py-4 sm:py-6 md:py-8 lg:py-[39px]">
           {/* Floor Plan Image Container - Figma: 949×628px */}
           <div className="relative w-full" style={{ paddingBottom: '66.17%' }}>
-            {/* Floor Plan Image */}
-            <img
-              src="/images/hero-floor-plan-main.png"
-              alt="Floor Plan Analysis"
+            {/* Floor Plan Lottie Animation */}
+            <Lottie
+              animationData={heroFloorPlanAnimation}
+              loop={true}
+              autoplay={true}
               className="absolute inset-0 w-full h-full object-contain"
             />
-
-            {/* Red Semi-transparent Circle - x:308 y:253 size:73 → 32.5%, 40.3%, 7.7% */}
-            <img
-              src="/images/hero-red-circle.png"
-              alt=""
-              className="absolute"
-              style={{ left: '32.5%', top: '40.3%', width: '7.7%', height: 'auto' }}
-            />
-
-            {/* Red X 1 - x:360 y:212 size:35 → 37.9%, 33.8%, 3.7% */}
-            <img
-              src="/images/hero-green-check.png"
-              alt=""
-              className="absolute"
-              style={{ left: '37.9%', top: '33.8%', width: '3.7%', height: 'auto' }}
-            />
-
-            {/* Red X 2 - x:378 y:122 size:28 → 39.8%, 19.4%, 2.9% */}
-            <img
-              src="/images/hero-green-check.png"
-              alt=""
-              className="absolute"
-              style={{ left: '39.8%', top: '19.4%', width: '2.9%', height: 'auto' }}
-            />
-
-            {/* Gray Check 1 - x:638 y:68 size:33 → 67.2%, 10.8%, 3.5% */}
-            <img
-              src="/images/hero-red-x.png"
-              alt=""
-              className="absolute shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] grayscale"
-              style={{ left: '67.2%', top: '10.8%', width: '3.5%', height: 'auto' }}
-            />
-
-            {/* Gray Check 2 - x:360 y:132 size:35 → 37.9%, 21.0%, 3.7% */}
-            <img
-              src="/images/hero-red-x.png"
-              alt=""
-              className="absolute shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] grayscale"
-              style={{ left: '37.9%', top: '21.0%', width: '3.7%', height: 'auto' }}
-            />
-
-            {/* Red X (large) - x:309 y:462 size:51 → 32.6%, 73.6%, 5.4% */}
-            <img
-              src="/images/hero-green-check.png"
-              alt=""
-              className="absolute"
-              style={{ left: '32.6%', top: '73.6%', width: '5.4%', height: 'auto' }}
-            />
-
-            {/* Gray Check 3 - x:812 y:175 size:19 → 85.6%, 27.9%, 2.0% */}
-            <img
-              src="/images/hero-red-x.png"
-              alt=""
-              className="absolute shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] grayscale"
-              style={{ left: '85.6%', top: '27.9%', width: '2.0%', height: 'auto' }}
-            />
-
-            {/* Gray Check 4 - x:616 y:165 size:20 → 64.9%, 26.3%, 2.1% */}
-            <img
-              src="/images/hero-red-x.png"
-              alt=""
-              className="absolute shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] grayscale"
-              style={{ left: '64.9%', top: '26.3%', width: '2.1%', height: 'auto' }}
-            />
-
-            {/* Tooltip Card - x:406 y:182 w:474 → 42.8%, 29.0%, 49.9% */}
-            <div
-              className="absolute flex flex-col gap-1 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]"
-              style={{ left: '42.8%', top: '29.0%', width: '49.9%' }}
-            >
-              {/* Non-Compliant Badge */}
-              <div className="flex items-center gap-1.5 bg-[#FFE5E5] rounded-[4px] px-2 py-1 w-fit">
-                <div className="w-4 h-4 rounded-full bg-[#F02C2C] flex items-center justify-center flex-shrink-0">
-                  <svg viewBox="0 0 10 10" className="w-2.5 h-2.5">
-                    <path d="M2.5 2.5L7.5 7.5M7.5 2.5L2.5 7.5" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
-                  </svg>
-                </div>
-                <span className="font-mono text-[10px] md:text-[12px] text-[#F02C2C] whitespace-nowrap font-medium">Non-Compliant</span>
-              </div>
-              {/* Dropdown Card */}
-              <div className="flex items-center gap-2 bg-white rounded-[4px] px-3 py-2 border border-gray-200">
-                <svg className="w-3 h-3 text-gray-500 flex-shrink-0" viewBox="0 0 12 12" fill="none">
-                  <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-                <div className="w-2 h-2 rounded-full bg-[#F02C2C] flex-shrink-0" />
-                <span className="font-inter text-[10px] md:text-[12px] text-black whitespace-nowrap">Kitchen wheelchair turning circle (Ø 1.5 m)</span>
-                <div className="w-3 h-3 border border-gray-300 rounded-sm ml-auto flex-shrink-0" />
-              </div>
-            </div>
-
           </div>
         </div>
       </FadeIn>
