@@ -22,22 +22,22 @@ const CaseStudyPageHero: FC<CaseStudyPageHeroProps> = ({ slice }) => {
     >
       {/* Consistent with other slices: max-w-[1250px] px-5 md:px-10 */}
       <div className="max-w-[1250px] mx-auto px-5 md:px-10">
-        {/* Main Container - Two columns on large screens */}
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
-          {/* Left Content - Main Hero */}
-          <div className="flex-1 flex flex-col">
+        {/* Main Container - Center content with sidebar on the side */}
+        <div className="relative flex flex-col lg:flex-row lg:justify-center gap-8 lg:gap-12">
+          {/* Main Content - Hero (centered) */}
+          <div className="flex-1 flex flex-col w-full lg:max-w-[880px] lg:mx-auto">
             {/* Company Logo, Title and Description - All Centered */}
             {/* Figma: Title = Trap 50px SemiBold, line-height 55px */}
             {/* Figma: Description = Inter 18px, line-height 27px (150%), black/65%, max-w 705px */}
             {/* Figma: Gap between title and description = 24px */}
             <FadeIn>
               <div className="flex flex-col items-center gap-[24px]">
-                {/* Company Logo - Figma: 137.25x36px */}
+                {/* Company Logo */}
                 {primary.company_logo?.url && (
                   <div className="flex justify-center">
                     <PrismicNextImage
                       field={primary.company_logo}
-                      className="h-[36px] w-auto max-w-[137px] object-contain"
+                      className="h-[50px] md:h-[60px] w-auto max-w-[220px] object-contain"
                       fallbackAlt=""
                     />
                   </div>
@@ -79,7 +79,7 @@ const CaseStudyPageHero: FC<CaseStudyPageHeroProps> = ({ slice }) => {
 
                 {/* Foreground Image - Figma: 425x528px, overlaps from left */}
                 {primary.foreground_image?.url && (
-                  <div className="absolute left-0 sm:left-[5%] md:left-[10%] lg:left-[15%] top-[73px] w-[250px] sm:w-[320px] md:w-[380px] lg:w-[425px] h-[320px] sm:h-[400px] md:h-[480px] lg:h-[528px] rounded-[10px] overflow-hidden z-10">
+                  <div className="absolute left-0 sm:left-0 md:left-[5%] lg:left-[8%] top-[73px] w-[250px] sm:w-[320px] md:w-[380px] lg:w-[425px] h-[320px] sm:h-[400px] md:h-[480px] lg:h-[528px] rounded-[10px] overflow-hidden z-10">
                     <PrismicNextImage
                       field={primary.foreground_image}
                       className="w-full h-full object-cover"
@@ -90,7 +90,7 @@ const CaseStudyPageHero: FC<CaseStudyPageHeroProps> = ({ slice }) => {
 
                 {/* Stats Card - Figma: 353x184px, padding 32px, radius 10px, bg #F2F2F2 */}
                 <FadeIn delay={400} direction="up">
-                  <div className="absolute left-0 bottom-0 bg-[#F2F2F2] rounded-[10px] p-[32px] w-[280px] sm:w-[320px] md:w-[353px] h-auto z-20">
+                  <div className="absolute left-0 bottom-[150px] bg-[#F2F2F2] rounded-[10px] p-[32px] w-[280px] sm:w-[320px] md:w-[353px] h-auto z-20">
                     {/* Red dot indicator - Figma: 17x17px, positioned top-right */}
                     <div className="absolute right-[32px] top-[32px] w-[17px] h-[17px] rounded-full bg-[#F02C2C]" />
 
@@ -127,22 +127,22 @@ const CaseStudyPageHero: FC<CaseStudyPageHeroProps> = ({ slice }) => {
           </div>
 
           {/* Right Sidebar - Company Info Panel (Figma: 343px, bg #F2F2F2, padding 16px, radius 5px) */}
-          <FadeIn delay={300} direction="right" className="w-full lg:w-[343px] flex-shrink-0">
+          <FadeIn delay={300} direction="right" className="w-full lg:w-[343px] lg:absolute lg:right-[-100px] lg:top-0 flex-shrink-0">
             <div className="bg-[#F2F2F2] rounded-[5px] p-[16px] overflow-hidden">
               {/* Inner content container (Figma: 309px width) */}
               <div className="flex flex-col w-full max-w-[309px]">
                 {/* Header - Logo and arrow on same line */}
                 <div className="flex items-center justify-between">
-                  {/* Company Logo (Figma: 137.25x36px) */}
-                  <div className="flex items-center h-[36px]">
+                  {/* Company Logo */}
+                  <div className="flex items-center h-[52px]">
                     {primary.company_logo?.url ? (
                       <PrismicNextImage
                         field={primary.company_logo}
-                        className="h-[36px] w-auto max-w-[137px] object-contain"
+                        className="h-[52px] w-auto max-w-[220px] object-contain"
                         fallbackAlt=""
                       />
                     ) : (
-                      <div className="h-[36px] w-[137px] bg-gray-300 rounded" />
+                      <div className="h-[52px] w-[220px] bg-gray-300 rounded" />
                     )}
                   </div>
 

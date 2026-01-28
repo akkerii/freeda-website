@@ -338,7 +338,7 @@ const CaseStudyContent: FC<CaseStudyContentProps> = ({ slice }) => {
                   <div className="flex flex-col gap-[24px]">
                     {/* Heading - Figma: Trap 36px SemiBold, line-height 43.2px */}
                     {section.heading && (
-                      <h2 className="font-trap text-[36px] font-semibold leading-[43.2px] text-black">
+                      <h2 className="font-trap text-[36px] font-semibold leading-[43.2px] text-black text-center">
                         {section.heading}
                       </h2>
                     )}

@@ -45,7 +45,7 @@ const LocationMarker = ({
 );
 
 const GlobalPresence = ({ slice }: GlobalPresenceProps) => {
-  const [activeLocation, setActiveLocation] = useState<number | null>(null);
+  const [activeLocation, setActiveLocation] = useState<number | null>(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const [mapBounds, setMapBounds] = useState({ offsetX: 0, offsetY: 0, width: 100, height: 100 });
 
