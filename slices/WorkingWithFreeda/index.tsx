@@ -3,6 +3,7 @@
 import { useRef, useEffect } from "react";
 import type { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
+import { PrismicNextLink } from "@prismicio/next";
 import FadeIn from "@/components/FadeIn";
 
 export type WorkingWithFreedaProps =
@@ -150,12 +151,12 @@ const WorkingWithFreeda = ({ slice }: WorkingWithFreedaProps) => {
 
           {/* CTA Button */}
           {slice.primary.button_text && (
-            <a
-              href="/case-study"
+            <PrismicNextLink
+              field={slice.primary.button_link}
               className="inline-flex items-center justify-center px-4 py-3 bg-[#F02C2C] rounded-[9px] font-mono text-[14px] sm:text-[16px] leading-[110%] text-white no-underline hover:opacity-90 transition-opacity"
             >
               {slice.primary.button_text}
-            </a>
+            </PrismicNextLink>
           )}
         </div>
       </FadeIn>

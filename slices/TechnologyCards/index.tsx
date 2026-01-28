@@ -3,6 +3,11 @@ import { SliceComponentProps } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 
 /**
+ * Props for `TechnologyCards`.
+ */
+export type TechnologyCardsProps = SliceComponentProps<any>;
+
+/**
  * Component for "TechnologyCards" Slices.
  */
 const TechnologyCards: FC<TechnologyCardsProps> = ({ slice }) => {
