@@ -56,18 +56,7 @@ const WorkingWithFreeda = ({ slice }: WorkingWithFreedaProps) => {
 
   // Render video content
   const renderVideo = () => {
-    // If there's an image, show it
-    if (primary.background_image?.url) {
-      return (
-        <img
-          src={primary.background_image.url}
-          alt={primary.background_image.alt || ""}
-          className="w-full h-full object-cover object-center"
-        />
-      );
-    }
-
-    // If there's a direct video URL, use it
+    // If there's a direct video URL, use it (priority over image)
     if (isDirectVideo && videoUrl) {
       return (
         <video
@@ -101,6 +90,17 @@ const WorkingWithFreeda = ({ slice }: WorkingWithFreedaProps) => {
             title="Background video"
           />
         </div>
+      );
+    }
+
+    // If there's an image (and no video URL), show it
+    if (primary.background_image?.url) {
+      return (
+        <img
+          src={primary.background_image.url}
+          alt={primary.background_image.alt || ""}
+          className="w-full h-full object-cover object-center"
+        />
       );
     }
 

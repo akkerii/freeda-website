@@ -231,7 +231,7 @@ const Testimonials = ({ slice }: TestimonialsProps) => {
           <FadeIn delay={200} className="w-full lg:flex-1">
             <article
               ref={videoContainerRef}
-              className="relative h-[250px] md:h-[350px] lg:h-[427px] bg-[#1a1a1a] rounded-[10px] overflow-hidden"
+              className="relative aspect-video bg-[#1a1a1a] rounded-[10px] overflow-hidden"
             >
               {primary.youtube_url ? (
                 /* Direct video file - autoplay on scroll */

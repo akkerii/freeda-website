@@ -1,10 +1,112 @@
+"use client";
+
+import { useRef, useEffect } from "react";
 import type { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import Navigation from "@/components/Navigation";
 
 export type WorkingHeroProps = SliceComponentProps<Content.WorkingHeroSlice>;
 
+// Helper to extract YouTube video ID
+const getYouTubeVideoId = (url: string): string | null => {
+  if (!url) return null;
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+  const match = url.match(regExp);
+  return match && match[2].length === 11 ? match[2] : null;
+};
+
+// Check if URL is a direct video file
+const isDirectVideoUrl = (url: string): boolean => {
+  if (!url) return false;
+  const videoExtensions = /\.(mp4|webm|ogg|mov|m4v)(\?.*)?$/i;
+  return videoExtensions.test(url);
+};
+
 const WorkingHero = ({ slice }: WorkingHeroProps) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const primary = slice.primary as any;
+
+  // Get video URL from Prismic or use default
+  const videoUrl = primary.video_url || "";
+  const youtubeId = getYouTubeVideoId(videoUrl);
+  const isDirectVideo = isDirectVideoUrl(videoUrl);
+
+  // Autoplay video on scroll
+  useEffect(() => {
+    if (!videoRef.current || !containerRef.current) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            videoRef.current?.play();
+          } else {
+            videoRef.current?.pause();
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  // Render video content
+  const renderVideo = () => {
+    // If there's a direct video URL, use it (priority)
+    if (isDirectVideo && videoUrl) {
+      return (
+        <video
+          ref={videoRef}
+          src={videoUrl}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        />
+      );
+    }
+
+    // If it's a YouTube URL, embed it with minimal branding
+    if (youtubeId) {
+      return (
+        <div className="absolute inset-0 overflow-hidden">
+          <iframe
+            src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1&mute=1&loop=1&playlist=${youtubeId}&controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1&fs=0&iv_load_policy=3`}
+            className="absolute pointer-events-none border-0"
+            style={{
+              top: "50%",
+              left: "50%",
+              width: "200%",
+              height: "200%",
+              transform: "translate(-50%, -50%)",
+            }}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
+            allowFullScreen={false}
+            title="Background video"
+          />
+        </div>
+      );
+    }
+
+    // Default: use local video file
+    return (
+      <video
+        ref={videoRef}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="w-full h-full object-cover"
+      >
+        <source src="/videos/working-with-freeda.mp4" type="video/mp4" />
+      </video>
+    );
+  };
+
   return (
     <section
       data-slice-type={slice.slice_type}
@@ -15,16 +117,8 @@ const WorkingHero = ({ slice }: WorkingHeroProps) => {
       <Navigation theme="light" />
 
       {/* Full Background Video */}
-      <div className="absolute inset-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover"
-        >
-          <source src="/videos/working-with-freeda.mp4" type="video/mp4" />
-        </video>
+      <div ref={containerRef} className="absolute inset-0">
+        {renderVideo()}
       </div>
 
       {/* Dark Content Box - Overlaid on Right Side */}

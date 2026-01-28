@@ -12,6 +12,13 @@
       "description": "Default variation",
       "imageUrl": "",
       "primary": {
+        "video_url": {
+          "type": "Text",
+          "config": {
+            "label": "Video URL",
+            "placeholder": "Direct video URL (mp4) or YouTube URL"
+          }
+        },
         "description": {
           "type": "Text",
           "config": {

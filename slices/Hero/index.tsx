@@ -122,9 +122,6 @@ const Hero = ({ slice }: HeroProps) => {
           <a href="/working-with-freeda" className="font-mono text-[15px] leading-[145%] text-black no-underline hover:opacity-70 transition-opacity whitespace-nowrap">
             Working with Freeda
           </a>
-          <a href="/resources" className="font-mono text-[15px] leading-[145%] text-black no-underline hover:opacity-70 transition-opacity">
-            Resources
-          </a>
           <a href="/blog" className="font-mono text-[15px] leading-[145%] text-black no-underline hover:opacity-70 transition-opacity">
             Blog
           </a>
@@ -171,9 +168,6 @@ const Hero = ({ slice }: HeroProps) => {
             </a>
             <a href="/working-with-freeda" className="font-mono text-[18px] text-black no-underline hover:opacity-70 transition-opacity">
               Working with Freeda
-            </a>
-            <a href="/resources" className="font-mono text-[18px] text-black no-underline hover:opacity-70 transition-opacity">
-              Resources
             </a>
             <a href="/blog" className="font-mono text-[18px] text-black no-underline hover:opacity-70 transition-opacity">
               Blog
