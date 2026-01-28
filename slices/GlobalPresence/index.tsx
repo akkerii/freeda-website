@@ -12,7 +12,7 @@ export type GlobalPresenceProps = SliceComponentProps<GlobalPresenceSlice>;
 // Map aspect ratio (width / height) - adjust this to match your world-map.svg
 const MAP_ASPECT_RATIO = 2.1; // approximate world map ratio
 
-// Location Marker with radar pulse effect
+// Location Marker with radar pulse effect - responsive sizes
 const LocationMarker = ({
   left,
   top,
@@ -31,14 +31,14 @@ const LocationMarker = ({
     style={{ left: `${left}%`, top: `${top}%`, transform: "translate(-50%, -50%)" }}
     onClick={onClick}
   >
-    {/* Radar pulse rings - always show for all markers */}
-    <span className="absolute inset-0 w-[17px] h-[17px] rounded-full bg-[#F02C2C] animate-radar" />
-    <span className="absolute inset-0 w-[17px] h-[17px] rounded-full bg-[#F02C2C] animate-radar-delayed-1" />
-    <span className="absolute inset-0 w-[17px] h-[17px] rounded-full bg-[#F02C2C] animate-radar-delayed-2" />
+    {/* Radar pulse rings - smaller on mobile */}
+    <span className="absolute inset-0 w-[7px] h-[7px] md:w-[17px] md:h-[17px] rounded-full bg-[#F02C2C] animate-radar" />
+    <span className="absolute inset-0 w-[7px] h-[7px] md:w-[17px] md:h-[17px] rounded-full bg-[#F02C2C] animate-radar-delayed-1" />
+    <span className="absolute inset-0 w-[7px] h-[7px] md:w-[17px] md:h-[17px] rounded-full bg-[#F02C2C] animate-radar-delayed-2" />
     {/* Main dot */}
     <span
-      className={`relative block w-[17px] h-[17px] rounded-full bg-[#F02C2C] transition-all ${
-        isActive ? "ring-[3px] ring-[#FF9E9E]" : ""
+      className={`relative block w-[7px] h-[7px] md:w-[17px] md:h-[17px] rounded-full bg-[#F02C2C] transition-all ${
+        isActive ? "ring-[1px] md:ring-[3px] ring-[#FF9E9E]" : ""
       }`}
     />
   </div>
@@ -47,7 +47,7 @@ const LocationMarker = ({
 const GlobalPresence = ({ slice }: GlobalPresenceProps) => {
   const [activeLocation, setActiveLocation] = useState<number | null>(0);
   const containerRef = useRef<HTMLDivElement>(null);
-  const [mapBounds, setMapBounds] = useState({ offsetX: 0, offsetY: 0, width: 100, height: 100 });
+  const [mapBounds, setMapBounds] = useState<{ offsetX: number; offsetY: number; width: number; height: number } | null>(null);
 
   // Calculate the actual map bounds within the container (accounting for object-contain)
   useEffect(() => {
@@ -57,6 +57,9 @@ const GlobalPresence = ({ slice }: GlobalPresenceProps) => {
       const container = containerRef.current;
       const containerWidth = container.offsetWidth;
       const containerHeight = container.offsetHeight;
+
+      if (containerWidth === 0 || containerHeight === 0) return;
+
       const containerRatio = containerWidth / containerHeight;
 
       let mapWidth, mapHeight, offsetX, offsetY;
@@ -83,9 +86,13 @@ const GlobalPresence = ({ slice }: GlobalPresenceProps) => {
       });
     };
 
-    calculateBounds();
+    // Small delay to ensure container has rendered with correct dimensions
+    const timer = setTimeout(calculateBounds, 50);
     window.addEventListener("resize", calculateBounds);
-    return () => window.removeEventListener("resize", calculateBounds);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("resize", calculateBounds);
+    };
   }, []);
 
   const handleDotClick = (index: number) => {
@@ -98,6 +105,7 @@ const GlobalPresence = ({ slice }: GlobalPresenceProps) => {
 
   // Convert marker position from map-relative % to container-relative %
   const getAdjustedPosition = (x: number, y: number) => {
+    if (!mapBounds) return { left: -100, top: -100 }; // Hide off-screen until bounds calculated
     return {
       left: mapBounds.offsetX + (x / 100) * mapBounds.width,
       top: mapBounds.offsetY + (y / 100) * mapBounds.height,
@@ -137,11 +145,11 @@ const GlobalPresence = ({ slice }: GlobalPresenceProps) => {
           </div>
         </FadeIn>
 
-        {/* Map Section */}
+        {/* Map View - Responsive */}
         <FadeIn delay={200}>
-          <div ref={containerRef} className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[593px] overflow-visible">
-            {/* SVG World Map from Figma */}
-            <div className="absolute inset-0">
+          <div ref={containerRef} className="relative w-full h-[280px] sm:h-[320px] md:h-[500px] lg:h-[593px] overflow-hidden md:overflow-visible">
+            {/* SVG World Map - zoomed on mobile */}
+            <div className="absolute inset-0 scale-[1.5] md:scale-100 origin-center">
               <Image
                 src="/world-map.svg"
                 alt="World Map"
@@ -151,25 +159,27 @@ const GlobalPresence = ({ slice }: GlobalPresenceProps) => {
               />
             </div>
 
-            {/* Location Markers - positioned relative to actual map bounds */}
-            {markers.map((marker, i) => {
-              const pos = getAdjustedPosition(marker.x, marker.y);
-              return (
-                <LocationMarker
-                  key={i}
-                  left={pos.left}
-                  top={pos.top}
-                  hasPulse={marker.hasPulse}
-                  isActive={activeLocation === i}
-                  onClick={() => handleDotClick(i)}
-                />
-              );
-            })}
+            {/* Location Markers - positioned relative to actual map bounds, scaled with map */}
+            <div className="absolute inset-0 scale-[1.5] md:scale-100 origin-center">
+              {mapBounds && markers.map((marker, i) => {
+                const pos = getAdjustedPosition(marker.x, marker.y);
+                return (
+                  <LocationMarker
+                    key={i}
+                    left={pos.left}
+                    top={pos.top}
+                    hasPulse={marker.hasPulse}
+                    isActive={activeLocation === i}
+                    onClick={() => handleDotClick(i)}
+                  />
+                );
+              })}
+            </div>
 
-            {/* Info Card - Shows when a marker is clicked */}
+            {/* Info Card - Shows when a marker is clicked - Hidden on mobile, shows below map */}
             {activeLocation !== null && slice.items && slice.items[activeLocation] && (
               <div
-                className="absolute z-[100] w-[300px] sm:w-[320px] md:w-[343px] bg-[#F2F2F2] rounded-[10px] overflow-hidden shadow-xl animate-fade-in-up"
+                className="hidden md:block absolute z-[100] w-[343px] bg-[#F2F2F2] rounded-[10px] overflow-hidden shadow-xl animate-fade-in-up"
                 style={{
                   left: "3%",
                   top: "3%",
@@ -198,13 +208,13 @@ const GlobalPresence = ({ slice }: GlobalPresenceProps) => {
                   </span>
 
                   {/* Project Title */}
-                  <h3 className="font-trap text-[20px] sm:text-[24px] font-semibold leading-[110%] text-black mb-4 pr-6">
+                  <h3 className="font-trap text-[24px] font-semibold leading-[110%] text-black mb-4 pr-6">
                     {slice.items[activeLocation].project_title}
                   </h3>
 
                   {/* Project Description */}
                   {slice.items[activeLocation].project_description && (
-                    <div className="font-inter text-[14px] sm:text-[16px] font-normal leading-[120%] text-black [&_p]:m-0">
+                    <div className="font-inter text-[16px] font-normal leading-[120%] text-black [&_p]:m-0">
                       <PrismicRichText
                         field={slice.items[activeLocation].project_description}
                       />
@@ -214,7 +224,7 @@ const GlobalPresence = ({ slice }: GlobalPresenceProps) => {
 
                 {/* Project Image */}
                 {slice.items[activeLocation].project_image?.url && (
-                  <div className="relative h-[150px] sm:h-[178px]">
+                  <div className="relative h-[178px]">
                     <PrismicNextImage
                       field={slice.items[activeLocation].project_image}
                       className="w-full h-full object-cover"
@@ -237,15 +247,15 @@ const GlobalPresence = ({ slice }: GlobalPresenceProps) => {
 
             {/* CTA Button with radar effect - Always visible, higher z-index than card */}
             {slice.primary.button_text && (
-              <div className="absolute left-1/2 -translate-x-1/2 bottom-[5%] sm:bottom-[8%] lg:bottom-[10%] z-40">
+              <div className="absolute left-1/2 -translate-x-1/2 bottom-[3%] md:bottom-[8%] lg:bottom-[10%] z-40">
                 <div className="relative inline-block">
-                  {/* Radar pulse rings for button */}
-                  <span className="absolute inset-0 rounded-[9px] bg-[#F02C2C] animate-button-radar" />
-                  <span className="absolute inset-0 rounded-[9px] bg-[#F02C2C] animate-button-radar-delayed-1" />
-                  <span className="absolute inset-0 rounded-[9px] bg-[#F02C2C] animate-button-radar-delayed-2" />
+                  {/* Radar pulse rings for button - smaller on mobile */}
+                  <span className="absolute inset-0 rounded-[6px] md:rounded-[9px] bg-[#F02C2C] animate-button-radar" />
+                  <span className="absolute inset-0 rounded-[6px] md:rounded-[9px] bg-[#F02C2C] animate-button-radar-delayed-1" />
+                  <span className="absolute inset-0 rounded-[6px] md:rounded-[9px] bg-[#F02C2C] animate-button-radar-delayed-2" />
                   <PrismicNextLink
                     field={slice.primary.button_link}
-                    className="relative inline-flex items-center justify-center px-[16px] py-[12px] bg-[#F02C2C] rounded-[9px] font-mono text-sm sm:text-base md:text-[18px] font-normal leading-[145%] text-white no-underline hover:opacity-90 transition-opacity whitespace-nowrap"
+                    className="relative inline-flex items-center justify-center px-[10px] py-[6px] md:px-[16px] md:py-[12px] bg-[#F02C2C] rounded-[6px] md:rounded-[9px] font-mono text-[10px] md:text-base lg:text-[18px] font-normal leading-[145%] text-white no-underline hover:opacity-90 transition-opacity whitespace-nowrap"
                   >
                     {slice.primary.button_text}
                   </PrismicNextLink>
@@ -254,6 +264,25 @@ const GlobalPresence = ({ slice }: GlobalPresenceProps) => {
             )}
           </div>
         </FadeIn>
+
+        {/* Mobile Info Card - Shows below map when a marker is clicked */}
+        {activeLocation !== null && slice.items && slice.items[activeLocation] && (
+          <div className="md:hidden mt-4 bg-[#F2F2F2] rounded-[10px] overflow-hidden">
+            <div className="p-4">
+              <span className="font-trap text-[14px] font-semibold text-black/60 block mb-1">
+                {slice.items[activeLocation].location_name}
+              </span>
+              <h3 className="font-trap text-[18px] font-semibold leading-[110%] text-black mb-2">
+                {slice.items[activeLocation].project_title}
+              </h3>
+              {slice.items[activeLocation].project_description && (
+                <div className="font-inter text-[14px] font-normal leading-[140%] text-black/70 [&_p]:m-0">
+                  <PrismicRichText field={slice.items[activeLocation].project_description} />
+                </div>
+              )}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

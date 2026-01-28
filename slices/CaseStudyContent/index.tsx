@@ -88,7 +88,7 @@ const getVideoPlatform = (url: string): string => {
   return 'Video';
 };
 
-// Video Player Component - Click to play with thumbnail preview
+// Video Player Component - Autoplay on scroll for all video types
 const VideoPlayer: FC<{
   videoUrl: string;
   thumbnail?: any;
@@ -100,6 +100,7 @@ const VideoPlayer: FC<{
   const containerRef = useRef<HTMLDivElement>(null);
 
   const youtubeId = getYouTubeVideoId(videoUrl);
+  const vimeoId = getVimeoVideoId(videoUrl);
   const googleDriveId = getGoogleDriveFileId(videoUrl);
   const isDirectVideo = isDirectVideoUrl(videoUrl);
 
@@ -107,7 +108,7 @@ const VideoPlayer: FC<{
   const thumbnailUrl = thumbnail?.url ||
     (youtubeId ? `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg` : null);
 
-  const embedUrl = getVideoEmbedUrl(videoUrl, true); // Always autoplay when clicked
+  const embedUrl = getVideoEmbedUrl(videoUrl, true); // Always autoplay when playing
 
   // Autoplay on scroll for direct video files
   useEffect(() => {
@@ -129,6 +130,26 @@ const VideoPlayer: FC<{
     observer.observe(containerRef.current);
     return () => observer.disconnect();
   }, [isDirectVideo]);
+
+  // Autoplay on scroll for YouTube/Vimeo videos
+  useEffect(() => {
+    if (isDirectVideo || googleDriveId || !containerRef.current) return;
+    if (!(youtubeId || vimeoId)) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !isPlaying) {
+            setIsPlaying(true);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  }, [isDirectVideo, googleDriveId, youtubeId, vimeoId, isPlaying]);
 
   // For direct video files: autoplay on scroll
   if (isDirectVideo) {
@@ -229,9 +250,10 @@ const VideoPlayer: FC<{
     );
   }
 
-  // YouTube/Vimeo: Show thumbnail with play button
+  // YouTube/Vimeo: Show thumbnail with play button (will autoplay on scroll)
   return (
     <div
+      ref={containerRef}
       className="relative w-full h-[400px] md:h-[500px] lg:h-[560px] rounded-[10px] overflow-hidden cursor-pointer group bg-[#1a1a1a]"
       onClick={() => setIsPlaying(true)}
     >

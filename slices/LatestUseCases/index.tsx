@@ -6,6 +6,7 @@ import { SliceComponentProps } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 import { createClient } from "@/prismicio";
 import clsx from "clsx";
+import Link from "next/link";
 
 /**
  * Props for `LatestUseCases`.
@@ -67,7 +68,7 @@ const LatestUseCases: FC<LatestUseCasesProps> = ({ slice }) => {
       <div className="max-w-[1400px] mx-auto px-5 md:px-10 lg:px-[67px]">
         {/* Section Title */}
         {slice.primary.title && (
-          <h2 className="font-trap text-3xl md:text-4xl lg:text-[50px] font-semibold text-black mb-10 md:mb-16 leading-[1.1]">
+          <h2 className="font-trap text-3xl md:text-4xl lg:text-[50px] font-semibold text-black mb-6 leading-[1.1]">
             {slice.primary.title}
           </h2>
         )}
@@ -84,7 +85,7 @@ const LatestUseCases: FC<LatestUseCasesProps> = ({ slice }) => {
                 key={originalIndex}
                 onClick={() => setSelectedIndex(originalIndex)}
                 className={clsx(
-                  "flex flex-col gap-8 items-start relative rounded-lg shrink-0 transition-all duration-500 ease-in-out text-left cursor-pointer hover:opacity-90",
+                  "group flex flex-col gap-8 items-start relative rounded-lg shrink-0 transition-all duration-500 ease-in-out text-left cursor-pointer",
                   isSelected
                     ? "w-full lg:w-[524px]"
                     : "w-full lg:w-[343px] lg:min-w-[336px] lg:max-w-[388px]"
@@ -117,6 +118,19 @@ const LatestUseCases: FC<LatestUseCasesProps> = ({ slice }) => {
                   {/* Coming Soon overlay - rgba(255,255,255,0.8) */}
                   {isComingSoon && (
                     <div className="absolute inset-0 bg-white/80 rounded-[10px]" />
+                  )}
+
+                  {/* Read More hover button - only for non-coming-soon cards */}
+                  {!isComingSoon && (
+                    <div className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                      <Link
+                        href={card.link_slug ? `/case-study/${card.link_slug}` : (card.card_id ? `/case-study/${card.card_id}` : '/case-study')}
+                        className="inline-flex items-center justify-center px-6 py-3 bg-[#F02C2C] rounded-[9px] font-mono text-[16px] md:text-[18px] text-white no-underline hover:bg-[#d92626] transition-colors whitespace-nowrap"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        Read More
+                      </Link>
+                    </div>
                   )}
                 </div>
 

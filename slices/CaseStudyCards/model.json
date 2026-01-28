@@ -37,6 +37,13 @@
                   "placeholder": "Cohabs or Coming soon"
                 }
               },
+              "link_slug": {
+                "type": "Text",
+                "config": {
+                  "label": "Link Slug (URL path)",
+                  "placeholder": "cohabs"
+                }
+              },
               "show_details": {
                 "type": "Boolean",
                 "config": {

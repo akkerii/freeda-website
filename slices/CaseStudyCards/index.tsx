@@ -4,6 +4,7 @@ import { FC, useState, useRef } from "react";
 import { Content, isFilled } from "@prismicio/client";
 import { SliceComponentProps, PrismicRichText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
+import Link from "next/link";
 
 /**
  * Props for `CaseStudyCards`.
@@ -117,7 +118,7 @@ const CaseStudyCards: FC<CaseStudyCardsProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="w-full py-16"
     >
-      <div className="flex flex-col gap-16 items-start mx-auto max-w-[1500px] px-5 md:px-8 lg:px-[40px]">
+      <div className="flex flex-col gap-6 items-start mx-auto max-w-[1500px] px-5 md:px-8 lg:px-[40px]">
         {/* Section Title */}
         {slice.primary.section_title && (
           <h1 className="font-heading text-[54px] font-semibold leading-[1.1] text-black m-0">
@@ -141,88 +142,116 @@ const CaseStudyCards: FC<CaseStudyCardsProps> = ({ slice }) => {
                 const isSelected = index === selectedIndex;
 
                 return (
-                  <button
+                  <div
                     key={index}
-                    ref={(el) => { cardRefs.current[index] = el; }}
-                    onClick={(e) => handleCardClick(index, e.currentTarget)}
-                    className="flex flex-col items-start shrink-0 w-[380px] md:w-[450px] lg:w-[524px] cursor-pointer hover:opacity-90 transition-opacity text-left"
+                    className="group flex flex-col items-start shrink-0 w-[380px] md:w-[450px] lg:w-[524px] text-left relative"
                   >
-                    <div className="h-[560px] md:h-[650px] lg:h-[750px] relative shrink-0 w-full overflow-hidden">
-                      {/* Main Card Container */}
-                      <div className="absolute inset-0 overflow-hidden rounded-[10px]">
-                        {/* Card Image */}
-                        {isFilled.image(card.image) && (
-                          <div className="absolute inset-0">
-                            <PrismicNextImage
-                              field={card.image}
-                              fill
-                              className="object-cover"
-                              fallbackAlt=""
-                            />
-                          </div>
-                        )}
+                    <button
+                      ref={(el) => { cardRefs.current[index] = el; }}
+                      onClick={(e) => handleCardClick(index, e.currentTarget)}
+                      className="w-full cursor-pointer transition-opacity"
+                    >
+                      <div className="h-[560px] md:h-[650px] lg:h-[750px] relative shrink-0 w-full overflow-hidden">
+                        {/* Main Card Container */}
+                        <div className="absolute inset-0 overflow-hidden rounded-[10px]">
+                          {/* Card Image */}
+                          {isFilled.image(card.image) && (
+                            <div className="absolute inset-0">
+                              <PrismicNextImage
+                                field={card.image}
+                                fill
+                                className="object-cover"
+                                fallbackAlt=""
+                              />
+                            </div>
+                          )}
 
-                        {/* Label Section (top-right overlay) */}
-                        <div className="absolute bg-[#f2f2f2] h-[80px] md:h-[100px] right-0 overflow-hidden rounded-bl-[10px] rounded-tr-[10px] top-0 w-[160px] md:w-[200px]">
-                          {/* Red Dot - always show */}
-                          <div className="absolute left-1/2 -translate-x-1/2 w-[14px] md:w-[16px] h-[14px] md:h-[16px] top-[16px] md:top-[20px]">
-                            <svg
-                              className="block size-full"
-                              fill="none"
-                              preserveAspectRatio="none"
-                              viewBox="0 0 16 16"
-                            >
-                              <circle cx="8" cy="8" fill="#F02C2C" r="8" />
-                            </svg>
-                          </div>
+                          {/* Read More button on image - for cards without Application section */}
+                          {!(isSelected && card.show_details) && (
+                            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                              <Link
+                                href={card.link_slug ? `/case-study/${card.link_slug}` : '/case-study'}
+                                className="inline-flex items-center justify-center px-6 py-3 bg-[#F02C2C] rounded-[9px] font-mono text-[16px] md:text-[18px] text-white no-underline hover:bg-[#d92626] transition-colors whitespace-nowrap"
+                                onClick={(e) => e.stopPropagation()}
+                              >
+                                Read More
+                              </Link>
+                            </div>
+                          )}
 
-                          {/* Label Text */}
-                          <div className="absolute flex flex-col font-mono justify-center leading-[1.2] left-1/2 -translate-x-1/2 text-[16px] md:text-[20px] text-black text-center top-[50px] md:top-[60px] w-[150px] md:w-[180px]">
-                            <p className="m-0">{card.label}</p>
-                          </div>
-                        </div>
+                          {/* Label Section (top-right overlay) */}
+                          <div className="absolute bg-[#f2f2f2] h-[80px] md:h-[100px] right-0 overflow-hidden rounded-bl-[10px] rounded-tr-[10px] top-0 w-[160px] md:w-[200px]">
+                            {/* Red Dot - always show */}
+                            <div className="absolute left-1/2 -translate-x-1/2 w-[14px] md:w-[16px] h-[14px] md:h-[16px] top-[16px] md:top-[20px]">
+                              <svg
+                                className="block size-full"
+                                fill="none"
+                                preserveAspectRatio="none"
+                                viewBox="0 0 16 16"
+                              >
+                                <circle cx="8" cy="8" fill="#F02C2C" r="8" />
+                              </svg>
+                            </div>
 
-                        {/* Application Section (bottom overlay) - only show on selected card with details */}
-                        {isSelected && card.show_details && (
-                          <div className="absolute bottom-0 left-0 w-full bg-[#f2f2f2] rounded-b-[10px] overflow-hidden">
-                            <div className="flex flex-col gap-4 p-6 md:p-8">
-                              {/* Application Text */}
-                              {card.application_description && (
-                                <div className="flex flex-col font-inter text-[16px] md:text-[18px] text-[rgba(0,0,0,0.55)]">
-                                  <p className="font-bold mb-2 text-black">Application</p>
-                                  <p className="font-normal mb-0 leading-[1.6]">
-                                    {card.application_description}
-                                  </p>
-                                </div>
-                              )}
-
-                              {/* Document Tags */}
-                              {card.document_tags && card.document_tags.length > 0 && (
-                                <div className="flex flex-col gap-3">
-                                  <p className="font-inter font-bold text-[16px] md:text-[18px] text-black m-0">Document analysed</p>
-                                  <div className="flex flex-col gap-2 md:gap-3">
-                                    {card.document_tags.map((tag: any, tagIndex: number) => (
-                                      <div
-                                        key={tagIndex}
-                                        className="bg-white flex gap-[10px] items-center px-3 md:px-4 py-2 rounded-[5px] w-fit"
-                                      >
-                                        <div className="shrink-0 w-5 h-5 md:w-6 md:h-6">
-                                          {getIcon(tag.icon_type)}
-                                        </div>
-                                        <p className="font-mono text-[16px] md:text-[18px] text-[rgba(0,0,0,0.55)] m-0 whitespace-nowrap leading-normal">
-                                          {tag.tag_text}
-                                        </p>
-                                      </div>
-                                    ))}
-                                  </div>
-                                </div>
-                              )}
+                            {/* Label Text */}
+                            <div className="absolute flex flex-col font-mono justify-center leading-[1.2] left-1/2 -translate-x-1/2 text-[16px] md:text-[20px] text-black text-center top-[50px] md:top-[60px] w-[150px] md:w-[180px]">
+                              <p className="m-0">{card.label}</p>
                             </div>
                           </div>
-                        )}
+
+                          {/* Application Section (bottom overlay) - only show on selected card with details */}
+                          {isSelected && card.show_details && (
+                            <div className="absolute bottom-0 left-0 w-full bg-[#f2f2f2] rounded-b-[10px] overflow-hidden">
+                              <div className="flex flex-col gap-4 p-6 md:p-8">
+                                {/* Application Text */}
+                                {card.application_description && (
+                                  <div className="flex flex-col font-inter text-[16px] md:text-[18px] text-[rgba(0,0,0,0.55)]">
+                                    <p className="font-bold mb-2 text-black">Application</p>
+                                    <p className="font-normal mb-0 leading-[1.6]">
+                                      {card.application_description}
+                                    </p>
+                                  </div>
+                                )}
+
+                                {/* Document Tags */}
+                                {card.document_tags && card.document_tags.length > 0 && (
+                                  <div className="flex flex-col gap-3">
+                                    <p className="font-inter font-bold text-[16px] md:text-[18px] text-black m-0">Document analysed</p>
+                                    <div className="flex flex-col gap-2 md:gap-3">
+                                      {card.document_tags.map((tag: any, tagIndex: number) => (
+                                        <div
+                                          key={tagIndex}
+                                          className="bg-white flex gap-[10px] items-center px-3 md:px-4 py-2 rounded-[5px] w-fit"
+                                        >
+                                          <div className="shrink-0 w-5 h-5 md:w-6 md:h-6">
+                                            {getIcon(tag.icon_type)}
+                                          </div>
+                                          <p className="font-mono text-[16px] md:text-[18px] text-[rgba(0,0,0,0.55)] m-0 whitespace-nowrap leading-normal">
+                                            {tag.tag_text}
+                                          </p>
+                                        </div>
+                                      ))}
+                                    </div>
+                                  </div>
+                                )}
+
+                                {/* Read More button - appears on hover */}
+                                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-2">
+                                  <Link
+                                    href={card.link_slug ? `/case-study/${card.link_slug}` : '/case-study'}
+                                    className="inline-flex items-center justify-center px-6 py-3 bg-[#F02C2C] rounded-[9px] font-mono text-[16px] md:text-[18px] text-white no-underline hover:bg-[#d92626] transition-colors whitespace-nowrap"
+                                    onClick={(e) => e.stopPropagation()}
+                                  >
+                                    Read More
+                                  </Link>
+                                </div>
+                              </div>
+                            </div>
+                          )}
+                        </div>
                       </div>
-                    </div>
-                  </button>
+                    </button>
+                  </div>
                 );
               })}
             </div>

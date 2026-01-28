@@ -5,6 +5,7 @@ import { Content, isFilled } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 import UseCaseLottieAnimation from "@/components/UseCaseLottieAnimation";
+import Link from "next/link";
 
 export type UseCaseCarouselProps =
   SliceComponentProps<Content.UseCaseCarouselSlice>;
@@ -85,7 +86,7 @@ const UseCaseCarousel: FC<UseCaseCarouselProps> = ({ slice }) => {
     >
       <div className="max-w-[1384px] mx-auto px-5 md:px-10 lg:px-[67px]">
         {/* Section Title */}
-        <h2 className="font-trap text-3xl md:text-4xl lg:text-[50px] font-semibold text-black mb-10 md:mb-16 leading-[1.1]">
+        <h2 className="font-trap text-3xl md:text-4xl lg:text-[50px] font-semibold text-black mb-6 leading-[1.1]">
           {slice.primary.section_title || "Use cases"}
         </h2>
 
@@ -99,7 +100,7 @@ const UseCaseCarousel: FC<UseCaseCarouselProps> = ({ slice }) => {
               <button
                 key={index}
                 onClick={() => setSelectedIndex(index)}
-                className={`text-left transition-all duration-300 flex flex-col ${
+                className={`group text-left transition-all duration-300 flex flex-col ${
                   isSelected
                     ? "lg:w-[524px] lg:flex-shrink-0"
                     : "lg:w-[343px] lg:flex-shrink-0"
@@ -129,6 +130,19 @@ const UseCaseCarousel: FC<UseCaseCarouselProps> = ({ slice }) => {
                   {/* Coming Soon overlay */}
                   {isComingSoon && (
                     <div className="absolute inset-0 bg-white/80" />
+                  )}
+
+                  {/* Read More hover button - only for non-coming-soon cards */}
+                  {!isComingSoon && (
+                    <div className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                      <Link
+                        href={(useCase as any).link_slug ? `/case-study/${(useCase as any).link_slug}` : '/case-study'}
+                        className="inline-flex items-center justify-center px-6 py-3 bg-[#F02C2C] rounded-[9px] font-mono text-[16px] md:text-[18px] text-white no-underline hover:bg-[#d92626] transition-colors whitespace-nowrap"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        Read More
+                      </Link>
+                    </div>
                   )}
                 </div>
 

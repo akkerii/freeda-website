@@ -1,10 +1,6 @@
 import { FC } from "react";
 import { SliceComponentProps } from "@prismicio/react";
-
-/**
- * Props for `TechnologyCards`.
- */
-export type TechnologyCardsProps = SliceComponentProps<any>;
+import { PrismicNextImage } from "@prismicio/next";
 
 /**
  * Component for "TechnologyCards" Slices.
@@ -14,7 +10,7 @@ const TechnologyCards: FC<TechnologyCardsProps> = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="bg-white w-full py-12 md:py-16 lg:py-20"
+      className="bg-white w-full pt-12 md:pt-16 lg:pt-20 pb-4 md:pb-5 lg:pb-6"
     >
       <div className="max-w-[1250px] mx-auto px-5 md:px-10">
         <div className="flex flex-col gap-10 md:gap-14 items-center w-full">
@@ -39,10 +35,21 @@ const TechnologyCards: FC<TechnologyCardsProps> = ({ slice }) => {
             {slice.primary.cards?.map((card: any, index: number) => (
               <article
                 key={index}
-                className="bg-black/5 flex flex-col items-start overflow-hidden rounded-[10px] min-h-[140px] md:min-h-[160px] relative"
+                className="bg-black/5 flex flex-col items-start overflow-hidden rounded-[10px] min-h-[180px] md:min-h-[200px] relative"
               >
                 {/* Card Content */}
-                <div className="flex flex-col gap-2 items-start p-6 md:p-8 w-full relative">
+                <div className="flex flex-col gap-3 items-start p-6 md:p-8 w-full relative">
+                  {/* Icon from Prismic */}
+                  {card.icon?.url && (
+                    <div className="w-[56px] h-[56px] mb-1">
+                      <PrismicNextImage
+                        field={card.icon}
+                        className="w-full h-full object-contain"
+                        fallbackAlt=""
+                      />
+                    </div>
+                  )}
+
                   <h5 className="font-trap text-xl md:text-2xl font-semibold leading-[1.2] tracking-[-0.48px] text-black m-0 whitespace-pre-line pr-6">
                     {card.card_text}
                   </h5>

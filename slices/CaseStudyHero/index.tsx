@@ -19,129 +19,131 @@ const CaseStudyHero: FC<CaseStudyHeroProps> = ({ slice }) => {
       <Navigation theme="dark" />
 
       {/* Desktop layout (xl+) */}
-      <div className="hidden xl:block h-[982px] w-full relative">
-        {/* Background floor plan image - mix-blend-lighten */}
-        <div className="absolute left-[116px] mix-blend-lighten size-[712px] top-[141px]">
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <img alt="" className="absolute left-0 max-w-none size-full top-0" src="/images/6c7c028e74db5ea2c485a653344802bd08faf5a5.png" />
-          </div>
-        </div>
-
-        {/* Main Floor Plan Card with Annotations - positioned from left edge */}
-        <div className="absolute bg-white border-[7px] border-[#f2f2f2] rounded-[9px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.1)] left-[-350px] top-[325px] w-[1036px] h-[613px] flex items-center justify-center overflow-hidden">
-          {/* Floor plan image inside card */}
-          <img
-            alt="Floor plan"
-            className="absolute w-[863px] h-[571px] object-cover"
-            src="/images/hero-floor-plan-main.png"
-          />
-
-          {/* Red Circle Annotation */}
-          <div className="absolute left-[380px] top-[230px] w-[66px] h-[66px]">
-            <img src="/images/hero-red-circle.png" alt="" className="w-full h-full" />
+      <div className="hidden xl:flex xl:justify-center h-[982px] w-full">
+        {/* Centered container to keep content aligned */}
+        <div className="relative w-full max-w-[1512px] h-full">
+          {/* Background floor plan image - mix-blend-lighten */}
+          <div className="absolute left-[116px] mix-blend-lighten size-[712px] top-[141px]">
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+              <img alt="" className="absolute left-0 max-w-none size-full top-0" src="/images/6c7c028e74db5ea2c485a653344802bd08faf5a5.png" />
+            </div>
           </div>
 
-          {/* Green Check Annotations */}
-          <img src="/images/hero-green-check.png" alt="" className="absolute w-[32px] h-[32px] left-[427px] top-[192px]" />
-          <img src="/images/hero-green-check.png" alt="" className="absolute w-[25px] h-[25px] left-[443px] top-[110px]" />
-          <img src="/images/hero-green-check.png" alt="" className="absolute w-[30px] h-[30px] left-[680px] top-[61px]" />
-          <img src="/images/hero-green-check.png" alt="" className="absolute w-[32px] h-[32px] left-[427px] top-[119px]" />
-          <img src="/images/hero-green-check.png" alt="" className="absolute w-[46px] h-[46px] left-[380px] top-[420px]" />
-          <img src="/images/hero-green-check.png" alt="" className="absolute w-[17px] h-[17px] left-[838px] top-[158px]" />
-          <img src="/images/hero-green-check.png" alt="" className="absolute w-[18px] h-[18px] left-[660px] top-[149px]" />
+          {/* Main Floor Plan Card with Annotations - positioned from left edge */}
+          <div className="absolute bg-white border-[7px] border-[#f2f2f2] rounded-[9px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.1)] left-[-350px] top-[325px] w-[1036px] h-[613px] flex items-center justify-center overflow-hidden">
+            {/* Floor plan image inside card */}
+            <img
+              alt="Floor plan"
+              className="absolute w-[863px] h-[571px] object-cover"
+              src="/images/hero-floor-plan-main.png"
+            />
 
-          {/* Tooltip Card */}
-          <div className="absolute flex flex-col gap-1 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] left-[469px] top-[165px] w-[431px]">
-            {/* Non-Compliant Badge */}
-            <div className="flex items-center gap-1.5 bg-[#FFE5E5] rounded-[4px] px-2 py-1 w-fit">
-              <div className="w-4 h-4 rounded-full bg-[#F02C2C] flex items-center justify-center flex-shrink-0">
-                <svg viewBox="0 0 10 10" className="w-2.5 h-2.5">
-                  <path d="M2.5 2.5L7.5 7.5M7.5 2.5L2.5 7.5" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
-                </svg>
+            {/* Red Circle Annotation */}
+            <div className="absolute left-[380px] top-[230px] w-[66px] h-[66px]">
+              <img src="/images/hero-red-circle.png" alt="" className="w-full h-full" />
+            </div>
+
+            {/* Green Check Annotations */}
+            <img src="/images/hero-green-check.png" alt="" className="absolute w-[32px] h-[32px] left-[427px] top-[192px]" />
+            <img src="/images/hero-green-check.png" alt="" className="absolute w-[25px] h-[25px] left-[443px] top-[110px]" />
+            <img src="/images/hero-green-check.png" alt="" className="absolute w-[30px] h-[30px] left-[680px] top-[61px]" />
+            <img src="/images/hero-green-check.png" alt="" className="absolute w-[32px] h-[32px] left-[427px] top-[119px]" />
+            <img src="/images/hero-green-check.png" alt="" className="absolute w-[46px] h-[46px] left-[380px] top-[420px]" />
+            <img src="/images/hero-green-check.png" alt="" className="absolute w-[17px] h-[17px] left-[838px] top-[158px]" />
+            <img src="/images/hero-green-check.png" alt="" className="absolute w-[18px] h-[18px] left-[660px] top-[149px]" />
+
+            {/* Tooltip Card */}
+            <div className="absolute flex flex-col gap-1 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] left-[469px] top-[165px] w-[431px]">
+              {/* Non-Compliant Badge */}
+              <div className="flex items-center gap-1.5 bg-[#FFE5E5] rounded-[4px] px-2 py-1 w-fit">
+                <div className="w-4 h-4 rounded-full bg-[#F02C2C] flex items-center justify-center flex-shrink-0">
+                  <svg viewBox="0 0 10 10" className="w-2.5 h-2.5">
+                    <path d="M2.5 2.5L7.5 7.5M7.5 2.5L2.5 7.5" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
+                  </svg>
+                </div>
+                <span className="font-mono text-[12px] text-[#F02C2C] whitespace-nowrap font-medium">Non-Compliant</span>
               </div>
-              <span className="font-mono text-[12px] text-[#F02C2C] whitespace-nowrap font-medium">Non-Compliant</span>
-            </div>
-            {/* Dropdown Card */}
-            <div className="flex items-center gap-2 bg-white rounded-[4px] px-3 py-2 border border-gray-200">
-              <svg className="w-3 h-3 text-gray-500 flex-shrink-0" viewBox="0 0 12 12" fill="none">
-                <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-              <div className="w-2 h-2 rounded-full bg-[#F02C2C] flex-shrink-0" />
-              <span className="font-inter text-[12px] text-black whitespace-nowrap">Kitchen wheelchair turning circle (Ø 1.5 m)</span>
-              <div className="w-3 h-3 border border-gray-300 rounded-sm ml-auto flex-shrink-0" />
-            </div>
-          </div>
-        </div>
-
-        {/* Small color screenshot overlay */}
-        <div className="absolute h-[553px] left-[342px] overflow-clip rounded-[10px] top-[260px] w-[407px]">
-          <img alt="" className="absolute inset-0 max-w-none object-center object-cover pointer-events-none size-full" src="/images/1464d2a6761181a16640ae6b4d5125ddc1739c02.png" />
-        </div>
-
-        {/* First Red vertical line with gradient (left) */}
-        <div className="absolute flex h-[977px] items-center justify-center left-[526px] top-[-15px] w-0">
-          <div className="flex-none rotate-[180deg] scale-y-[-100%]">
-            <div className="h-[977px] relative w-0">
-              <div className="absolute inset-[0_-0.63px]">
-                <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1.2593 977">
-                  <path d="M0.62965 0V977" stroke="url(#paint0_linear_case_study_1)" strokeWidth="1.2593" />
-                  <defs>
-                    <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_case_study_1" x1="1.11405" x2="1.11405" y1="114.734" y2="953.479">
-                      <stop stopColor="#EC0606" />
-                      <stop offset="1" stopColor="white" stopOpacity="0.1" />
-                    </linearGradient>
-                  </defs>
+              {/* Dropdown Card */}
+              <div className="flex items-center gap-2 bg-white rounded-[4px] px-3 py-2 border border-gray-200">
+                <svg className="w-3 h-3 text-gray-500 flex-shrink-0" viewBox="0 0 12 12" fill="none">
+                  <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
+                <div className="w-2 h-2 rounded-full bg-[#F02C2C] flex-shrink-0" />
+                <span className="font-inter text-[12px] text-black whitespace-nowrap">Kitchen wheelchair turning circle (Ø 1.5 m)</span>
+                <div className="w-3 h-3 border border-gray-300 rounded-sm ml-auto flex-shrink-0" />
               </div>
             </div>
           </div>
-        </div>
 
-        {/* First Red dot on line (left) */}
-        <div className="absolute left-[523px] size-[5.037px] top-[390px]">
-          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 5.0372 5.0372">
-            <circle cx="2.5186" cy="2.5186" fill="#EC0606" r="2.5186" />
-          </svg>
-        </div>
+          {/* Small color screenshot overlay */}
+          <div className="absolute h-[553px] left-[342px] overflow-clip rounded-[10px] top-[260px] w-[407px]">
+            <img alt="" className="absolute inset-0 max-w-none object-center object-cover pointer-events-none size-full" src="/images/1464d2a6761181a16640ae6b4d5125ddc1739c02.png" />
+          </div>
 
-        {/* 328OO text (left line) */}
-        <div className="absolute flex flex-col font-mono justify-center leading-[0] left-[546px] not-italic text-[#ec0606] text-[20px] top-[391px] tracking-[-1px] -translate-y-1/2 uppercase">
-          <p className="leading-[normal]">328OO</p>
-        </div>
-
-        {/* Second Red vertical line with gradient (right) */}
-        <div className="absolute flex h-[982px] items-center justify-center left-[630px] top-0 w-0">
-          <div className="flex-none rotate-[180deg]">
-            <div className="h-[982px] relative w-0">
-              <div className="absolute inset-[0_-0.63px]">
-                <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1.2593 982">
-                  <path d="M0.62965 0V982" stroke="url(#paint0_linear_case_study_2)" strokeWidth="1.2593" />
-                  <defs>
-                    <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_case_study_2" x1="1.11405" x2="1.11405" y1="114.734" y2="953.479">
-                      <stop stopColor="#EC0606" />
-                      <stop offset="1" stopColor="white" stopOpacity="0.1" />
-                    </linearGradient>
-                  </defs>
-                </svg>
+          {/* First Red vertical line with gradient (left) */}
+          <div className="absolute flex h-[977px] items-center justify-center left-[526px] top-[-15px] w-0">
+            <div className="flex-none rotate-[180deg] scale-y-[-100%]">
+              <div className="h-[977px] relative w-0">
+                <div className="absolute inset-[0_-0.63px]">
+                  <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1.2593 977">
+                    <path d="M0.62965 0V977" stroke="url(#paint0_linear_case_study_1)" strokeWidth="1.2593" />
+                    <defs>
+                      <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_case_study_1" x1="1.11405" x2="1.11405" y1="114.734" y2="953.479">
+                        <stop stopColor="#EC0606" />
+                        <stop offset="1" stopColor="white" stopOpacity="0.1" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        {/* Second Red dot on line (right) */}
-        <div className="absolute left-[627px] size-[5.037px] top-[704px]">
-          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 5.0372 5.0372">
-            <circle cx="2.5186" cy="2.5186" fill="#EC0606" r="2.5186" />
-          </svg>
-        </div>
+          {/* First Red dot on line (left) */}
+          <div className="absolute left-[523px] size-[5.037px] top-[390px]">
+            <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 5.0372 5.0372">
+              <circle cx="2.5186" cy="2.5186" fill="#EC0606" r="2.5186" />
+            </svg>
+          </div>
 
-        {/* 888OO text (right line) */}
-        <div className="absolute flex flex-col font-mono justify-center leading-[0] left-[650px] not-italic text-[#ec0606] text-[20px] top-[705px] tracking-[-1px] -translate-y-1/2 uppercase">
-          <p className="leading-[normal]">888OO</p>
-        </div>
+          {/* 328OO text (left line) */}
+          <div className="absolute flex flex-col font-mono justify-center leading-[0] left-[546px] not-italic text-[#ec0606] text-[20px] top-[391px] tracking-[-1px] -translate-y-1/2 uppercase">
+            <p className="leading-[normal]">328OO</p>
+          </div>
 
-        {/* Text content - right side */}
-        <div className="absolute content-stretch flex flex-col gap-[25px] items-start right-[80px] top-1/2 -translate-y-1/2 w-[523px]">
+          {/* Second Red vertical line with gradient (right) */}
+          <div className="absolute flex h-[982px] items-center justify-center left-[630px] top-0 w-0">
+            <div className="flex-none rotate-[180deg]">
+              <div className="h-[982px] relative w-0">
+                <div className="absolute inset-[0_-0.63px]">
+                  <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1.2593 982">
+                    <path d="M0.62965 0V982" stroke="url(#paint0_linear_case_study_2)" strokeWidth="1.2593" />
+                    <defs>
+                      <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_case_study_2" x1="1.11405" x2="1.11405" y1="114.734" y2="953.479">
+                        <stop stopColor="#EC0606" />
+                        <stop offset="1" stopColor="white" stopOpacity="0.1" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Second Red dot on line (right) */}
+          <div className="absolute left-[627px] size-[5.037px] top-[704px]">
+            <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 5.0372 5.0372">
+              <circle cx="2.5186" cy="2.5186" fill="#EC0606" r="2.5186" />
+            </svg>
+          </div>
+
+          {/* 888OO text (right line) */}
+          <div className="absolute flex flex-col font-mono justify-center leading-[0] left-[650px] not-italic text-[#ec0606] text-[20px] top-[705px] tracking-[-1px] -translate-y-1/2 uppercase">
+            <p className="leading-[normal]">888OO</p>
+          </div>
+
+          {/* Text content - right side */}
+          <div className="absolute content-stretch flex flex-col gap-[25px] items-start right-[80px] top-1/2 -translate-y-1/2 w-[523px]">
           {/* Badge */}
           <div className="bg-[#555] content-stretch flex gap-[10px] items-center justify-center overflow-clip px-[16px] py-[7px] relative rounded-[5px] shrink-0">
             <div className="relative shrink-0 size-[8px]">
@@ -163,6 +165,7 @@ const CaseStudyHero: FC<CaseStudyHeroProps> = ({ slice }) => {
             <p className="leading-[1.45]">Freeda is not used in theory. It is applied on real projects, under real regulatory and operational constraints.</p>
           </div>
         </div>
+        </div>{/* End centered container */}
       </div>
 
       {/* Tablet/Mobile layout (below xl) - same composition as desktop, scaled */}
@@ -188,6 +191,35 @@ const CaseStudyHero: FC<CaseStudyHeroProps> = ({ slice }) => {
           {/* Small color screenshot - overlapping */}
           <div className="absolute h-[65%] sm:h-[70%] left-[30%] sm:left-[35%] md:left-[40%] overflow-clip rounded-[8px] sm:rounded-[10px] top-[20%] sm:top-[18%] w-[45%] sm:w-[40%] md:w-[35%]">
             <img alt="" className="absolute inset-0 max-w-none object-center object-cover pointer-events-none size-full" src="/images/1464d2a6761181a16640ae6b4d5125ddc1739c02.png" />
+          </div>
+
+          {/* Red vertical lines - mobile */}
+          {/* First line - simple gradient div */}
+          <div
+            className="absolute left-[50%] sm:left-[52%] md:left-[50%] top-0 w-[1px] h-full"
+            style={{ background: 'linear-gradient(to bottom, transparent 0%, #EC0606 15%, #EC0606 85%, transparent 100%)' }}
+          />
+
+          {/* First Red dot */}
+          <div className="absolute left-[50%] sm:left-[52%] md:left-[50%] w-[5px] h-[5px] rounded-full bg-[#EC0606] top-[35%] -translate-x-1/2 -translate-y-1/2" />
+
+          {/* First number text */}
+          <div className="absolute font-mono left-[52%] sm:left-[54%] md:left-[52%] text-[#ec0606] text-[12px] sm:text-[14px] md:text-[16px] top-[35%] tracking-[-0.5px] -translate-y-1/2 uppercase">
+            328OO
+          </div>
+
+          {/* Second line */}
+          <div
+            className="absolute left-[58%] sm:left-[60%] md:left-[57%] top-0 w-[1px] h-full"
+            style={{ background: 'linear-gradient(to bottom, transparent 0%, #EC0606 15%, #EC0606 85%, transparent 100%)' }}
+          />
+
+          {/* Second Red dot */}
+          <div className="absolute left-[58%] sm:left-[60%] md:left-[57%] w-[5px] h-[5px] rounded-full bg-[#EC0606] top-[65%] -translate-x-1/2 -translate-y-1/2" />
+
+          {/* Second number text */}
+          <div className="absolute font-mono left-[60%] sm:left-[62%] md:left-[59%] text-[#ec0606] text-[12px] sm:text-[14px] md:text-[16px] top-[65%] tracking-[-0.5px] -translate-y-1/2 uppercase">
+            888OO
           </div>
         </div>
 

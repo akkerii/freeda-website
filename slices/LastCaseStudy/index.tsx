@@ -129,7 +129,7 @@ const LastCaseStudy: FC<LastCaseStudyProps> = ({ slice }) => {
       <div className="max-w-[1250px] mx-auto px-5 md:px-10">
         {/* Section Title */}
         {slice.primary.title && (
-          <h2 className="font-trap text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-semibold text-black mb-8 md:mb-12 lg:mb-16 leading-[1.1]">
+          <h2 className="font-trap text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-semibold text-black mb-6 leading-[1.1]">
             {slice.primary.title}
           </h2>
         )}

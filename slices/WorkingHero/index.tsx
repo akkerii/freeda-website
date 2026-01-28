@@ -9,7 +9,7 @@ const WorkingHero = ({ slice }: WorkingHeroProps) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="relative w-full h-[600px] sm:h-[700px] md:h-[850px] lg:h-[982px] overflow-hidden"
+      className="relative w-full h-auto min-h-[500px] sm:h-[700px] md:h-[850px] lg:h-[982px] overflow-hidden"
     >
       {/* Navigation */}
       <Navigation theme="light" />
@@ -28,8 +28,8 @@ const WorkingHero = ({ slice }: WorkingHeroProps) => {
       </div>
 
       {/* Dark Content Box - Overlaid on Right Side */}
-      <div className="absolute right-0 bottom-0 w-full sm:w-[320px] md:w-[420px] lg:w-[500px] xl:w-[564px] h-[350px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[537px] bg-[#202020] rounded-tl-[10px]">
-        <div className="flex flex-col gap-6 md:gap-8 items-start justify-center h-full px-6 sm:px-8 md:px-12 lg:px-[66px]">
+      <div className="absolute right-0 bottom-0 w-full sm:w-[320px] md:w-[420px] lg:w-[500px] xl:w-[564px] h-auto sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[537px] bg-[#202020] rounded-t-[10px] sm:rounded-tr-none sm:rounded-tl-[10px]">
+        <div className="flex flex-col gap-4 sm:gap-6 md:gap-8 items-start justify-center h-full px-5 py-6 sm:px-8 sm:py-0 md:px-12 lg:px-[66px]">
           {/* Title */}
           <div className="flex flex-col font-trap font-semibold leading-[1.1] text-[32px] sm:text-[40px] md:text-[52px] lg:text-[64px] text-white tracking-[-1.6px]">
             <h1 className="block mb-0">Working</h1>

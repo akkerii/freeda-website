@@ -15,19 +15,19 @@ const TechnologyDetails: FC<TechnologyDetailsProps> = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="bg-white w-full py-12 md:py-16 lg:py-20"
+      className="bg-white w-full pt-4 md:pt-5 lg:pt-6 pb-12 md:pb-16 lg:pb-20"
     >
       <div className="max-w-[1250px] mx-auto px-5 md:px-10">
         <div className="flex flex-col lg:flex-row gap-6 md:gap-8 lg:gap-12 items-center lg:items-start">
-          {/* Images - Stack on mobile, row on desktop */}
-          <div className="w-full sm:w-auto flex flex-col sm:flex-row gap-4 md:gap-6 lg:gap-8 sm:shrink-0">
+          {/* Images - Row on all sizes, scaled appropriately */}
+          <div className="w-auto flex flex-row gap-3 sm:gap-4 md:gap-6 lg:gap-8 sm:shrink-0 justify-center lg:justify-start">
             {slice.primary.images?.map((item: any, index: number) => (
               <div
                 key={index}
                 className={`relative rounded-[5px] overflow-hidden ${
                   index === 0
-                    ? "h-[200px] sm:h-[240px] md:h-[292px] w-full sm:w-[160px] md:w-[219px]"
-                    : "h-[200px] sm:h-[240px] md:h-[292px] w-full sm:w-[250px] md:w-[343px]"
+                    ? "h-[180px] sm:h-[220px] md:h-[292px] w-[120px] sm:w-[150px] md:w-[219px]"
+                    : "h-[180px] sm:h-[220px] md:h-[292px] w-[180px] sm:w-[220px] md:w-[343px]"
                 }`}
               >
                 {item.image?.url && (

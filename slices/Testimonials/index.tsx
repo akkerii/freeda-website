@@ -73,6 +73,18 @@ const Testimonials = ({ slice }: TestimonialsProps) => {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const videoContainerRef = useRef<HTMLElement>(null);
+  const featuredCardRef = useRef<HTMLElement>(null);
+
+  // Handle card selection with scroll on mobile
+  const handleCardSelect = (index: number) => {
+    setSelectedIndex(index);
+    // On mobile (< 1024px), scroll to the featured card
+    if (typeof window !== 'undefined' && window.innerWidth < 1024 && featuredCardRef.current) {
+      setTimeout(() => {
+        featuredCardRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+  };
 
   // Get the active testimonial data
   const items = (slice.items || []) as any[];
@@ -103,6 +115,27 @@ const Testimonials = ({ slice }: TestimonialsProps) => {
     observer.observe(videoContainerRef.current);
     return () => observer.disconnect();
   }, [isDirectVideo]);
+
+  // Autoplay on scroll for YouTube videos
+  useEffect(() => {
+    if (isDirectVideo || !youtubeId || !videoContainerRef.current) return;
+    const googleDriveId = primary.youtube_url ? getGoogleDriveFileId(primary.youtube_url) : null;
+    if (googleDriveId) return; // Skip for Google Drive
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !isVideoPlaying) {
+            setIsVideoPlaying(true);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(videoContainerRef.current);
+    return () => observer.disconnect();
+  }, [isDirectVideo, youtubeId, isVideoPlaying, primary.youtube_url]);
 
   // Get active testimonial - ensure we have items and valid index
   const activeItem = items[selectedIndex];
@@ -144,12 +177,15 @@ const Testimonials = ({ slice }: TestimonialsProps) => {
         <div className="flex flex-col lg:flex-row gap-5 items-stretch">
           {/* Featured Testimonial Card - Left */}
           <FadeIn delay={100} direction="left">
-            <article className="relative w-full lg:w-[343px] h-auto lg:h-[427px] bg-[#F2F2F2] rounded-[10px] p-[33px] flex flex-col flex-shrink-0 overflow-hidden">
+            <article
+              ref={featuredCardRef}
+              className="relative w-full lg:w-[343px] h-auto lg:min-h-[427px] bg-[#F2F2F2] rounded-[10px] p-[24px] lg:p-[28px] flex flex-col flex-shrink-0 scroll-mt-4"
+            >
               {/* Logo and Quote Section */}
-              <div className="flex flex-col gap-6 flex-1 min-h-0">
+              <div className="flex flex-col gap-4 flex-1">
                 {/* Company Logo */}
                 {isFilled.image(activeTestimonial.logo) && (
-                  <div className="h-[31px] w-full max-w-[153px] flex-shrink-0">
+                  <div className="h-[28px] w-full max-w-[140px] flex-shrink-0">
                     <PrismicNextImage
                       field={activeTestimonial.logo}
                       className="h-full w-auto object-contain object-left"
@@ -160,18 +196,18 @@ const Testimonials = ({ slice }: TestimonialsProps) => {
 
                 {/* Quote */}
                 {isFilled.richText(activeTestimonial.quote) && (
-                  <div className="font-inter text-[16px] text-black leading-normal [&_p]:m-0 overflow-y-auto flex-1">
-                    <span className="block text-[36px] leading-none mb-1">"</span>
+                  <div className="font-inter text-[14px] lg:text-[15px] text-black leading-[1.5] [&_p]:m-0 flex-1">
+                    <span className="block text-[28px] leading-none mb-1">"</span>
                     <PrismicRichText field={activeTestimonial.quote} />
                   </div>
                 )}
               </div>
 
               {/* Author Info */}
-              <div className="flex flex-col gap-[14px] mt-4 flex-shrink-0">
+              <div className="flex items-center gap-3 mt-4 flex-shrink-0">
                 {/* Author Image */}
                 {isFilled.image(activeTestimonial.authorImage) && (
-                  <div className="w-[49px] h-[49px] rounded-full overflow-hidden">
+                  <div className="w-[40px] h-[40px] rounded-full overflow-hidden flex-shrink-0">
                     <PrismicNextImage
                       field={activeTestimonial.authorImage}
                       className="w-full h-full object-cover"
@@ -182,7 +218,7 @@ const Testimonials = ({ slice }: TestimonialsProps) => {
 
                 {/* Author Name and Title */}
                 {activeTestimonial.authorName && (
-                  <p className="font-trap text-[16px] font-semibold uppercase text-black m-0">
+                  <p className="font-trap text-[13px] lg:text-[14px] font-semibold uppercase text-black m-0">
                     {activeTestimonial.authorName}
                     {activeTestimonial.authorTitle && ` - ${activeTestimonial.authorTitle}`}
                   </p>
@@ -279,7 +315,7 @@ const Testimonials = ({ slice }: TestimonialsProps) => {
                 return (
                   <button
                     key={index}
-                    onClick={() => setSelectedIndex(index)}
+                    onClick={() => handleCardSelect(index)}
                     className="relative h-[101px] rounded-[10px] p-8 flex items-center justify-start transition-all cursor-pointer bg-[#EDEDED] hover:bg-[#E0E0E0]"
                   >
                     {/* Company Logo */}
@@ -295,21 +331,19 @@ const Testimonials = ({ slice }: TestimonialsProps) => {
                       )}
                     </div>
 
-                    {/* Red Dot */}
-                    <div className="absolute right-[29px] top-[15px] w-[17px] h-[17px]">
-                      <svg className="block size-full" fill="none" viewBox="0 0 17 17">
-                        <circle cx="8.5" cy="8.5" fill="#F02C2C" r="8.5" />
-                      </svg>
-                    </div>
-
-                    {/* Coming Soon Text */}
-                    {item.is_coming_soon && (
-                      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 translate-x-[38px]">
-                        <p className="font-inter text-[13px] text-black/30 leading-[1.45] tracking-[-0.065px] text-center m-0">
+                    {/* Coming Soon + Red Dot - Side by side, centered */}
+                    <div className="absolute right-4 top-1/2 -translate-y-1/2 flex items-center gap-2">
+                      {item.is_coming_soon && (
+                        <p className="font-inter text-[12px] text-black/30 leading-[1.2] tracking-[-0.065px] m-0 whitespace-nowrap">
                           coming soon
                         </p>
+                      )}
+                      <div className="w-[13px] h-[13px] flex-shrink-0">
+                        <svg className="block size-full" fill="none" viewBox="0 0 17 17">
+                          <circle cx="8.5" cy="8.5" fill="#F02C2C" r="8.5" />
+                        </svg>
                       </div>
-                    )}
+                    </div>
                   </button>
                 );
               })}

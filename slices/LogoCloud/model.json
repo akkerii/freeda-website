@@ -35,6 +35,15 @@
             "label": "Company Name",
             "placeholder": "Company name for alt text"
           }
+        },
+        "has_case_study": {
+          "type": "Boolean",
+          "config": {
+            "label": "Has Case Study",
+            "default_value": false,
+            "placeholder_false": "No",
+            "placeholder_true": "Yes"
+          }
         }
       }
     }

@@ -31,6 +31,16 @@
           "config": {
             "label": "Technology Cards",
             "fields": {
+              "icon": {
+                "type": "Image",
+                "config": {
+                  "label": "Icon",
+                  "constraint": {
+                    "width": 56,
+                    "height": 56
+                  }
+                }
+              },
               "card_text": {
                 "type": "Text",
                 "config": {

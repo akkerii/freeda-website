@@ -20,6 +20,13 @@
             "thumbnails": []
           }
         },
+        "video_url": {
+          "type": "Text",
+          "config": {
+            "label": "Video URL",
+            "placeholder": "Direct video URL (mp4) or YouTube URL"
+          }
+        },
         "title": {
           "type": "Text",
           "config": {

@@ -9,6 +9,7 @@ export type DarkCtaProps = SliceComponentProps<DarkCtaSlice>;
 
 const DarkCta = ({ slice }: DarkCtaProps) => {
   return (
+    <div className="relative mb-[60px] sm:mb-[70px] md:mb-[80px] lg:mb-[100px]">
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
@@ -36,7 +37,7 @@ const DarkCta = ({ slice }: DarkCtaProps) => {
       </div>
 
       {/* Image Composition - Single image from Prismic */}
-      <FadeIn delay={200}>
+      <FadeIn delay={200} direction="none">
         <div className="absolute left-1/2 -translate-x-1/2 top-[32%] lg:top-[354px] w-[95%] sm:w-[90%] md:w-[85%] lg:w-[886px] h-[450px] sm:h-[550px] md:h-[650px] lg:h-[735px]">
           {slice.primary.image?.url && (
             <PrismicNextImage
@@ -45,18 +46,6 @@ const DarkCta = ({ slice }: DarkCtaProps) => {
               fallbackAlt=""
             />
           )}
-        </div>
-      </FadeIn>
-
-      {/* CTA Button - Centered, 116px from bottom of section */}
-      <FadeIn delay={500}>
-        <div className="absolute left-1/2 -translate-x-1/2 bottom-[60px] sm:bottom-[80px] md:bottom-[100px] lg:bottom-[116px] z-40">
-          <PrismicNextLink
-            field={slice.primary.button_link}
-            className="inline-flex items-center justify-center px-[24px] py-[16px] bg-[#F02C2C] rounded-[9px] font-mono text-[16px] sm:text-[18px] font-normal leading-[1.1] text-white capitalize no-underline hover:opacity-90 transition-opacity whitespace-nowrap"
-          >
-            {slice.primary.button_text || "→ Explore Use Cases & Cases Study"}
-          </PrismicNextLink>
         </div>
       </FadeIn>
 
@@ -78,6 +67,22 @@ const DarkCta = ({ slice }: DarkCtaProps) => {
         </div>
       )}
     </section>
+
+      {/* Grey background area for button */}
+      <div className="absolute bottom-0 left-0 right-0 h-[60px] sm:h-[70px] md:h-[80px] lg:h-[100px] bg-[#F2F2F2] -mb-[60px] sm:-mb-[70px] md:-mb-[80px] lg:-mb-[100px]" />
+
+      {/* CTA Button - Outside section so it can overflow into white space */}
+      <FadeIn delay={500} direction="none">
+        <div className="absolute left-1/2 -translate-x-1/2 bottom-[-50px] sm:bottom-[-55px] md:bottom-[-60px] lg:bottom-[-70px] z-40">
+          <PrismicNextLink
+            field={slice.primary.button_link}
+            className="inline-flex items-center justify-center px-[16px] sm:px-[20px] md:px-[24px] py-[10px] sm:py-[12px] md:py-[16px] bg-[#F02C2C] rounded-[9px] font-mono text-[11px] sm:text-[13px] md:text-[16px] lg:text-[18px] font-normal leading-[1.2] text-white capitalize no-underline hover:opacity-90 transition-opacity text-center max-w-[280px] sm:max-w-none sm:whitespace-nowrap"
+          >
+            {slice.primary.button_text || "→ Explore Use Cases & Cases Study"}
+          </PrismicNextLink>
+        </div>
+      </FadeIn>
+    </div>
   );
 };
 

@@ -51,6 +51,9 @@
             },
             "logo_cloud": {
               "type": "SharedSlice"
+            },
+            "case_study_cards": {
+              "type": "SharedSlice"
             }
           }
         }

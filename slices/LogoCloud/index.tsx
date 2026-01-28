@@ -24,7 +24,27 @@ const LogoCloud = ({ slice }: LogoCloudProps) => {
 
       {/* Marquee - Infinite horizontal scroll */}
       <FadeIn delay={200}>
-        <div className="relative w-full overflow-hidden">
+        <div className="relative w-full overflow-hidden pb-10 sm:pb-8">
+          {/* Case Study badge - Mobile: centered, Desktop: left */}
+          <a
+            href="/case-study"
+            className="absolute left-1/2 -translate-x-1/2 sm:left-4 sm:translate-x-0 lg:left-[10%] bottom-0 z-10 bg-[#F2F2F2] px-2 py-1 rounded-[2px] flex items-center justify-center hover:bg-[#E8E8E8] transition-colors"
+          >
+            <span className="font-inter font-semibold text-[12px] text-[#8B9187] leading-[1.2] whitespace-nowrap">
+              Case Study
+            </span>
+          </a>
+
+          {/* Case Study badge - Right (hidden on mobile) */}
+          <a
+            href="/case-study"
+            className="absolute right-4 lg:right-[10%] bottom-0 z-10 bg-[#F2F2F2] px-2 py-1 rounded-[2px] hidden sm:flex items-center justify-center hover:bg-[#E8E8E8] transition-colors"
+          >
+            <span className="font-inter font-semibold text-[12px] text-[#8B9187] leading-[1.2] whitespace-nowrap">
+              Case Study
+            </span>
+          </a>
+
           <div className="flex animate-marquee hover:pause">
             {/* Repeat logo sets multiple times to ensure full width coverage */}
             {[0, 1, 2, 3].map((setIndex) => (

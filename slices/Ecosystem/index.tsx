@@ -35,7 +35,7 @@ const Ecosystem: FC<EcosystemProps> = ({ slice }) => {
                   {item.logo?.url && (
                     <PrismicNextImage
                       field={item.logo}
-                      className="h-[60px] md:h-[100px] w-auto object-contain"
+                      className="h-[60px] md:h-[100px] w-auto object-contain grayscale"
                       fallbackAlt=""
                     />
                   )}

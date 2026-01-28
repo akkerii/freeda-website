@@ -71,6 +71,13 @@
                   "label": "Coming Soon Badge"
                 }
               },
+              "link_slug": {
+                "type": "Text",
+                "config": {
+                  "label": "Link Slug (URL path for case study)",
+                  "placeholder": "cohabs"
+                }
+              },
               "detail_title": {
                 "type": "Text",
                 "config": {

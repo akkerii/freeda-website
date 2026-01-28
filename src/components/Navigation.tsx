@@ -55,9 +55,6 @@ export default function Navigation({ theme = "light" }: NavigationProps) {
         <a href="/working-with-freeda" className={`font-mono text-[15px] 2xl:text-[16px] leading-[145%] ${textColor} no-underline hover:opacity-70 transition-opacity whitespace-nowrap`}>
           Working with Freeda
         </a>
-        <a href="/resources" className={`font-mono text-[15px] 2xl:text-[16px] leading-[145%] ${textColor} no-underline hover:opacity-70 transition-opacity`}>
-          Resources
-        </a>
         <a href="/blog" className={`font-mono text-[15px] 2xl:text-[16px] leading-[145%] ${textColor} no-underline hover:opacity-70 transition-opacity`}>
           Blog
         </a>
@@ -103,9 +100,6 @@ export default function Navigation({ theme = "light" }: NavigationProps) {
             </a>
             <a href="/working-with-freeda" className={`font-mono text-[18px] ${textColor} no-underline hover:opacity-70 transition-opacity`}>
               Working with Freeda
-            </a>
-            <a href="/resources" className={`font-mono text-[18px] ${textColor} no-underline hover:opacity-70 transition-opacity`}>
-              Resources
             </a>
             <a href="/blog" className={`font-mono text-[18px] ${textColor} no-underline hover:opacity-70 transition-opacity`}>
               Blog

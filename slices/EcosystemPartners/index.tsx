@@ -25,24 +25,29 @@ const EcosystemPartners: FC<EcosystemPartnersProps> = ({ slice }) => {
           </p>
         )}
 
-        {/* Partner Logos - Single row on desktop, all same size */}
-        <div className="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16 items-center justify-center w-full">
-          {slice.primary.logos?.map((item: any, index: number) => (
-            <div
-              key={index}
-              className="h-[60px] md:h-[80px] lg:h-[100px] w-[180px] md:w-[220px] lg:w-[280px] overflow-hidden relative flex items-center justify-center shrink-0"
-            >
-              {item.logo?.url && (
-                <PrismicNextImage
-                  field={item.logo}
-                  className={`object-contain w-full h-full ${
-                    index === 0 || index === 2 ? "grayscale" : ""
-                  }`}
-                  fallbackAlt=""
-                />
-              )}
-            </div>
-          ))}
+        {/* Partner Logos - Horizontal scrolling marquee */}
+        <div className="relative w-full overflow-hidden">
+          <div className="flex animate-marquee hover:pause">
+            {/* Repeat logo sets multiple times to ensure full width coverage */}
+            {[0, 1, 2, 3].map((setIndex) => (
+              <div key={`set-${setIndex}`} className="flex items-center gap-8 md:gap-12 lg:gap-16 shrink-0 pr-8 md:pr-12 lg:pr-16">
+                {slice.primary.logos?.map((item: any, index: number) => (
+                  <div
+                    key={`${setIndex}-${index}`}
+                    className="h-[50px] md:h-[80px] lg:h-[100px] w-[140px] md:w-[200px] lg:w-[250px] overflow-hidden relative flex items-center justify-center shrink-0"
+                  >
+                    {item.logo?.url && (
+                      <PrismicNextImage
+                        field={item.logo}
+                        className="object-contain w-full h-full grayscale"
+                        fallbackAlt=""
+                      />
+                    )}
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* CTA Button */}

@@ -78,9 +78,9 @@ const HowItWorks = ({ slice }: HowItWorksProps) => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full max-w-[1100px] auto-rows-fr">
             {slice.items.map((item, index) => (
               <FadeIn key={index} delay={100 + index * 100} className="h-full">
-                <article className="relative w-full h-full min-h-[361px] bg-black/5 rounded-[10px] flex flex-col overflow-hidden">
+                <article className="relative w-full h-full min-h-[420px] bg-black/5 rounded-[10px] flex flex-col overflow-hidden">
                   {/* Text Content */}
-                  <div className="flex flex-col gap-2 p-6 md:p-8 pb-[140px] flex-1">
+                  <div className="flex flex-col gap-3 p-6 md:p-8 flex-1 mb-[130px]">
                     {/* Step Title */}
                     {item.step_title && (
                       <h3 className="font-trap text-xl md:text-2xl font-semibold leading-[1.2] tracking-[-0.48px] text-black m-0 max-w-[402px]">
