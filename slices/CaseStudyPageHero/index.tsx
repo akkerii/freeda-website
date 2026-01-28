@@ -209,7 +209,7 @@ const CaseStudyPageHero: FC<CaseStudyPageHeroProps> = ({ slice }) => {
             {/* Figma: Background image = 524x656px, radius 10px */}
             {/* Figma: Foreground image = 425x528px, radius 10px */}
             {/* Figma: Stats card = 353x184px, bg #F2F2F2, radius 10px, padding 32px */}
-            <FadeIn delay={200}>
+            <FadeIn delay={200} direction="none">
               <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[656px] mt-[24px]">
                 {/* Background Image - Figma: 524x656px, right side */}
                 {primary.background_image?.url && (
@@ -234,8 +234,7 @@ const CaseStudyPageHero: FC<CaseStudyPageHeroProps> = ({ slice }) => {
                 )}
 
                 {/* Stats Card - Figma: 353x184px, padding 32px, radius 10px, bg #F2F2F2 */}
-                <FadeIn delay={400} direction="up">
-                  <div className="absolute left-0 bottom-[150px] bg-[#F2F2F2] rounded-[10px] p-[32px] w-[280px] sm:w-[320px] md:w-[353px] h-auto z-20">
+                <div className="absolute left-0 bottom-[150px] bg-[#F2F2F2] rounded-[10px] p-[32px] w-[280px] sm:w-[320px] md:w-[353px] h-auto z-20">
                     {/* Red dot indicator - Figma: 17x17px, positioned top-right */}
                     <div className="absolute right-[32px] top-[32px] w-[17px] h-[17px] rounded-full bg-[#F02C2C]" />
 
@@ -265,8 +264,7 @@ const CaseStudyPageHero: FC<CaseStudyPageHeroProps> = ({ slice }) => {
                         </p>
                       )}
                     </div>
-                  </div>
-                </FadeIn>
+                </div>
               </div>
             </FadeIn>
           </div>
