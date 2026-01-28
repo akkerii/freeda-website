@@ -36,13 +36,11 @@
             "placeholder": "Company name for alt text"
           }
         },
-        "has_case_study": {
-          "type": "Boolean",
+        "case_study_slug": {
+          "type": "Text",
           "config": {
-            "label": "Has Case Study",
-            "default_value": false,
-            "placeholder_false": "No",
-            "placeholder_true": "Yes"
+            "label": "Case Study Slug",
+            "placeholder": "e.g. 'company-name' for /case-study/company-name"
           }
         }
       }
