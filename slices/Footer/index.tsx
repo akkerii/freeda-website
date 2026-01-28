@@ -47,9 +47,7 @@ const Footer = ({ slice }: FooterProps) => {
                 {/* Description & Social */}
                 <FadeIn delay={100}>
                   <div className="flex flex-col gap-6">
-                    <p className="font-inter font-medium text-[16px] text-black/55 leading-[1.45] tracking-[-0.11px]">
-                      Descriptive line about what your company does.
-                    </p>
+                    <div className="h-[24px]"></div>
                     <nav className="flex gap-5 items-center">
                       <SocialLink>
                         <g clipPath="url(#clip0_mobile_1)">
@@ -124,11 +122,7 @@ const Footer = ({ slice }: FooterProps) => {
               <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 xl:gap-[100px] px-10 md:px-14 lg:px-20 xl:px-[100px] pt-22 lg:pt-32 xl:pt-[130px] pb-12 md:pb-16 lg:pb-20 xl:pb-[80px]" data-name="Container">
                 {/* Left content - Description & Social */}
                 <FadeIn delay={100} direction="left" className="flex flex-col gap-8 md:gap-10 lg:gap-[50px] w-full lg:w-auto lg:min-w-[200px] xl:min-w-[280px]" data-name="Content">
-                  <div className="flex flex-col gap-3" data-name="Text">
-                    <p className="font-inter font-medium text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] text-black/55 leading-[1.45] tracking-[-0.11px]">
-                      Descriptive line about what your company does.
-                    </p>
-                  </div>
+                  <div className="h-[24px] md:h-[28px] lg:h-[32px]"></div>
                   <nav className="flex gap-5 md:gap-6 lg:gap-[28px] items-center" data-name="Social links">
                     <SocialLink>
                       <g clipPath="url(#clip0_1_219)" id="Social link 1">

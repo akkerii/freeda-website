@@ -6,7 +6,7 @@ import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import FadeIn from "@/components/FadeIn";
 import Lottie from "lottie-react";
-import heroFloorPlanAnimation from "../../public/animations/hero-floor-plan.json";
+import heroFloorPlanAnimation from "../../public/animations/hero-lottie.json";
 
 export type HeroProps = SliceComponentProps<HeroSlice>;
 
