@@ -235,8 +235,8 @@ const CaseStudyCards: FC<CaseStudyCardsProps> = ({ slice }) => {
                                   </div>
                                 )}
 
-                                {/* Read More button - appears on hover */}
-                                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-2">
+                                {/* Read More button - always visible when details are shown */}
+                                <div className="mt-2">
                                   <Link
                                     href={card.link_slug ? `/case-study/${card.link_slug}` : '/case-study'}
                                     className="inline-flex items-center justify-center px-6 py-3 bg-[#F02C2C] rounded-[9px] font-mono text-[16px] md:text-[18px] text-white no-underline hover:bg-[#d92626] transition-colors whitespace-nowrap"

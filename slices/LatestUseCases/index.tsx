@@ -124,7 +124,7 @@ const LatestUseCases: FC<LatestUseCasesProps> = ({ slice }) => {
                   {!isComingSoon && (
                     <div className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
                       <Link
-                        href={card.link_slug ? `/case-study/${card.link_slug}` : (card.card_id ? `/case-study/${card.card_id}` : '/case-study')}
+                        href={card.link_slug ? `/case-study/${card.link_slug}` : '/use-cases'}
                         className="inline-flex items-center justify-center px-6 py-3 bg-[#F02C2C] rounded-[9px] font-mono text-[16px] md:text-[18px] text-white no-underline hover:bg-[#d92626] transition-colors whitespace-nowrap"
                         onClick={(e) => e.stopPropagation()}
                       >

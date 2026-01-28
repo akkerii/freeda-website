@@ -5,6 +5,7 @@ import { isFilled } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 import { createClient } from "@/prismicio";
+import Link from "next/link";
 
 // Icon components
 const EditIcon = () => (
@@ -231,6 +232,17 @@ const LastCaseStudy: FC<LastCaseStudyProps> = ({ slice }) => {
                                     </div>
                                   </div>
                                 )}
+
+                              {/* Read More button */}
+                              <div className="mt-2">
+                                <Link
+                                  href={card.link_slug ? `/case-study/${card.link_slug}` : '/case-study'}
+                                  className="inline-flex items-center justify-center px-6 py-3 bg-[#F02C2C] rounded-[9px] font-mono text-[14px] md:text-[16px] lg:text-[18px] text-white no-underline hover:bg-[#d92626] transition-colors whitespace-nowrap"
+                                  onClick={(e) => e.stopPropagation()}
+                                >
+                                  Read More
+                                </Link>
+                              </div>
                             </div>
                           </div>
                         )}

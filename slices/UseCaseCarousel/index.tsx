@@ -184,7 +184,7 @@ const UseCaseCarousel: FC<UseCaseCarouselProps> = ({ slice }) => {
 
         {/* Selected Use Case Details */}
         {selectedCase && (
-          <div className="flex flex-col gap-[72px]">
+          <div key={`details-${selectedIndex}`} className="flex flex-col gap-[72px]">
             {/* Detail Header */}
             <div className="text-center max-w-[1087px] mx-auto">
               <h3 className="font-trap text-3xl md:text-4xl lg:text-[50px] font-semibold text-black leading-[110%] mb-6">
@@ -201,6 +201,7 @@ const UseCaseCarousel: FC<UseCaseCarouselProps> = ({ slice }) => {
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-[111px] items-center">
               {/* Lottie Animation for Step 1 */}
               <UseCaseLottieAnimation
+                key={`step1-${selectedIndex}`}
                 src="/animations/step1-config.json"
                 className="w-full lg:w-auto"
               />
@@ -226,24 +227,12 @@ const UseCaseCarousel: FC<UseCaseCarouselProps> = ({ slice }) => {
 
             {/* Step 2 - Content Left, Image Right */}
             <div className="flex flex-col lg:flex-row-reverse gap-8 lg:gap-[111px] items-center">
-              {/* Image */}
-              <div className="w-full lg:w-[523px] h-[400px] lg:h-[560px] relative rounded-[10px] overflow-hidden flex-shrink-0">
-                {isFilled.image(selectedCase.step2_image) ? (
-                  <PrismicNextImage
-                    field={selectedCase.step2_image}
-                    fill
-                    className="object-cover grayscale"
-                  />
-                ) : (
-                  <div className="w-full h-full bg-[#F5F5F5]" />
-                )}
-                {/* Icon Badge */}
-                <div className="absolute bottom-6 right-6">
-                  <div className="w-[76px] h-[76px] rounded-full bg-[#F02C2C] flex items-center justify-center">
-                    <Step2Icon />
-                  </div>
-                </div>
-              </div>
+              {/* Lottie Animation for Step 2 */}
+              <UseCaseLottieAnimation
+                key={`step2-${selectedIndex}`}
+                src="/animations/step2-config.json"
+                className="w-full lg:w-auto"
+              />
 
               {/* Content */}
               <div className="flex-1">
@@ -266,24 +255,12 @@ const UseCaseCarousel: FC<UseCaseCarouselProps> = ({ slice }) => {
 
             {/* Step 3 - Image Left, Content Right */}
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-[111px] items-center">
-              {/* Image */}
-              <div className="w-full lg:w-[523px] h-[400px] lg:h-[560px] relative rounded-[10px] overflow-hidden flex-shrink-0">
-                {isFilled.image(selectedCase.step3_image) ? (
-                  <PrismicNextImage
-                    field={selectedCase.step3_image}
-                    fill
-                    className="object-cover grayscale"
-                  />
-                ) : (
-                  <div className="w-full h-full bg-[#F5F5F5]" />
-                )}
-                {/* Icon Badge */}
-                <div className="absolute bottom-6 left-6">
-                  <div className="w-[76px] h-[76px] rounded-full bg-[#F02C2C] flex items-center justify-center">
-                    <Step3Icon />
-                  </div>
-                </div>
-              </div>
+              {/* Lottie Animation for Step 3 */}
+              <UseCaseLottieAnimation
+                key={`step3-${selectedIndex}`}
+                src="/animations/step3-config.json"
+                className="w-full lg:w-auto"
+              />
 
               {/* Content */}
               <div className="flex-1">

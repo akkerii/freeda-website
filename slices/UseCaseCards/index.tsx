@@ -152,20 +152,22 @@ const UseCaseCards: FC<UseCaseCardsProps> = ({ slice }) => {
                       isImageLeft ? "lg:flex-row" : "lg:flex-row-reverse"
                     )}
                   >
-                    {/* Image with Freeda logo badge or Lottie animation */}
-                    {/* Lottie animations for first 3 steps of first card */}
-                    {selectedIndex === 0 && stepIndex === 0 ? (
+                    {/* Lottie animations for all 3 steps of ALL use cases */}
+                    {stepIndex === 0 ? (
                       <UseCaseLottieAnimation
+                        key={`step1-${selectedIndex}`}
                         src="/animations/step1-config.json"
                         className="w-full lg:w-auto"
                       />
-                    ) : selectedIndex === 0 && stepIndex === 1 ? (
+                    ) : stepIndex === 1 ? (
                       <UseCaseLottieAnimation
+                        key={`step2-${selectedIndex}`}
                         src="/animations/step2-config.json"
                         className="w-full lg:w-auto"
                       />
-                    ) : selectedIndex === 0 && stepIndex === 2 ? (
+                    ) : stepIndex === 2 ? (
                       <UseCaseLottieAnimation
+                        key={`step3-${selectedIndex}`}
                         src="/animations/step3-config.json"
                         className="w-full lg:w-auto"
                       />

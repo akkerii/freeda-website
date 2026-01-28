@@ -139,6 +139,27 @@
             "label": "Since Description",
             "placeholder": "Ensure that architectural layouts comply with accessibility requirements..."
           }
+        },
+        "cta_button_text": {
+          "type": "Text",
+          "config": {
+            "label": "CTA Button Text",
+            "placeholder": "→ Eiffage Cases"
+          }
+        },
+        "cta_button_url": {
+          "type": "Text",
+          "config": {
+            "label": "CTA Button URL",
+            "placeholder": "/case-study/eiffage"
+          }
+        },
+        "cta_button_link": {
+          "type": "Link",
+          "config": {
+            "label": "CTA Button Link (alternative)",
+            "placeholder": "Link to case study page"
+          }
         }
       }
     }

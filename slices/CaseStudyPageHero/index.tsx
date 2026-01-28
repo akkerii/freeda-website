@@ -4,7 +4,7 @@
 import { FC, useState, useEffect, useRef } from "react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
-import { PrismicNextImage } from "@prismicio/next";
+import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import FadeIn from "@/components/FadeIn";
 
 export type CaseStudyPageHeroProps =
@@ -139,6 +139,25 @@ const CaseStudyPageHero: FC<CaseStudyPageHeroProps> = ({ slice }) => {
                   <div className="flex flex-col gap-[8px]">
                     {primary.since_title && <p className="font-inter text-[18px] font-normal text-black leading-[1.5] m-0">{primary.since_title}</p>}
                   </div>
+
+                  {/* CTA Button */}
+                  {primary.cta_button_text && (
+                    primary.cta_button_url ? (
+                      <a
+                        href={primary.cta_button_url}
+                        className="inline-flex items-center justify-center px-[16px] py-[10px] bg-[#F02C2C] rounded-[5px] font-mono text-[18px] text-white text-center leading-[1.45] no-underline hover:opacity-90 transition-opacity w-fit"
+                      >
+                        {primary.cta_button_text}
+                      </a>
+                    ) : (
+                      <PrismicNextLink
+                        field={primary.cta_button_link}
+                        className="inline-flex items-center justify-center px-[16px] py-[10px] bg-[#F02C2C] rounded-[5px] font-mono text-[18px] text-white text-center leading-[1.45] no-underline hover:opacity-90 transition-opacity w-fit"
+                      >
+                        {primary.cta_button_text}
+                      </PrismicNextLink>
+                    )
+                  )}
                 </div>
               </div>
             </div>
@@ -358,6 +377,25 @@ const CaseStudyPageHero: FC<CaseStudyPageHeroProps> = ({ slice }) => {
                           </p>
                         )}
                       </div>
+
+                      {/* CTA Button */}
+                      {primary.cta_button_text && (
+                        primary.cta_button_url ? (
+                          <a
+                            href={primary.cta_button_url}
+                            className="inline-flex items-center justify-center px-[16px] py-[10px] bg-[#F02C2C] rounded-[5px] font-mono text-[18px] text-white text-center leading-[1.45] no-underline hover:opacity-90 transition-opacity w-fit"
+                          >
+                            {primary.cta_button_text}
+                          </a>
+                        ) : (
+                          <PrismicNextLink
+                            field={primary.cta_button_link}
+                            className="inline-flex items-center justify-center px-[16px] py-[10px] bg-[#F02C2C] rounded-[5px] font-mono text-[18px] text-white text-center leading-[1.45] no-underline hover:opacity-90 transition-opacity w-fit"
+                          >
+                            {primary.cta_button_text}
+                          </PrismicNextLink>
+                        )
+                      )}
                     </div>
                   </div>
                 </div>
