@@ -96,35 +96,33 @@ const UseCaseHero: FC<UseCaseHeroProps> = ({ slice }) => {
         </div>
       </div>
 
-      {/* Tablet/Mobile layout (below xl) - stacked vertical layout */}
+      {/* Tablet/Mobile layout (below xl) - same composition as desktop, scaled */}
       <div className="xl:hidden flex flex-col min-h-screen">
-        {/* Images section */}
-        <div className="relative w-full h-[400px] sm:h-[450px] md:h-[500px] lg:h-[550px] mt-[80px]">
+        {/* Images section - scaled desktop composition */}
+        <div className="relative w-full h-[350px] sm:h-[400px] md:h-[480px] lg:h-[550px] mt-[80px] overflow-hidden">
           {/* Background floor plan image */}
-          <div className="absolute left-0 mix-blend-lighten w-[60%] max-w-[400px] aspect-square top-0 hidden md:block">
+          <div className="absolute left-[-5%] mix-blend-lighten w-[50%] sm:w-[45%] aspect-square top-0">
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
               <img alt="" className="absolute left-0 max-w-none size-full top-0" src="/images/6c7c028e74db5ea2c485a653344802bd08faf5a5.png" />
             </div>
           </div>
 
-          {/* Large report screenshot */}
-          <div className="absolute h-[85%] left-[5%] pointer-events-none rounded-[10px] top-[10%] w-[85%] sm:w-[80%] md:w-[75%]">
-            <div className="absolute inset-0 overflow-hidden rounded-[10px]">
-              <img alt="" className="absolute h-full left-0 max-w-none top-0 w-full grayscale object-cover" src="/images/6478d52c5db017fb5e4c6a867bd0123e67f6bc69.png" />
+          {/* Large grayscale report screenshot - back */}
+          <div className="absolute h-[80%] left-[-15%] sm:left-[-10%] md:left-[-5%] pointer-events-none rounded-[8px] sm:rounded-[10px] top-[12%] w-[75%] sm:w-[70%] md:w-[65%] grayscale">
+            <div className="absolute inset-0 overflow-hidden rounded-[8px] sm:rounded-[10px]">
+              <img alt="" className="absolute h-full left-0 max-w-none top-0 w-full object-cover" src="/images/6478d52c5db017fb5e4c6a867bd0123e67f6bc69.png" />
             </div>
-            <div aria-hidden="true" className="absolute border-2 border-[rgba(0,0,0,0.02)] border-solid inset-[-2px] rounded-[12px]" />
+            <div aria-hidden="true" className="absolute border-[4px] sm:border-[6px] md:border-8 border-[rgba(0,0,0,0.02)] border-solid inset-[-4px] sm:inset-[-6px] md:inset-[-8px] rounded-[12px] sm:rounded-[16px] md:rounded-[18px]" />
           </div>
 
-          {/* Small color screenshot - foreground */}
-          <div className="absolute h-[70%] left-[25%] sm:left-[30%] md:left-[35%] overflow-clip rounded-[10px] top-[20%] w-[45%] sm:w-[40%] md:w-[35%] hidden sm:block">
-            <div className="absolute inset-0">
-              <img alt="" className="absolute inset-0 max-w-none object-center object-cover pointer-events-none size-full" src="/images/67b9bbfe06c9bbfdd83967f7ba2e655e69ba1480.png" />
-            </div>
+          {/* Small color screenshot - front, overlapping */}
+          <div className="absolute h-[65%] sm:h-[70%] left-[32%] sm:left-[38%] md:left-[42%] overflow-clip rounded-[8px] sm:rounded-[10px] top-[20%] sm:top-[18%] w-[45%] sm:w-[38%] md:w-[35%]">
+            <img alt="" className="absolute inset-0 max-w-none object-center object-cover pointer-events-none size-full" src="/images/67b9bbfe06c9bbfdd83967f7ba2e655e69ba1480.png" />
           </div>
         </div>
 
         {/* Text content */}
-        <div className="flex flex-col gap-[16px] sm:gap-[20px] items-start px-5 sm:px-8 md:px-12 lg:px-16 py-10 sm:py-12 md:py-16 w-full">
+        <div className="flex flex-col gap-[16px] sm:gap-[20px] items-start px-5 sm:px-8 md:px-12 lg:px-16 py-8 sm:py-10 md:py-14 w-full">
           {/* Badge */}
           <div className="bg-[#555] flex gap-[10px] items-center justify-center overflow-clip px-[12px] py-[6px] rounded-[5px]">
             <div className="size-[6px]">

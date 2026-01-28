@@ -117,23 +117,23 @@ const UseCaseCards: FC<UseCaseCardsProps> = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="relative w-full bg-white py-16 md:py-20 lg:py-24 overflow-hidden"
+      className="relative w-full bg-white py-12 md:py-24 overflow-hidden"
     >
       {/* Floating Navigation - Only visible when section is in view */}
       {cards.length > 0 && (
         <div
           className={clsx(
-            "fixed right-4 md:right-6 lg:right-8 top-1/2 -translate-y-1/2 z-50 transition-opacity duration-300",
+            "fixed right-8 top-1/2 -translate-y-1/2 z-50 transition-opacity duration-300 hidden lg:block",
             isNavVisible ? "opacity-100" : "opacity-0 pointer-events-none"
           )}
         >
-          <div className="bg-[#F2F2F2] rounded-[10px] p-3 md:p-4 flex flex-col gap-4 md:gap-5 shadow-lg max-w-[180px] md:max-w-[220px]">
+          <div className="bg-[#F2F2F2] rounded-[10px] p-4 flex flex-col gap-5 shadow-lg max-w-[220px]">
             {cards.map((card: any, idx: number) => (
               <button
                 key={idx}
                 onClick={() => setSelectedIndex(idx)}
                 className={clsx(
-                  "font-trap text-[13px] md:text-[15px] leading-[1.2] text-left transition-colors",
+                  "font-trap text-[15px] leading-[1.2] text-left transition-colors",
                   idx === selectedIndex
                     ? "font-bold text-black"
                     : "font-semibold text-[#D2D2D2] hover:text-black/50"
@@ -146,10 +146,13 @@ const UseCaseCards: FC<UseCaseCardsProps> = ({ slice }) => {
         </div>
       )}
 
-      <div className="max-w-[1512px] mx-auto px-5 md:px-10 lg:px-[64px]">
+      {/* Scaled container for mobile - scales down to fit screen while maintaining desktop layout */}
+      {/* Height wrapper compensates for scale transform at each breakpoint */}
+      <div className="w-full overflow-hidden h-[750px] sm:h-[1100px] md:h-[1500px] lg:h-[1900px] xl:h-auto">
+        <div className="w-[1200px] min-w-[1200px] max-w-[1512px] px-[64px] mx-auto origin-top scale-[0.35] sm:scale-[0.5] md:scale-[0.68] lg:scale-[0.85] xl:scale-100">
         {/* Section Title */}
         {slice.primary.section_title && (
-          <h2 className="font-trap text-3xl md:text-4xl lg:text-[50px] font-semibold text-black mb-10 md:mb-16 leading-[1.1] pr-5 md:pr-10 lg:pr-[67px]">
+          <h2 className="font-trap text-[50px] font-semibold text-black mb-16 leading-[1.1] pr-[67px]">
             {slice.primary.section_title}
           </h2>
         )}
@@ -183,9 +186,7 @@ const UseCaseCards: FC<UseCaseCardsProps> = ({ slice }) => {
                     onClick={() => setSelectedIndex(originalIndex)}
                     className={clsx(
                       "flex flex-col gap-8 items-start relative rounded-lg shrink-0 transition-all duration-500 ease-out text-left cursor-pointer",
-                      isSelected
-                        ? "w-[300px] sm:w-[400px] lg:w-[524px]"
-                        : "w-[260px] sm:w-[300px] lg:w-[343px]"
+                      isSelected ? "w-[524px]" : "w-[343px]"
                     )}
                     style={{
                       opacity: visibility,
@@ -195,7 +196,7 @@ const UseCaseCards: FC<UseCaseCardsProps> = ({ slice }) => {
                   <div
                     className={clsx(
                       "relative overflow-hidden rounded-[10px] w-full shrink-0",
-                      isSelected ? "h-[400px] sm:h-[550px] lg:h-[698px]" : "h-[350px] sm:h-[400px] lg:h-[456px]"
+                      isSelected ? "h-[698px]" : "h-[456px]"
                     )}
                   >
                     {isFilled.image(card.card_image) ? (
@@ -234,12 +235,12 @@ const UseCaseCards: FC<UseCaseCardsProps> = ({ slice }) => {
                   {/* Card Text Content - gap 16px */}
                   <div className="flex flex-col gap-4 items-start w-full">
                     {/* Card Title - Trap SemiBold 24px, line-height 120% */}
-                    <h5 className="font-trap text-xl md:text-2xl font-semibold text-black leading-[1.2] m-0">
+                    <h5 className="font-trap text-2xl font-semibold text-black leading-[1.2] m-0">
                       {card.card_title}
                     </h5>
 
                     {/* Card Description - Inter 18px, opacity 55% */}
-                    <div className="flex flex-col text-base md:text-lg text-black/55 leading-[normal]">
+                    <div className="flex flex-col text-lg text-black/55 leading-[normal]">
                       {/* Application */}
                       <p className="font-inter font-bold m-0">Application</p>
                       <p className="font-inter font-normal m-0 mb-4">
@@ -262,23 +263,23 @@ const UseCaseCards: FC<UseCaseCardsProps> = ({ slice }) => {
 
         {/* Detail View - Dynamic Steps Section */}
         {cards[selectedIndex] && (
-          <div className="mt-16 md:mt-20 lg:mt-24 relative min-h-[400px]">
+          <div className="mt-24 relative min-h-[400px]">
             {/* Detail Title */}
             {cards[selectedIndex].detail_title && (
-              <h3 className="font-trap text-2xl md:text-3xl lg:text-[40px] font-semibold text-black mb-4 leading-[1.1] whitespace-pre-line text-center">
+              <h3 className="font-trap text-[40px] font-semibold text-black mb-4 leading-[1.1] whitespace-pre-line text-center">
                 {cards[selectedIndex].detail_title}
               </h3>
             )}
 
             {/* Detail Description */}
             {cards[selectedIndex].detail_description && (
-              <p className="font-inter text-lg md:text-xl lg:text-[24px] text-black/55 leading-[1.45] tracking-[-0.12px] mb-12 md:mb-16 max-w-[800px] mx-auto text-center">
+              <p className="font-inter text-[24px] text-black/55 leading-[1.45] tracking-[-0.12px] mb-16 max-w-[800px] mx-auto text-center">
                 {cards[selectedIndex].detail_description}
               </p>
             )}
 
             {/* Steps Container */}
-            <div className="flex flex-col gap-16 md:gap-20 lg:gap-24">
+            <div className="flex flex-col gap-24">
               {/* Filter and render steps for the selected card */}
               {slice.primary.steps
                 ?.filter((step: any) => step.card_id === cards[selectedIndex].card_id)
@@ -294,8 +295,8 @@ const UseCaseCards: FC<UseCaseCardsProps> = ({ slice }) => {
                     <div
                       key={stepIndex}
                       className={clsx(
-                        "flex flex-col gap-8 lg:gap-12 items-start",
-                        isImageLeft ? "lg:flex-row" : "lg:flex-row-reverse"
+                        "flex gap-12 items-start",
+                        isImageLeft ? "flex-row" : "flex-row-reverse"
                       )}
                     >
                       {/* Image with Freeda logo badge or Lottie animation */}
@@ -303,27 +304,27 @@ const UseCaseCards: FC<UseCaseCardsProps> = ({ slice }) => {
                       {selectedIndex === 0 && stepIndex === 0 ? (
                         <UseCaseLottieAnimation
                           src="/animations/step1-config.json"
-                          className="w-full lg:w-auto"
+                          className="w-auto"
                         />
                       ) : selectedIndex === 0 && stepIndex === 1 ? (
                         <UseCaseLottieAnimation
                           src="/animations/step2-config.json"
-                          className="w-full lg:w-auto"
+                          className="w-auto"
                         />
                       ) : selectedIndex === 0 && stepIndex === 2 ? (
                         <UseCaseLottieAnimation
                           src="/animations/step3-config.json"
-                          className="w-full lg:w-auto"
+                          className="w-auto"
                         />
                       ) : step.use_composition ? (
                         <UseCaseImageComposition
-                          className="w-full lg:w-auto"
+                          className="w-auto"
                           mainImage={step.composition_main_image?.url || "/images/use-cases/main-screenshot.png"}
                           cardImage={step.composition_card_image?.url || "/images/use-cases/card-requirements.png"}
                           smallImage={step.composition_small_image?.url || "/images/use-cases/small-frame.png"}
                         />
                       ) : isFilled.image(step.step_image) ? (
-                        <div className="relative w-full lg:w-[523px] h-[400px] lg:h-[558px] shrink-0 rounded-[10px] overflow-hidden">
+                        <div className="relative w-[523px] h-[558px] shrink-0 rounded-[10px] overflow-hidden">
                           <PrismicNextImage
                             field={step.step_image}
                             fill
@@ -332,13 +333,13 @@ const UseCaseCards: FC<UseCaseCardsProps> = ({ slice }) => {
                           />
                         </div>
                       ) : (
-                        <UseCaseImageComposition className="w-full lg:w-auto" />
+                        <UseCaseImageComposition className="w-auto" />
                       )}
 
                       {/* Content */}
                       <div className="flex flex-col gap-6 flex-1">
                         {/* Title */}
-                        <h4 className="font-trap text-xl md:text-2xl font-semibold text-black leading-[1.2]">
+                        <h4 className="font-trap text-2xl font-semibold text-black leading-[1.2]">
                           {step.step_title}
                         </h4>
 
@@ -392,6 +393,7 @@ const UseCaseCards: FC<UseCaseCardsProps> = ({ slice }) => {
             </div>
           </div>
         )}
+        </div>
       </div>
     </section>
   );

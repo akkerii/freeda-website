@@ -8,9 +8,11 @@ interface NavigationProps {
 
 export default function Navigation({ theme = "light" }: NavigationProps) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const textColor = theme === "dark" ? "text-white" : "text-black";
+  const bgColor = theme === "dark" ? "bg-[#202020]" : "bg-white";
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -25,13 +27,13 @@ export default function Navigation({ theme = "light" }: NavigationProps) {
 
   return (
     <div className="absolute top-0 left-0 right-0 z-[9999] flex items-center justify-between px-5 md:px-10 lg:px-14 py-6 md:py-8">
-      {/* Left: Navigation */}
-      <nav className="hidden md:flex items-center gap-8 z-10">
+      {/* Left: Navigation - hidden until 2xl breakpoint to prevent overlap */}
+      <nav className="hidden 2xl:flex items-center gap-6 z-10">
         {/* Applications Dropdown */}
         <div className="relative" ref={dropdownRef}>
           <button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            className={`font-mono text-[16px] leading-[145%] ${textColor} no-underline hover:opacity-70 transition-opacity flex items-center gap-1`}
+            className={`font-mono text-[15px] 2xl:text-[16px] leading-[145%] ${textColor} no-underline hover:opacity-70 transition-opacity flex items-center gap-1`}
           >
             Applications
             <svg className={`w-4 h-4 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -50,16 +52,27 @@ export default function Navigation({ theme = "light" }: NavigationProps) {
             </div>
           )}
         </div>
-        <a href="/working-with-freeda" className={`font-mono text-[16px] leading-[145%] ${textColor} no-underline hover:opacity-70 transition-opacity`}>
+        <a href="/working-with-freeda" className={`font-mono text-[15px] 2xl:text-[16px] leading-[145%] ${textColor} no-underline hover:opacity-70 transition-opacity whitespace-nowrap`}>
           Working with Freeda
         </a>
-        <a href="/resources" className={`font-mono text-[16px] leading-[145%] ${textColor} no-underline hover:opacity-70 transition-opacity`}>
+        <a href="/resources" className={`font-mono text-[15px] 2xl:text-[16px] leading-[145%] ${textColor} no-underline hover:opacity-70 transition-opacity`}>
           Resources
         </a>
-        <a href="/blog" className={`font-mono text-[16px] leading-[145%] ${textColor} no-underline hover:opacity-70 transition-opacity`}>
+        <a href="/blog" className={`font-mono text-[15px] 2xl:text-[16px] leading-[145%] ${textColor} no-underline hover:opacity-70 transition-opacity`}>
           Blog
         </a>
       </nav>
+
+      {/* Mobile Menu Button - show below 2xl */}
+      <button
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        className={`2xl:hidden flex flex-col justify-center items-center w-10 h-10 z-20 ${textColor}`}
+        aria-label="Toggle menu"
+      >
+        <span className={`block w-6 h-0.5 ${theme === "dark" ? "bg-white" : "bg-black"} transition-transform ${isMobileMenuOpen ? 'rotate-45 translate-y-1' : ''}`} />
+        <span className={`block w-6 h-0.5 ${theme === "dark" ? "bg-white" : "bg-black"} my-1 transition-opacity ${isMobileMenuOpen ? 'opacity-0' : ''}`} />
+        <span className={`block w-6 h-0.5 ${theme === "dark" ? "bg-white" : "bg-black"} transition-transform ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+      </button>
 
       {/* Center: Logo */}
       <a href="/" className="flex items-center no-underline hover:opacity-80 transition-opacity absolute left-1/2 -translate-x-1/2 z-0 pointer-events-auto">
@@ -73,10 +86,39 @@ export default function Navigation({ theme = "light" }: NavigationProps) {
       {/* Right: Contact Button */}
       <a
         href="/contact"
-        className="hidden sm:flex items-center justify-center px-4 py-3 bg-[#F2F2F2] border-2 border-black/15 hover:bg-[#E8E8E8] rounded-[9px] font-mono text-sm lg:text-[18px] leading-[145%] text-black no-underline transition-colors z-10"
+        className="hidden sm:flex items-center justify-center px-4 py-3 bg-[#F2F2F2] border-2 border-black/15 hover:bg-[#E8E8E8] rounded-[9px] font-mono text-sm lg:text-[16px] xl:text-[18px] leading-[145%] text-black no-underline transition-colors z-10"
       >
         Discuss a project
       </a>
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className={`fixed inset-0 ${bgColor} z-[9998] 2xl:hidden pt-24 px-6`}>
+          <nav className="flex flex-col gap-6">
+            <a href="/case-study" className={`font-mono text-[18px] ${textColor} no-underline hover:opacity-70 transition-opacity`}>
+              Case Study
+            </a>
+            <a href="/use-cases" className={`font-mono text-[18px] ${textColor} no-underline hover:opacity-70 transition-opacity`}>
+              Use Cases
+            </a>
+            <a href="/working-with-freeda" className={`font-mono text-[18px] ${textColor} no-underline hover:opacity-70 transition-opacity`}>
+              Working with Freeda
+            </a>
+            <a href="/resources" className={`font-mono text-[18px] ${textColor} no-underline hover:opacity-70 transition-opacity`}>
+              Resources
+            </a>
+            <a href="/blog" className={`font-mono text-[18px] ${textColor} no-underline hover:opacity-70 transition-opacity`}>
+              Blog
+            </a>
+            <a
+              href="/contact"
+              className="mt-4 flex items-center justify-center px-4 py-3 bg-[#F02C2C] rounded-[9px] font-mono text-[18px] text-white no-underline transition-colors"
+            >
+              Discuss a project
+            </a>
+          </nav>
+        </div>
+      )}
     </div>
   );
 }

@@ -165,19 +165,19 @@ const CaseStudyHero: FC<CaseStudyHeroProps> = ({ slice }) => {
         </div>
       </div>
 
-      {/* Tablet/Mobile layout (below xl) - stacked vertical layout */}
+      {/* Tablet/Mobile layout (below xl) - same composition as desktop, scaled */}
       <div className="xl:hidden flex flex-col min-h-screen">
-        {/* Images section */}
-        <div className="relative w-full h-[400px] sm:h-[450px] md:h-[500px] lg:h-[550px] mt-[80px]">
+        {/* Images section - scaled desktop composition */}
+        <div className="relative w-full h-[350px] sm:h-[400px] md:h-[480px] lg:h-[550px] mt-[80px] overflow-hidden">
           {/* Background floor plan image */}
-          <div className="absolute left-0 mix-blend-lighten w-[60%] max-w-[400px] aspect-square top-0 hidden md:block">
+          <div className="absolute left-[-5%] mix-blend-lighten w-[50%] sm:w-[45%] aspect-square top-0">
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
               <img alt="" className="absolute left-0 max-w-none size-full top-0" src="/images/6c7c028e74db5ea2c485a653344802bd08faf5a5.png" />
             </div>
           </div>
 
-          {/* Floor Plan Card */}
-          <div className="absolute bg-white border-4 border-[#f2f2f2] rounded-[8px] shadow-lg left-[5%] top-[10%] w-[85%] sm:w-[75%] md:w-[65%] h-[80%] flex items-center justify-center overflow-hidden">
+          {/* Floor Plan Card - scaled from desktop */}
+          <div className="absolute bg-white border-[4px] sm:border-[5px] md:border-[6px] border-[#f2f2f2] rounded-[6px] sm:rounded-[8px] shadow-lg left-[-20%] sm:left-[-15%] md:left-[-10%] top-[15%] w-[75%] sm:w-[70%] md:w-[65%] h-[75%] sm:h-[80%] flex items-center justify-center overflow-hidden">
             <img
               alt="Floor plan"
               className="absolute w-full h-full object-cover"
@@ -185,16 +185,14 @@ const CaseStudyHero: FC<CaseStudyHeroProps> = ({ slice }) => {
             />
           </div>
 
-          {/* Small color screenshot - foreground */}
-          <div className="absolute h-[60%] left-[30%] sm:left-[35%] md:left-[40%] overflow-clip rounded-[10px] top-[25%] w-[40%] sm:w-[35%] md:w-[30%] hidden sm:block">
-            <div className="absolute inset-0">
-              <img alt="" className="absolute inset-0 max-w-none object-center object-cover pointer-events-none size-full" src="/images/1464d2a6761181a16640ae6b4d5125ddc1739c02.png" />
-            </div>
+          {/* Small color screenshot - overlapping */}
+          <div className="absolute h-[65%] sm:h-[70%] left-[30%] sm:left-[35%] md:left-[40%] overflow-clip rounded-[8px] sm:rounded-[10px] top-[20%] sm:top-[18%] w-[45%] sm:w-[40%] md:w-[35%]">
+            <img alt="" className="absolute inset-0 max-w-none object-center object-cover pointer-events-none size-full" src="/images/1464d2a6761181a16640ae6b4d5125ddc1739c02.png" />
           </div>
         </div>
 
         {/* Text content */}
-        <div className="flex flex-col gap-[16px] sm:gap-[20px] items-start px-5 sm:px-8 md:px-12 lg:px-16 py-10 sm:py-12 md:py-16 w-full">
+        <div className="flex flex-col gap-[16px] sm:gap-[20px] items-start px-5 sm:px-8 md:px-12 lg:px-16 py-8 sm:py-10 md:py-14 w-full">
           {/* Badge */}
           <div className="bg-[#555] flex gap-[10px] items-center justify-center overflow-clip px-[12px] py-[6px] rounded-[5px]">
             <div className="size-[6px]">

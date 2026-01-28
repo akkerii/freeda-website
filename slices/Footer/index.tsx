@@ -33,89 +33,178 @@ const Footer = ({ slice }: FooterProps) => {
     >
       <div className="flex flex-col items-center relative w-full" data-name="Footer">
         <div className="relative w-full max-w-[1512px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
-          {/* Wrapper to maintain aspect ratio and positions */}
-          <div className="relative w-full" style={{ aspectRatio: '1800/921' }}>
+
+          {/* Mobile Layout */}
+          <div className="block md:hidden relative">
+            {/* Logo for mobile - overlapping */}
+            <div className="relative w-full z-10 pointer-events-none">
+              <img src="/images/freeda-logo-combined.svg" alt="" className="w-full h-auto object-contain" />
+            </div>
+
+            {/* Footer content box for mobile - overlapped by logo */}
+            <footer className="bg-[rgba(242,242,242,0.4)] rounded-[10px] overflow-hidden -mt-[60px] relative" data-name="Footer Mobile">
+              <div className="flex flex-col gap-8 px-6 pt-[80px] pb-8">
+                {/* Description & Social */}
+                <FadeIn delay={100}>
+                  <div className="flex flex-col gap-6">
+                    <p className="font-inter font-medium text-[16px] text-black/55 leading-[1.45] tracking-[-0.11px]">
+                      Descriptive line about what your company does.
+                    </p>
+                    <nav className="flex gap-5 items-center">
+                      <SocialLink>
+                        <g clipPath="url(#clip0_mobile_1)">
+                          <path d={svgPaths.p3c382d72} fill="black" fillOpacity="0.45" />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_mobile_1">
+                            <rect fill="white" height="24" width="24" />
+                          </clipPath>
+                        </defs>
+                      </SocialLink>
+                      <SocialLink>
+                        <g clipPath="url(#clip0_mobile_2)">
+                          <g>
+                            <path clipRule="evenodd" d={svgPaths.p1fcf5070} fill="black" fillOpacity="0.45" fillRule="evenodd" />
+                            <path d={svgPaths.pe7ea00} fill="white" />
+                            <path d={svgPaths.p1ab31680} fill="white" />
+                            <path d={svgPaths.p28c6df0} fill="white" />
+                          </g>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_mobile_2">
+                            <rect fill="white" height="24" width="24" />
+                          </clipPath>
+                        </defs>
+                      </SocialLink>
+                      <SocialLink>
+                        <path d={svgPaths.pdaf0200} fill="black" fillOpacity="0.45" />
+                      </SocialLink>
+                    </nav>
+                  </div>
+                </FadeIn>
+
+                {/* Nav columns for mobile */}
+                <FadeIn delay={200}>
+                  <div className="grid grid-cols-2 gap-8">
+                    {/* Column 1 - Applications */}
+                    <nav className="flex flex-col gap-2">
+                      <div className="pb-3">
+                        <p className="font-trap font-semibold text-[18px] text-black leading-[1.2] capitalize">Applications</p>
+                      </div>
+                      <a href="/use-cases" className="font-inter font-medium text-[14px] text-black/55 leading-[1.45] tracking-[-0.08px] hover:text-black transition-colors">Use Cases</a>
+                      <a href="/case-study" className="font-inter font-medium text-[14px] text-black/55 leading-[1.45] tracking-[-0.08px] hover:text-black transition-colors">Case Study</a>
+                    </nav>
+
+                    {/* Column 2 - Resources */}
+                    <nav className="flex flex-col gap-2">
+                      <div className="pb-3">
+                        <p className="font-trap font-semibold text-[18px] text-black leading-[1.2] capitalize">Resources</p>
+                      </div>
+                      <a href="/resources#video" className="font-inter font-medium text-[14px] text-black/55 leading-[1.45] tracking-[-0.08px] hover:text-black transition-colors">Short Video</a>
+                      <a href="/blog" className="font-inter font-medium text-[14px] text-black/55 leading-[1.45] tracking-[-0.08px] hover:text-black transition-colors">Articles</a>
+                      <a href="/resources#news" className="font-inter font-medium text-[14px] text-black/55 leading-[1.45] tracking-[-0.08px] hover:text-black transition-colors">News Room</a>
+                    </nav>
+
+                    {/* Column 3 - Company */}
+                    <nav className="flex flex-col gap-2 col-span-2">
+                      <div className="pb-3">
+                        <p className="font-trap font-semibold text-[18px] text-black leading-[1.2] capitalize">Company</p>
+                      </div>
+                      <div className="flex flex-wrap gap-x-6 gap-y-2">
+                        <a href="/working-with-freeda" className="font-inter font-medium text-[14px] text-black/55 leading-[1.45] tracking-[-0.08px] hover:text-black transition-colors">Working with Freeda</a>
+                        <a href="/careers" className="font-inter font-medium text-[14px] text-black/55 leading-[1.45] tracking-[-0.08px] hover:text-black transition-colors">Careers</a>
+                        <a href="/legal" className="font-inter font-medium text-[14px] text-black/55 leading-[1.45] tracking-[-0.08px] hover:text-black transition-colors">Legal</a>
+                      </div>
+                    </nav>
+                  </div>
+                </FadeIn>
+              </div>
+            </footer>
+          </div>
+
+          {/* Desktop Layout - Original */}
+          <div className="hidden md:block relative w-full" style={{ aspectRatio: '1800/921' }}>
             {/* Combined X + Freeda logo - absolute at top */}
             <div className="absolute left-0 top-0 w-full pointer-events-none" style={{ height: '51.14%' }}>
               <img src="/images/freeda-logo-combined.svg" alt="" className="block w-full h-full object-contain object-top" />
             </div>
 
             {/* Footer content box - positioned below logo overlap */}
-            <footer className="absolute left-0 right-0 bottom-0 bg-[rgba(242,242,242,0.4)] rounded-[10px] sm:rounded-[14px] overflow-hidden" style={{ top: '25.5%' }} data-name="Footer 1">
-            <div className="flex flex-col lg:flex-row gap-8 sm:gap-10 md:gap-12 lg:gap-16 xl:gap-[100px] px-6 sm:px-10 md:px-14 lg:px-20 xl:px-[px] pt-16 sm:pt-18 md:pt-22 lg:pt-32 xl:pt-[130px] pb-10 sm:pb-12 md:pb-16 lg:pb-20 xl:pb-[80px]" data-name="Container">
-              {/* Left content - Description & Social */}
-              <FadeIn delay={100} direction="left" className="flex flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-[50px] w-full lg:w-auto lg:min-w-[200px] xl:min-w-[280px]" data-name="Content">
-                <div className="flex flex-col gap-2 sm:gap-3" data-name="Text">
-                  <p className="font-inter font-medium text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] text-black/55 leading-[1.45] tracking-[-0.11px]">
-                    Descriptive line about what your company does.
-                  </p>
-                </div>
-                <nav className="flex gap-4 sm:gap-5 md:gap-6 lg:gap-[28px] items-center" data-name="Social links">
-                  <SocialLink>
-                    <g clipPath="url(#clip0_1_219)" id="Social link 1">
-                      <path d={svgPaths.p3c382d72} fill="var(--fill-0, black)" fillOpacity="0.45" id="Vector" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_1_219">
-                        <rect fill="white" height="24" width="24" />
-                      </clipPath>
-                    </defs>
-                  </SocialLink>
-                  <SocialLink>
-                    <g clipPath="url(#clip0_1_216)" id="Social link 2">
-                      <g id="Vector">
-                        <path clipRule="evenodd" d={svgPaths.p1fcf5070} fill="black" fillOpacity="0.45" fillRule="evenodd" />
-                        <path d={svgPaths.pe7ea00} fill="var(--fill-0, white)" />
-                        <path d={svgPaths.p1ab31680} fill="var(--fill-0, white)" />
-                        <path d={svgPaths.p28c6df0} fill="var(--fill-0, white)" />
+            <footer className="absolute left-0 right-0 bottom-0 bg-[rgba(242,242,242,0.4)] rounded-[14px] overflow-hidden" style={{ top: '25.5%' }} data-name="Footer 1">
+              <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 xl:gap-[100px] px-10 md:px-14 lg:px-20 xl:px-[100px] pt-22 lg:pt-32 xl:pt-[130px] pb-12 md:pb-16 lg:pb-20 xl:pb-[80px]" data-name="Container">
+                {/* Left content - Description & Social */}
+                <FadeIn delay={100} direction="left" className="flex flex-col gap-8 md:gap-10 lg:gap-[50px] w-full lg:w-auto lg:min-w-[200px] xl:min-w-[280px]" data-name="Content">
+                  <div className="flex flex-col gap-3" data-name="Text">
+                    <p className="font-inter font-medium text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] text-black/55 leading-[1.45] tracking-[-0.11px]">
+                      Descriptive line about what your company does.
+                    </p>
+                  </div>
+                  <nav className="flex gap-5 md:gap-6 lg:gap-[28px] items-center" data-name="Social links">
+                    <SocialLink>
+                      <g clipPath="url(#clip0_1_219)" id="Social link 1">
+                        <path d={svgPaths.p3c382d72} fill="var(--fill-0, black)" fillOpacity="0.45" id="Vector" />
                       </g>
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_1_216">
-                        <rect fill="white" height="24" width="24" />
-                      </clipPath>
-                    </defs>
-                  </SocialLink>
-                  <SocialLink>
-                    <g id="Social link 3">
-                      <path d={svgPaths.pdaf0200} fill="var(--fill-0, black)" fillOpacity="0.45" id="Vector" />
-                    </g>
-                  </SocialLink>
-                </nav>
-              </FadeIn>
+                      <defs>
+                        <clipPath id="clip0_1_219">
+                          <rect fill="white" height="24" width="24" />
+                        </clipPath>
+                      </defs>
+                    </SocialLink>
+                    <SocialLink>
+                      <g clipPath="url(#clip0_1_216)" id="Social link 2">
+                        <g id="Vector">
+                          <path clipRule="evenodd" d={svgPaths.p1fcf5070} fill="black" fillOpacity="0.45" fillRule="evenodd" />
+                          <path d={svgPaths.pe7ea00} fill="var(--fill-0, white)" />
+                          <path d={svgPaths.p1ab31680} fill="var(--fill-0, white)" />
+                          <path d={svgPaths.p28c6df0} fill="var(--fill-0, white)" />
+                        </g>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1_216">
+                          <rect fill="white" height="24" width="24" />
+                        </clipPath>
+                      </defs>
+                    </SocialLink>
+                    <SocialLink>
+                      <g id="Social link 3">
+                        <path d={svgPaths.pdaf0200} fill="var(--fill-0, black)" fillOpacity="0.45" id="Vector" />
+                      </g>
+                    </SocialLink>
+                  </nav>
+                </FadeIn>
 
-              {/* Right content - Nav columns */}
-              <FadeIn delay={200} direction="right" className="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-[40px] flex-1 lg:-mt-8 xl:-mt-12" data-name="Nav">
-                {/* Column 1 - Applications */}
-                <nav className="flex flex-col gap-2 sm:gap-[8px]" data-name="Column 1">
-                  <div className="pb-3 sm:pb-4 lg:pb-[16px]">
-                    <p className="font-trap font-semibold text-[20px] sm:text-[24px] text-black leading-[1.2] capitalize">Applications</p>
-                  </div>
-                  <a href="/use-cases" className="font-inter font-medium text-[14px] sm:text-[16px] text-black/55 leading-[1.45] tracking-[-0.08px] hover:text-black transition-colors">Use Cases</a>
-                  <a href="/case-study" className="font-inter font-medium text-[14px] sm:text-[16px] text-black/55 leading-[1.45] tracking-[-0.08px] hover:text-black transition-colors">Case Study</a>
-                </nav>
+                {/* Right content - Nav columns */}
+                <FadeIn delay={200} direction="right" className="grid grid-cols-3 gap-8 md:gap-10 lg:gap-12 xl:gap-[40px] flex-1 lg:-mt-8 xl:-mt-12" data-name="Nav">
+                  {/* Column 1 - Applications */}
+                  <nav className="flex flex-col gap-[8px]" data-name="Column 1">
+                    <div className="pb-4 lg:pb-[16px]">
+                      <p className="font-trap font-semibold text-[20px] sm:text-[24px] text-black leading-[1.2] capitalize">Applications</p>
+                    </div>
+                    <a href="/use-cases" className="font-inter font-medium text-[14px] sm:text-[16px] text-black/55 leading-[1.45] tracking-[-0.08px] hover:text-black transition-colors">Use Cases</a>
+                    <a href="/case-study" className="font-inter font-medium text-[14px] sm:text-[16px] text-black/55 leading-[1.45] tracking-[-0.08px] hover:text-black transition-colors">Case Study</a>
+                  </nav>
 
-                {/* Column 2 - Resources */}
-                <nav className="flex flex-col gap-2 sm:gap-[8px]" data-name="Column 2">
-                  <div className="pb-3 sm:pb-4 lg:pb-[16px]">
-                    <p className="font-trap font-semibold text-[20px] sm:text-[24px] text-black leading-[1.2] capitalize">Resources</p>
-                  </div>
-                  <a href="/resources#video" className="font-inter font-medium text-[14px] sm:text-[16px] text-black/55 leading-[1.45] tracking-[-0.08px] hover:text-black transition-colors">Short Video</a>
-                  <a href="/blog" className="font-inter font-medium text-[14px] sm:text-[16px] text-black/55 leading-[1.45] tracking-[-0.08px] hover:text-black transition-colors">Articles</a>
-                  <a href="/resources#news" className="font-inter font-medium text-[14px] sm:text-[16px] text-black/55 leading-[1.45] tracking-[-0.08px] hover:text-black transition-colors">News Room</a>
-                </nav>
+                  {/* Column 2 - Resources */}
+                  <nav className="flex flex-col gap-[8px]" data-name="Column 2">
+                    <div className="pb-4 lg:pb-[16px]">
+                      <p className="font-trap font-semibold text-[20px] sm:text-[24px] text-black leading-[1.2] capitalize">Resources</p>
+                    </div>
+                    <a href="/resources#video" className="font-inter font-medium text-[14px] sm:text-[16px] text-black/55 leading-[1.45] tracking-[-0.08px] hover:text-black transition-colors">Short Video</a>
+                    <a href="/blog" className="font-inter font-medium text-[14px] sm:text-[16px] text-black/55 leading-[1.45] tracking-[-0.08px] hover:text-black transition-colors">Articles</a>
+                    <a href="/resources#news" className="font-inter font-medium text-[14px] sm:text-[16px] text-black/55 leading-[1.45] tracking-[-0.08px] hover:text-black transition-colors">News Room</a>
+                  </nav>
 
-                {/* Column 3 - Company */}
-                <nav className="flex flex-col gap-2 sm:gap-[8px]" data-name="Column 3">
-                  <div className="pb-3 sm:pb-4 lg:pb-[16px]">
-                    <p className="font-trap font-semibold text-[20px] sm:text-[24px] text-black leading-[1.2] capitalize">Company</p>
-                  </div>
-                  <a href="/working-with-freeda" className="font-inter font-medium text-[14px] sm:text-[16px] text-black/55 leading-[1.45] tracking-[-0.08px] hover:text-black transition-colors">Working with Freeda</a>
-                  <a href="/careers" className="font-inter font-medium text-[14px] sm:text-[16px] text-black/55 leading-[1.45] tracking-[-0.08px] hover:text-black transition-colors">Careers</a>
-                  <a href="/legal" className="font-inter font-medium text-[14px] sm:text-[16px] text-black/55 leading-[1.45] tracking-[-0.08px] hover:text-black transition-colors">Legal</a>
-                </nav>
-              </FadeIn>
-            </div>
+                  {/* Column 3 - Company */}
+                  <nav className="flex flex-col gap-[8px]" data-name="Column 3">
+                    <div className="pb-4 lg:pb-[16px]">
+                      <p className="font-trap font-semibold text-[20px] sm:text-[24px] text-black leading-[1.2] capitalize">Company</p>
+                    </div>
+                    <a href="/working-with-freeda" className="font-inter font-medium text-[14px] sm:text-[16px] text-black/55 leading-[1.45] tracking-[-0.08px] hover:text-black transition-colors">Working with Freeda</a>
+                    <a href="/careers" className="font-inter font-medium text-[14px] sm:text-[16px] text-black/55 leading-[1.45] tracking-[-0.08px] hover:text-black transition-colors">Careers</a>
+                    <a href="/legal" className="font-inter font-medium text-[14px] sm:text-[16px] text-black/55 leading-[1.45] tracking-[-0.08px] hover:text-black transition-colors">Legal</a>
+                  </nav>
+                </FadeIn>
+              </div>
             </footer>
           </div>
         </div>
