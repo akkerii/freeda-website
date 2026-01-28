@@ -82,7 +82,9 @@ export default function Navigation({ theme = "light" }: NavigationProps) {
 
       {/* Right: Contact Button */}
       <a
-        href="/contact"
+        href="https://freeda-so.notion.site/Freeda-Careers-2065c01c88ed80259519e83d67a331aa"
+        target="_blank"
+        rel="noopener noreferrer"
         className="hidden sm:flex items-center justify-center px-4 py-3 bg-[#F2F2F2] border-2 border-black/15 hover:bg-[#E8E8E8] rounded-[9px] font-mono text-sm lg:text-[16px] xl:text-[18px] leading-[145%] text-black no-underline transition-colors z-10"
       >
         Discuss a project
@@ -105,7 +107,9 @@ export default function Navigation({ theme = "light" }: NavigationProps) {
               Blog
             </a>
             <a
-              href="/contact"
+              href="https://freeda-so.notion.site/Freeda-Careers-2065c01c88ed80259519e83d67a331aa"
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-4 flex items-center justify-center px-4 py-3 bg-[#F02C2C] rounded-[9px] font-mono text-[18px] text-white no-underline transition-colors"
             >
               Discuss a project

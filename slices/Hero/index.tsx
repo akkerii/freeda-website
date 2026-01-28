@@ -148,12 +148,14 @@ const Hero = ({ slice }: HeroProps) => {
         </a>
 
         {/* Right: Contact Button */}
-        <PrismicNextLink
-          field={slice.primary.header_button_link}
+        <a
+          href="https://freeda-so.notion.site/Freeda-Careers-2065c01c88ed80259519e83d67a331aa"
+          target="_blank"
+          rel="noopener noreferrer"
           className="hidden sm:flex items-center justify-center px-3 md:px-4 py-2 md:py-3 bg-[#F2F2F2] border-2 border-black/15 rounded-[9px] font-mono text-xs sm:text-sm lg:text-[16px] xl:text-[18px] leading-[145%] text-black no-underline hover:bg-black/5 transition-colors z-10"
         >
           {slice.primary.header_button_text || "Discuss a project"}
-        </PrismicNextLink>
+        </a>
       </div>
 
       {/* Mobile Menu Overlay */}
@@ -173,7 +175,9 @@ const Hero = ({ slice }: HeroProps) => {
               Blog
             </a>
             <a
-              href="/contact"
+              href="https://freeda-so.notion.site/Freeda-Careers-2065c01c88ed80259519e83d67a331aa"
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-4 flex items-center justify-center px-4 py-3 bg-[#F02C2C] rounded-[9px] font-mono text-[18px] text-white no-underline transition-colors"
             >
               Discuss a project
@@ -207,12 +211,14 @@ const Hero = ({ slice }: HeroProps) => {
           {/* CTA Buttons - Figma: gap-[16px] */}
           <FadeIn delay={300}>
             <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4">
-              <PrismicNextLink
-                field={slice.primary.primary_button_link}
+              <a
+                href="https://freeda-so.notion.site/Freeda-Careers-2065c01c88ed80259519e83d67a331aa"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-4 py-2.5 sm:py-3 bg-[#F02C2C] rounded-[9px] font-mono text-[14px] sm:text-[16px] leading-[1.1] text-white capitalize no-underline hover:bg-[#d92626] transition-colors w-full sm:w-auto"
               >
                 {slice.primary.primary_button_text || "Discuss a project"}
-              </PrismicNextLink>
+              </a>
               <PrismicNextLink
                 field={slice.primary.secondary_button_link}
                 className="inline-flex items-center justify-center px-4 py-2.5 sm:py-3 bg-[#F2F2F2] border-2 border-black/15 rounded-[9px] font-mono text-[14px] sm:text-[16px] leading-[1.1] text-black capitalize no-underline hover:border-black/30 transition-colors w-full sm:w-auto"
