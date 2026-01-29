@@ -49,22 +49,55 @@ const DarkCta = ({ slice }: DarkCtaProps) => {
         </div>
       </FadeIn>
 
-      {/* Use Case Points - Right side, aligned with image right edge */}
+      {/* Use Case Points - Right side on desktop, bottom on mobile */}
       {slice.items && slice.items.length > 0 && (
-        <div className="absolute right-[3%] lg:right-[calc(50%-520px)] top-[18%] lg:top-[120px] hidden md:flex flex-col gap-[50px] lg:gap-[47px] z-20">
-          {slice.items.map((item, index) => (
-            <FadeIn key={index} delay={600 + index * 100}>
-              <div className="flex flex-col items-center w-[160px] h-[93px]">
-                {/* Red dot */}
-                <div className="w-[19px] h-[19px] rounded-full bg-[#F02C2C] flex-shrink-0" />
-                {/* Label */}
-                <span className="font-mono font-bold text-[18px] text-white leading-[1.45] text-center mt-[16px] w-full">
-                  {item.use_case_label}
-                </span>
-              </div>
-            </FadeIn>
-          ))}
-        </div>
+        <>
+          {/* Desktop: Right side */}
+          <div className="absolute right-[3%] lg:right-[calc(50%-520px)] top-[18%] lg:top-[120px] hidden md:flex flex-col gap-[50px] lg:gap-[47px] z-20">
+            {slice.items.map((item, index) => (
+              <FadeIn key={index} delay={600 + index * 100}>
+                <div className="flex flex-col items-center w-[160px] h-[93px]">
+                  {/* Red dot */}
+                  <div className="w-[19px] h-[19px] rounded-full bg-[#F02C2C] flex-shrink-0" />
+                  {/* Label */}
+                  <span className="font-mono font-bold text-[18px] text-white leading-[1.45] text-center mt-[16px] w-full">
+                    {item.use_case_label}
+                  </span>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+
+          {/* Mobile: 2 rows - 3 on top, 2 on bottom centered */}
+          <div className="absolute bottom-[50px] left-0 right-0 md:hidden z-20 px-4">
+            {/* First row - 3 items */}
+            <div className="flex justify-center gap-3 mb-4">
+              {slice.items.slice(0, 3).map((item, index) => (
+                <FadeIn key={index} delay={400 + index * 100}>
+                  <div className="flex flex-col items-center w-[100px]">
+                    <div className="w-[10px] h-[10px] rounded-full bg-[#F02C2C] flex-shrink-0" />
+                    <span className="font-mono font-bold text-[9px] text-white leading-[1.2] text-center mt-[5px]">
+                      {item.use_case_label}
+                    </span>
+                  </div>
+                </FadeIn>
+              ))}
+            </div>
+            {/* Second row - 2 items centered */}
+            <div className="flex justify-center gap-6">
+              {slice.items.slice(3, 5).map((item, index) => (
+                <FadeIn key={index + 3} delay={700 + index * 100}>
+                  <div className="flex flex-col items-center w-[100px]">
+                    <div className="w-[10px] h-[10px] rounded-full bg-[#F02C2C] flex-shrink-0" />
+                    <span className="font-mono font-bold text-[9px] text-white leading-[1.2] text-center mt-[5px]">
+                      {item.use_case_label}
+                    </span>
+                  </div>
+                </FadeIn>
+              ))}
+            </div>
+          </div>
+        </>
       )}
     </section>
 
