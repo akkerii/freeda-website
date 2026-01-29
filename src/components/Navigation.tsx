@@ -82,7 +82,7 @@ export default function Navigation({ theme = "light" }: NavigationProps) {
 
       {/* Right: Contact Button */}
       <a
-        href="https://freeda-so.notion.site/Freeda-Careers-2065c01c88ed80259519e83d67a331aa"
+        href="https://form.typeform.com/to/QsXZbKn1"
         target="_blank"
         rel="noopener noreferrer"
         className="hidden sm:flex items-center justify-center px-4 py-3 bg-[#F2F2F2] border-2 border-black/15 hover:bg-[#E8E8E8] rounded-[9px] font-mono text-sm lg:text-[16px] xl:text-[18px] leading-[145%] text-black no-underline transition-colors z-10"
@@ -92,8 +92,31 @@ export default function Navigation({ theme = "light" }: NavigationProps) {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className={`fixed inset-0 ${bgColor} z-[9998] 2xl:hidden pt-24 px-6`}>
-          <nav className="flex flex-col gap-6">
+        <div className={`fixed inset-0 ${bgColor} z-[9999] 2xl:hidden`}>
+          {/* Header with Close Button */}
+          <div className="flex items-center justify-between px-5 py-6">
+            <div className="w-10" /> {/* Spacer */}
+            {/* Logo in center */}
+            <a href="/" className="flex items-center">
+              <img
+                src="/images/freeda-logo-dark.svg"
+                alt="Freeda"
+                className="h-8 w-auto"
+              />
+            </a>
+            {/* Close Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="w-10 h-10 flex items-center justify-center text-black"
+              aria-label="Close menu"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+
+          <nav className="flex flex-col gap-6 pt-8 px-6">
             <a href="/case-study" className={`font-mono text-[18px] ${textColor} no-underline hover:opacity-70 transition-opacity`}>
               Case Study
             </a>
@@ -107,7 +130,7 @@ export default function Navigation({ theme = "light" }: NavigationProps) {
               Blog
             </a>
             <a
-              href="https://freeda-so.notion.site/Freeda-Careers-2065c01c88ed80259519e83d67a331aa"
+              href="https://form.typeform.com/to/QsXZbKn1"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 flex items-center justify-center px-4 py-3 bg-[#F02C2C] rounded-[9px] font-mono text-[18px] text-white no-underline transition-colors"

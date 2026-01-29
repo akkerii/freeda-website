@@ -54,42 +54,42 @@ const Hero = ({ slice }: HeroProps) => {
       {/* Top Left - near Vector 5 (moved up to avoid title overlap) */}
       <div className="absolute left-[28%] top-[10%] hidden lg:flex items-start gap-2 pointer-events-none z-20 -translate-x-[2.5px] hero-number-left-1">
         <div className="w-[5px] h-[5px] rounded-full bg-[#F02C2C] mt-2" />
-        <span className="font-mono text-[20px] text-[#F02C2C] tracking-[-1px] uppercase">12300</span>
+        <span className="font-mono text-[20px] text-[#F02C2C] tracking-[-1px] uppercase">13403</span>
       </div>
 
       {/* Middle Left - near Vector 5 */}
       <div className="absolute left-[28%] top-[60%] hidden lg:flex items-start gap-2 pointer-events-none z-20 -translate-x-[2.5px] hero-number-left-2">
         <div className="w-[5px] h-[5px] rounded-full bg-[#F02C2C] mt-2" />
-        <span className="font-mono text-[20px] text-[#F02C2C] tracking-[-1px] uppercase">12300</span>
+        <span className="font-mono text-[20px] text-[#F02C2C] tracking-[-1px] uppercase">11340</span>
       </div>
 
       {/* Bottom Left - near Vector 5 */}
       <div className="absolute left-[28%] top-[70.5%] hidden lg:flex items-start gap-2 pointer-events-none z-20 -translate-x-[2.5px] hero-number-left-3">
         <div className="w-[5px] h-[5px] rounded-full bg-[#F02C2C] mt-2" />
-        <span className="font-mono text-[20px] text-[#F02C2C] tracking-[-1px] uppercase">12300</span>
+        <span className="font-mono text-[20px] text-[#F02C2C] tracking-[-1px] uppercase">12394</span>
       </div>
 
       {/* Far Left Bottom */}
       <div className="absolute left-[15%] top-[81%] hidden lg:flex items-start gap-2 pointer-events-none z-20 -translate-x-[2.5px] hero-number-left-4">
         <div className="w-[5px] h-[5px] rounded-full bg-[#F02C2C] mt-2" />
-        <span className="font-mono text-[20px] text-[#F02C2C] tracking-[-1px] uppercase">12300</span>
+        <span className="font-mono text-[20px] text-[#F02C2C] tracking-[-1px] uppercase">14039</span>
       </div>
 
       {/* Top Right - dot at top level of number */}
       <div className="absolute right-[26%] top-[14%] hidden lg:flex items-start gap-2 pointer-events-none z-20 translate-x-[calc(100%-2.75px)] hero-number-right-1">
         <div className="w-[5px] h-[5px] rounded-full bg-[#F02C2C] mt-2" />
-        <span className="font-mono text-[20px] text-[#F02C2C] tracking-[-1px] uppercase">12300</span>
+        <span className="font-mono text-[20px] text-[#F02C2C] tracking-[-1px] uppercase">13403</span>
       </div>
 
       {/* Upper Middle Right - number centered on line */}
       <div className="absolute right-[26%] top-[27%] hidden lg:flex items-center pointer-events-none z-20 translate-x-[28%] hero-number-right-2">
-        <span className="font-mono text-[20px] text-[#F02C2C] tracking-[-1px] uppercase">12300</span>
+        <span className="font-mono text-[20px] text-[#F02C2C] tracking-[-1px] uppercase">11340</span>
       </div>
 
       {/* Middle Right - dot at top level of number */}
       <div className="absolute right-[26%] top-[60%] hidden lg:flex items-start gap-2 pointer-events-none z-20 translate-x-[200%] hero-number-right-3">
         <div className="w-[5px] h-[5px] rounded-full bg-[#F02C2C] mt-2" />
-        <span className="font-mono text-[20px] text-[#F02C2C] tracking-[-1px] uppercase">12300</span>
+        <span className="font-mono text-[20px] text-[#F02C2C] tracking-[-1px] uppercase">12394</span>
       </div>
 
       {/* Header - Full width */}
@@ -149,7 +149,7 @@ const Hero = ({ slice }: HeroProps) => {
 
         {/* Right: Contact Button */}
         <a
-          href="https://freeda-so.notion.site/Freeda-Careers-2065c01c88ed80259519e83d67a331aa"
+          href="https://form.typeform.com/to/QsXZbKn1"
           target="_blank"
           rel="noopener noreferrer"
           className="hidden sm:flex items-center justify-center px-3 md:px-4 py-2 md:py-3 bg-[#F2F2F2] border-2 border-black/15 rounded-[9px] font-mono text-xs sm:text-sm lg:text-[16px] xl:text-[18px] leading-[145%] text-black no-underline hover:bg-black/5 transition-colors z-10"
@@ -160,8 +160,31 @@ const Hero = ({ slice }: HeroProps) => {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 bg-[#F2F2F2] z-[10000] 2xl:hidden pt-20 px-6">
-          <nav className="flex flex-col gap-6">
+        <div className="fixed inset-0 bg-[#F2F2F2] z-[10000] 2xl:hidden">
+          {/* Header with Close Button */}
+          <div className="flex items-center justify-between px-5 py-6">
+            <div className="w-10" /> {/* Spacer */}
+            {/* Logo in center */}
+            <a href="/" className="flex items-center">
+              <img
+                src="/images/freeda-logo-dark.svg"
+                alt="Freeda"
+                className="h-8 w-auto"
+              />
+            </a>
+            {/* Close Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="w-10 h-10 flex items-center justify-center text-black"
+              aria-label="Close menu"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+
+          <nav className="flex flex-col gap-6 pt-8 px-6">
             <a href="/case-study" className="font-mono text-[18px] text-black no-underline hover:opacity-70 transition-opacity">
               Case Study
             </a>
@@ -175,7 +198,7 @@ const Hero = ({ slice }: HeroProps) => {
               Blog
             </a>
             <a
-              href="https://freeda-so.notion.site/Freeda-Careers-2065c01c88ed80259519e83d67a331aa"
+              href="https://form.typeform.com/to/QsXZbKn1"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 flex items-center justify-center px-4 py-3 bg-[#F02C2C] rounded-[9px] font-mono text-[18px] text-white no-underline transition-colors"
@@ -212,7 +235,7 @@ const Hero = ({ slice }: HeroProps) => {
           <FadeIn delay={300}>
             <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4">
               <a
-                href="https://freeda-so.notion.site/Freeda-Careers-2065c01c88ed80259519e83d67a331aa"
+                href="https://form.typeform.com/to/QsXZbKn1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-4 py-2.5 sm:py-3 bg-[#F02C2C] rounded-[9px] font-mono text-[14px] sm:text-[16px] leading-[1.1] text-white capitalize no-underline hover:bg-[#d92626] transition-colors w-full sm:w-auto"

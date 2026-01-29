@@ -147,7 +147,7 @@ const DocumentFeatures = ({ slice }: DocumentFeaturesProps) => {
         <FadeIn delay={300}>
           <div className="flex justify-center mt-10 md:mt-14">
             <a
-              href="https://freeda-so.notion.site/Freeda-Careers-2065c01c88ed80259519e83d67a331aa"
+              href="https://form.typeform.com/to/QsXZbKn1"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 py-3 bg-[#F02C2C] rounded-[9px] font-mono text-[14px] sm:text-[16px] leading-[1.1] text-white capitalize no-underline hover:bg-[#d92626] transition-colors"
