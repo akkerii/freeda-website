@@ -68,14 +68,23 @@ const CaseStudyPageHero: FC<CaseStudyPageHeroProps> = ({ slice }) => {
               />
             )}
           </div>
-          {/* Industry badge */}
-          {primary.industry_type && (
-            <div className="inline-flex items-center gap-[8px] bg-white rounded-[5px] px-[10px] py-[6px]">
-              <div className="w-[6px] h-[6px] rounded-full bg-[#F02C2C] flex-shrink-0" />
-              <span className="font-inter text-[14px] font-normal text-black leading-[1.45]">
-                {primary.industry_type}
-              </span>
-            </div>
+          {/* CTA Button - same as desktop card */}
+          {primary.cta_button_text && (
+            primary.cta_button_url ? (
+              <a
+                href={primary.cta_button_url}
+                className="inline-flex items-center bg-[#F02C2C] rounded-[5px] px-3 py-2 text-white font-mono text-[12px] font-medium no-underline hover:bg-[#d92626] transition-colors"
+              >
+                {primary.cta_button_text}
+              </a>
+            ) : (
+              <PrismicNextLink
+                field={primary.cta_button_link}
+                className="inline-flex items-center bg-[#F02C2C] rounded-[5px] px-3 py-2 text-white font-mono text-[12px] font-medium no-underline hover:bg-[#d92626] transition-colors"
+              >
+                {primary.cta_button_text}
+              </PrismicNextLink>
+            )
           )}
         </div>
       </div>
