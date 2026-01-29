@@ -111,30 +111,58 @@ const WorkingHero = ({ slice }: WorkingHeroProps) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="relative w-full h-auto min-h-[500px] sm:h-[700px] md:h-[850px] lg:h-[982px] overflow-hidden"
+      className="relative w-full"
     >
       {/* Navigation */}
       <Navigation theme="light" />
 
-      {/* Full Background Video */}
-      <div ref={containerRef} className="absolute inset-0">
-        {renderVideo()}
+      {/* Desktop Layout: Video with overlaid content box */}
+      <div className="hidden sm:block relative w-full h-[700px] md:h-[850px] lg:h-[982px] overflow-hidden">
+        {/* Full Background Video */}
+        <div ref={containerRef} className="absolute inset-0">
+          {renderVideo()}
+        </div>
+
+        {/* Dark Content Box - Overlaid on Right Side */}
+        <div className="absolute right-0 bottom-0 w-[320px] md:w-[420px] lg:w-[500px] xl:w-[564px] h-[400px] md:h-[450px] lg:h-[500px] xl:h-[537px] bg-[#202020] rounded-tl-[10px]">
+          <div className="flex flex-col gap-6 md:gap-8 items-start justify-center h-full px-8 md:px-12 lg:px-[66px]">
+            {/* Title */}
+            <div className="flex flex-col font-trap font-semibold leading-[1.1] text-[40px] md:text-[52px] lg:text-[64px] text-white tracking-[-1.6px]">
+              <h1 className="block mb-0">Working</h1>
+              <h1 className="block">with Freeda</h1>
+            </div>
+
+            {/* Description */}
+            <p className="font-inter font-normal text-[16px] md:text-[20px] lg:text-[24px] text-white/65 leading-[1.45] tracking-[-0.12px] max-w-[432px]">
+              {slice.primary.description ||
+                "Freeda is designed for teams dealing with complex projects, multiple stakeholders and regulatory constraints. We don't just deliver analyses. We help structure how risk is managed at the design stage."}
+            </p>
+          </div>
+        </div>
       </div>
 
-      {/* Dark Content Box - Overlaid on Right Side */}
-      <div className="absolute right-0 bottom-0 w-full sm:w-[320px] md:w-[420px] lg:w-[500px] xl:w-[564px] h-auto sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[537px] bg-[#202020] rounded-t-[10px] sm:rounded-tr-none sm:rounded-tl-[10px]">
-        <div className="flex flex-col gap-4 sm:gap-6 md:gap-8 items-start justify-center h-full px-5 py-6 sm:px-8 sm:py-0 md:px-12 lg:px-[66px]">
-          {/* Title */}
-          <div className="flex flex-col font-trap font-semibold leading-[1.1] text-[32px] sm:text-[40px] md:text-[52px] lg:text-[64px] text-white tracking-[-1.6px]">
-            <h1 className="block mb-0">Working</h1>
-            <h1 className="block">with Freeda</h1>
-          </div>
+      {/* Mobile Layout: Video above, content below */}
+      <div className="sm:hidden flex flex-col">
+        {/* Video Section */}
+        <div ref={containerRef} className="relative w-full h-[300px] overflow-hidden">
+          {renderVideo()}
+        </div>
 
-          {/* Description */}
-          <p className="font-inter font-normal text-[14px] sm:text-[16px] md:text-[20px] lg:text-[24px] text-white/65 leading-[1.45] tracking-[-0.12px] max-w-[432px]">
-            {slice.primary.description ||
-              "Freeda is designed for teams dealing with complex projects, multiple stakeholders and regulatory constraints. We don't just deliver analyses. We help structure how risk is managed at the design stage."}
-          </p>
+        {/* Dark Content Box - Below video */}
+        <div className="w-full bg-[#202020]">
+          <div className="flex flex-col gap-4 items-start px-5 py-8">
+            {/* Title */}
+            <div className="flex flex-col font-trap font-semibold leading-[1.1] text-[32px] text-white tracking-[-1.6px]">
+              <h1 className="block mb-0">Working</h1>
+              <h1 className="block">with Freeda</h1>
+            </div>
+
+            {/* Description */}
+            <p className="font-inter font-normal text-[14px] text-white/65 leading-[1.45] tracking-[-0.12px]">
+              {slice.primary.description ||
+                "Freeda is designed for teams dealing with complex projects, multiple stakeholders and regulatory constraints. We don't just deliver analyses. We help structure how risk is managed at the design stage."}
+            </p>
+          </div>
         </div>
       </div>
     </section>
