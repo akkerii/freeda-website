@@ -7,6 +7,7 @@ import { PrismicNextImage } from "@prismicio/next";
 import { createClient } from "@/prismicio";
 import clsx from "clsx";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 /**
  * Props for `LatestUseCases`.
@@ -19,6 +20,7 @@ export type LatestUseCasesProps = SliceComponentProps<any>;
 const LatestUseCases: FC<LatestUseCasesProps> = ({ slice }) => {
   const [useCaseCards, setUseCaseCards] = useState<any[]>([]);
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const router = useRouter();
 
   useEffect(() => {
     const fetchUseCases = async () => {
@@ -83,9 +85,16 @@ const LatestUseCases: FC<LatestUseCasesProps> = ({ slice }) => {
             return (
               <button
                 key={originalIndex}
-                onClick={() => setSelectedIndex(originalIndex)}
+                onClick={() => {
+                  setSelectedIndex(originalIndex);
+                  // Navigate to Use Cases page with this use case selected (unless coming soon)
+                  if (!isComingSoon) {
+                    router.push(`/use-cases#usecase-${originalIndex}`);
+                  }
+                }}
                 className={clsx(
-                  "group flex flex-col gap-8 items-start relative rounded-lg shrink-0 transition-all duration-500 ease-in-out text-left cursor-pointer",
+                  "group flex flex-col gap-8 items-start relative rounded-lg shrink-0 transition-all duration-500 ease-in-out text-left",
+                  isComingSoon ? "cursor-default" : "cursor-pointer",
                   isSelected
                     ? "w-full lg:w-[524px]"
                     : "w-full lg:w-[343px] lg:min-w-[336px] lg:max-w-[388px]"
@@ -124,7 +133,7 @@ const LatestUseCases: FC<LatestUseCasesProps> = ({ slice }) => {
                   {!isComingSoon && (
                     <div className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
                       <Link
-                        href={card.link_slug ? `/case-study/${card.link_slug}` : '/use-cases'}
+                        href={`/use-cases#usecase-${originalIndex}`}
                         className="inline-flex items-center justify-center px-6 py-3 bg-[#F02C2C] rounded-[9px] font-mono text-[16px] md:text-[18px] text-white no-underline hover:bg-[#d92626] transition-colors whitespace-nowrap"
                         onClick={(e) => e.stopPropagation()}
                       >

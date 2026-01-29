@@ -16,6 +16,25 @@ const UseCaseCards: FC<UseCaseCardsProps> = ({ slice }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [isNavVisible, setIsNavVisible] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
+  const hasScrolledToHash = useRef(false);
+
+  // Read URL hash on mount and select the corresponding use case
+  useEffect(() => {
+    if (hasScrolledToHash.current || cards.length === 0) return;
+
+    const hash = window.location.hash;
+    if (hash && hash.startsWith('#usecase-')) {
+      const index = parseInt(hash.replace('#usecase-', ''), 10);
+      if (!isNaN(index) && index >= 0 && index < cards.length) {
+        setSelectedIndex(index);
+        hasScrolledToHash.current = true;
+        // Scroll to content after a short delay to allow render
+        setTimeout(() => {
+          contentRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 300);
+      }
+    }
+  }, [cards.length]);
 
   // Scroll to content section
   const scrollToContent = () => {
