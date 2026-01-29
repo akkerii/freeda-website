@@ -92,7 +92,7 @@ const UseCaseCards: FC<UseCaseCardsProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="relative w-full bg-white py-24 overflow-x-auto"
     >
-      {/* Floating Navigation - Only visible when section is in view */}
+      {/* Desktop Floating Navigation - Only visible when section is in view */}
       {cards.length > 0 && (
         <div
           className={clsx(
@@ -118,6 +118,59 @@ const UseCaseCards: FC<UseCaseCardsProps> = ({ slice }) => {
                 {card.card_title}
               </button>
             ))}
+          </div>
+        </div>
+      )}
+
+      {/* Mobile/Tablet Fixed Top Navigation */}
+      {cards.length > 0 && (
+        <div
+          className={clsx(
+            "fixed top-0 left-0 right-0 z-50 transition-all duration-300 lg:hidden",
+            isNavVisible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"
+          )}
+        >
+          <div className="bg-white/95 backdrop-blur-md border-b border-black/5 shadow-sm">
+            {/* Progress indicator */}
+            <div className="h-[3px] bg-[#F2F2F2]">
+              <div
+                className="h-full bg-[#F02C2C] transition-all duration-300"
+                style={{ width: `${((selectedIndex + 1) / cards.length) * 100}%` }}
+              />
+            </div>
+
+            <div className="px-4 py-3">
+              {/* Current selection label */}
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-[11px] font-mono text-black/40 uppercase tracking-wider">Use Case</span>
+                <span className="text-[11px] font-mono text-black/40">{selectedIndex + 1} / {cards.length}</span>
+              </div>
+
+              {/* Navigation pills */}
+              <div className="flex gap-2 overflow-x-auto scrollbar-hide pb-1">
+                {cards.map((card: any, idx: number) => (
+                  <button
+                    key={idx}
+                    onClick={() => {
+                      setSelectedIndex(idx);
+                      scrollToContent();
+                    }}
+                    className={clsx(
+                      "flex-shrink-0 flex items-center gap-2 px-3 py-2 rounded-lg text-[12px] font-trap font-semibold transition-all whitespace-nowrap",
+                      idx === selectedIndex
+                        ? "bg-[#202020] text-white"
+                        : "bg-[#F2F2F2] text-black/50 active:bg-[#E5E5E5]"
+                    )}
+                  >
+                    <span className={clsx(
+                      "w-[6px] h-[6px] rounded-full flex-shrink-0",
+                      idx === selectedIndex ? "bg-[#F02C2C]" : "bg-black/20"
+                    )} />
+                    {card.card_title}
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       )}
