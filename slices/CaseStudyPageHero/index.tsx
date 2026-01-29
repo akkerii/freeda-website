@@ -14,31 +14,24 @@ const CaseStudyPageHero: FC<CaseStudyPageHeroProps> = ({ slice }) => {
   const { primary } = slice;
   const [isExpanded, setIsExpanded] = useState(true);
   const [showMobileSticky, setShowMobileSticky] = useState(false);
-  const [showDesktopFixed, setShowDesktopFixed] = useState(false);
+  const [showCard, setShowCard] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
+  const heroRef = useRef<HTMLElement>(null);
 
-  // Track scroll for both mobile sticky navbar and desktop fixed card
+  // Track scroll to show card after scrolling past hero
   useEffect(() => {
     const handleScroll = () => {
-      if (!cardRef.current) return;
-
-      const cardRect = cardRef.current.getBoundingClientRect();
       const isDesktop = window.innerWidth >= 1024;
-
-      // Find the footer to know when to stop showing the fixed card
-      const footer = document.querySelector('[data-slice-type="footer"]') || document.querySelector('footer');
-      const footerTop = footer ? footer.getBoundingClientRect().top : Infinity;
+      // Show card after scrolling past 500px (past the hero section)
+      const scrollThreshold = 500;
 
       if (isDesktop) {
-        // Desktop: Show fixed card ONLY when original card is completely scrolled out of view
-        // (when the bottom of the original card is above the viewport top + offset)
-        const shouldShowFixed = cardRect.bottom < 0 && footerTop > 500;
-        setShowDesktopFixed(shouldShowFixed);
+        setShowCard(window.scrollY > scrollThreshold);
         setShowMobileSticky(false);
       } else {
-        // Mobile: Show sticky navbar when card scrolls out of view
-        setShowMobileSticky(cardRect.bottom < 80);
-        setShowDesktopFixed(false);
+        // Mobile: Show sticky navbar after scrolling past 200px
+        setShowMobileSticky(window.scrollY > 200);
+        setShowCard(false);
       }
     };
 
@@ -87,86 +80,8 @@ const CaseStudyPageHero: FC<CaseStudyPageHeroProps> = ({ slice }) => {
         </div>
       </div>
 
-      {/* Desktop Fixed Card - floats on right side when scrolling */}
-      <div
-        className={`hidden lg:block fixed right-[40px] xl:right-[80px] top-[100px] z-40 w-[343px] transition-all duration-300 ${
-          showDesktopFixed ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[50px] pointer-events-none'
-        }`}
-      >
-        <div className="bg-[#F2F2F2] rounded-[5px] p-[16px] overflow-hidden shadow-lg">
-          <div className="flex flex-col w-full max-w-[309px]">
-            {/* Header - Logo and arrow */}
-            <div className="flex items-center justify-between">
-              <div className="flex items-center h-[52px]">
-                {primary.company_logo?.url && (
-                  <PrismicNextImage
-                    field={primary.company_logo}
-                    className="h-[52px] w-auto max-w-[220px] object-contain"
-                    fallbackAlt=""
-                  />
-                )}
-              </div>
-              <button
-                onClick={() => setIsExpanded(!isExpanded)}
-                className="w-[32px] h-[32px] flex items-center justify-center text-black/60 hover:text-black hover:bg-black/5 rounded-full transition-all duration-200 cursor-pointer"
-              >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className={`transition-transform duration-300 ${isExpanded ? '' : 'rotate-180'}`}>
-                  <path d="M6.75 9.25L12 14.75L17.25 9.25" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </button>
-            </div>
-
-            {/* Collapsible content */}
-            <div className="grid transition-all duration-300 ease-out" style={{ gridTemplateRows: isExpanded ? '1fr' : '0fr' }}>
-              <div className="overflow-hidden">
-                <div className="flex flex-col gap-[24px] pt-[24px]">
-                  {/* About */}
-                  <div className="flex flex-col">
-                    {primary.about_title && <p className="font-inter text-[18px] font-normal text-black leading-[1.5] m-0">{primary.about_title}</p>}
-                    {primary.about_description && <p className="font-inter text-[18px] font-normal text-black/55 leading-[1.5] w-[287px] m-0">{primary.about_description}</p>}
-                  </div>
-                  {/* Industry */}
-                  <div className="flex flex-col gap-[8px]">
-                    {primary.industry_title && <p className="font-inter text-[18px] font-normal text-black leading-[1.5] m-0">{primary.industry_title}</p>}
-                    {primary.industry_type && (
-                      <div className="inline-flex items-center gap-[10px] bg-white rounded-[5px] p-[10px] w-fit">
-                        <div className="w-[8px] h-[8px] rounded-full bg-[#F02C2C] flex-shrink-0" />
-                        <span className="font-inter text-[18px] font-normal text-black leading-[1.45] tracking-[-0.09px]">{primary.industry_type}</span>
-                      </div>
-                    )}
-                  </div>
-                  {/* Since */}
-                  <div className="flex flex-col gap-[8px]">
-                    {primary.since_title && <p className="font-inter text-[18px] font-normal text-black leading-[1.5] m-0">{primary.since_title}</p>}
-                  </div>
-
-                  {/* CTA Button */}
-                  {primary.cta_button_text && (
-                    primary.cta_button_url ? (
-                      <a
-                        href={primary.cta_button_url}
-                        className="inline-flex items-center justify-center px-[16px] py-[10px] bg-[#F02C2C] rounded-[5px] font-mono text-[18px] text-white text-center leading-[1.45] no-underline hover:opacity-90 transition-opacity w-fit"
-                      >
-                        {primary.cta_button_text}
-                      </a>
-                    ) : (
-                      <PrismicNextLink
-                        field={primary.cta_button_link}
-                        className="inline-flex items-center justify-center px-[16px] py-[10px] bg-[#F02C2C] rounded-[5px] font-mono text-[18px] text-white text-center leading-[1.45] no-underline hover:opacity-90 transition-opacity w-fit"
-                      >
-                        {primary.cta_button_text}
-                      </PrismicNextLink>
-                    )
-                  )}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Consistent with other slices: max-w-[1250px] px-5 md:px-10 */}
-      <div className="max-w-[1250px] mx-auto px-5 md:px-10">
+      {/* Consistent with other slices: max-w-[1250px] px-5 md:px-10, with right space for sticky card on lg+ */}
+      <div className="max-w-[1250px] mx-auto px-5 md:px-10 lg:pr-[400px]">
         {/* Main Container - Center content with sidebar on the side */}
         <div className="relative flex flex-col lg:flex-row lg:justify-center gap-8 lg:gap-12">
           {/* Main Content - Hero (centered) */}
@@ -270,9 +185,11 @@ const CaseStudyPageHero: FC<CaseStudyPageHeroProps> = ({ slice }) => {
           </div>
 
           {/* Right Sidebar - Company Info Panel (Figma: 343px, bg #F2F2F2, padding 16px, radius 5px) */}
-          {/* Original card - tracked for scroll, fixed version appears when scrolling */}
-          <FadeIn delay={300} direction="right" className="w-full lg:w-[343px] lg:absolute lg:right-[-100px] lg:top-0 flex-shrink-0">
-            <div ref={cardRef} className="bg-[#F2F2F2] rounded-[5px] p-[16px] overflow-hidden">
+          {/* Fixed card that appears after scrolling past hero */}
+          <div className={`hidden lg:block w-[343px] fixed right-[40px] xl:right-[80px] top-[100px] z-40 flex-shrink-0 transition-all duration-300 ${
+            showCard ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[50px] pointer-events-none'
+          }`}>
+            <div ref={cardRef} className="bg-[#F2F2F2] rounded-[5px] p-[16px] overflow-hidden shadow-lg">
               {/* Inner content container (Figma: 309px width) */}
               <div className="flex flex-col w-full max-w-[309px]">
                 {/* Header - Logo and arrow on same line */}
@@ -399,7 +316,7 @@ const CaseStudyPageHero: FC<CaseStudyPageHeroProps> = ({ slice }) => {
                 </div>
               </div>
             </div>
-          </FadeIn>
+          </div>
         </div>
       </div>
     </section>

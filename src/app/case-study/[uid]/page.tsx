@@ -5,6 +5,7 @@ import { createClient } from "../../../../prismicio";
 import CaseStudyPageHero from "../../../../slices/CaseStudyPageHero";
 import CaseStudyContent from "../../../../slices/CaseStudyContent";
 import Navigation from "@/components/Navigation";
+import HomeLinkedGlobalPresence from "../../../../slices/GlobalPresence/HomeLinkedGlobalPresence";
 
 type Params = { uid: string };
 
@@ -75,7 +76,7 @@ export default async function CaseStudyDetailPage({ params }: { params: Promise<
     (slice: any) => slice.slice_type === "case_study_hero"
   );
   const bottomSlices = caseStudyPageSlices.filter(
-    (slice: any) => !["case_study_hero", "case_study_page_hero", "case_study_content"].includes(slice.slice_type)
+    (slice: any) => !["case_study_hero", "case_study_page_hero", "case_study_content", "global_presence"].includes(slice.slice_type)
   );
 
   return (
@@ -105,7 +106,10 @@ export default async function CaseStudyDetailPage({ params }: { params: Promise<
         />
       )}
 
-      {/* Render remaining slices from case_study_page (CaseStudyCards, GlobalPresence, LogoCloud, Footer, etc.) */}
+      {/* Render GlobalPresence from homepage */}
+      <HomeLinkedGlobalPresence />
+
+      {/* Render remaining slices from case_study_page (CaseStudyCards, LogoCloud, Footer, etc.) */}
       <SliceZone slices={bottomSlices} components={components} />
     </main>
   );

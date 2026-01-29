@@ -312,12 +312,9 @@ const Testimonials = ({ slice }: TestimonialsProps) => {
                 // Skip the currently selected item
                 if (index === selectedIndex) return null;
 
-                return (
-                  <button
-                    key={index}
-                    onClick={() => handleCardSelect(index)}
-                    className="relative h-[101px] rounded-[10px] p-8 flex items-center justify-start transition-all cursor-pointer bg-[#EDEDED] hover:bg-[#E0E0E0]"
-                  >
+                // Common card content
+                const cardContent = (
+                  <>
                     {/* Company Logo */}
                     <div className="h-[48px] w-[110px]">
                       {isFilled.image(item.company_logo) ? (
@@ -344,6 +341,29 @@ const Testimonials = ({ slice }: TestimonialsProps) => {
                         </svg>
                       </div>
                     </div>
+                  </>
+                );
+
+                // If coming soon, render as non-clickable div
+                if (item.is_coming_soon) {
+                  return (
+                    <div
+                      key={index}
+                      className="relative h-[101px] rounded-[10px] p-8 flex items-center justify-start bg-[#EDEDED]"
+                    >
+                      {cardContent}
+                    </div>
+                  );
+                }
+
+                // Otherwise, render as clickable button
+                return (
+                  <button
+                    key={index}
+                    onClick={() => handleCardSelect(index)}
+                    className="relative h-[101px] rounded-[10px] p-8 flex items-center justify-start transition-all cursor-pointer bg-[#EDEDED] hover:bg-[#E0E0E0]"
+                  >
+                    {cardContent}
                   </button>
                 );
               })}

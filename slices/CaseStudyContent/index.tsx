@@ -313,8 +313,8 @@ const CaseStudyContent: FC<CaseStudyContentProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="bg-white py-12 md:py-16 lg:py-20"
     >
-      {/* Consistent with other slices: max-w-[1250px] px-5 md:px-10 */}
-      <div className="w-full max-w-[1250px] mx-auto px-5 md:px-10">
+      {/* Consistent with other slices: max-w-[1250px] px-5 md:px-10, with right space for sticky card on lg+ */}
+      <div className="w-full max-w-[1250px] mx-auto px-5 md:px-10 lg:pr-[400px]">
         {/* Content sections with 111px gap between them */}
         <div className="flex flex-col gap-[111px]">
           {sections.map((section: any, index: number) => {
@@ -367,17 +367,28 @@ const CaseStudyContent: FC<CaseStudyContentProps> = ({ slice }) => {
 
                     {/* Body Text - Figma: Inter 24px, line-height 29px, letter-spacing -0.12px, black/55% */}
                     {isFilled.richText(section.body_text) && (
-                      <div className="font-inter text-[24px] text-black/55 leading-[29px] tracking-[-0.12px]">
+                      <div className="font-inter text-[18px] md:text-[20px] lg:text-[24px] text-black/55 leading-[1.6] tracking-[-0.12px]">
                         <PrismicRichText
                           field={section.body_text}
                           components={{
-                            paragraph: ({ children }) => (
-                              <p className="mb-0">{children}</p>
-                            ),
+                            paragraph: ({ children, text }) => {
+                              // If paragraph is empty or just whitespace, render as a spacer
+                              const isEmpty = !text || text.trim() === '';
+                              if (isEmpty) {
+                                return <div className="h-6" />;
+                              }
+                              return <p className="mb-0">{children}</p>;
+                            },
                             strong: ({ children }) => (
                               <strong className="font-bold text-black">
                                 {children}
                               </strong>
+                            ),
+                            listItem: ({ children }) => (
+                              <li className="mb-2 ml-6 list-disc">{children}</li>
+                            ),
+                            list: ({ children }) => (
+                              <ul className="my-4">{children}</ul>
                             ),
                           }}
                         />
@@ -418,17 +429,28 @@ const CaseStudyContent: FC<CaseStudyContentProps> = ({ slice }) => {
                   <div className="flex flex-col gap-[24px]">
                     {/* Body Text - Figma: Inter 24px, line-height 29px, letter-spacing -0.12px, black/55% */}
                     {isFilled.richText(section.body_text) && (
-                      <div className="font-inter text-[24px] text-black/55 leading-[29px] tracking-[-0.12px]">
+                      <div className="font-inter text-[18px] md:text-[20px] lg:text-[24px] text-black/55 leading-[1.6] tracking-[-0.12px]">
                         <PrismicRichText
                           field={section.body_text}
                           components={{
-                            paragraph: ({ children }) => (
-                              <p className="mb-0">{children}</p>
-                            ),
+                            paragraph: ({ children, text }) => {
+                              // If paragraph is empty or just whitespace, render as a spacer
+                              const isEmpty = !text || text.trim() === '';
+                              if (isEmpty) {
+                                return <div className="h-6" />;
+                              }
+                              return <p className="mb-0">{children}</p>;
+                            },
                             strong: ({ children }) => (
                               <strong className="font-bold text-black">
                                 {children}
                               </strong>
+                            ),
+                            listItem: ({ children }) => (
+                              <li className="mb-2 ml-6 list-disc">{children}</li>
+                            ),
+                            list: ({ children }) => (
+                              <ul className="my-4">{children}</ul>
                             ),
                           }}
                         />

@@ -14,7 +14,7 @@ export type UseCaseCardsProps = SliceComponentProps<any>;
 const UseCaseCards: FC<UseCaseCardsProps> = ({ slice }) => {
   const cards = slice.items || [];
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [isNavVisible, setIsNavVisible] = useState(true);
+  const [isNavVisible, setIsNavVisible] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
 
   // Scroll to content section
