@@ -5,8 +5,6 @@ import { isFilled } from "@prismicio/client";
 import { SliceComponentProps, PrismicRichText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 import clsx from "clsx";
-import UseCaseImageComposition from "@/components/UseCaseImageComposition";
-import UseCaseLottieAnimation from "@/components/UseCaseLottieAnimation";
 
 // Type will be generated after pushing to Prismic
 export type UseCaseCardsProps = SliceComponentProps<any>;
@@ -171,33 +169,8 @@ const UseCaseCards: FC<UseCaseCardsProps> = ({ slice }) => {
                       isImageLeft ? "lg:flex-row" : "lg:flex-row-reverse"
                     )}
                   >
-                    {/* Lottie animations for all 3 steps of ALL use cases */}
-                    {stepIndex === 0 ? (
-                      <UseCaseLottieAnimation
-                        key={`step1-${selectedIndex}`}
-                        src="/animations/step1-config.json"
-                        className="w-full lg:w-auto"
-                      />
-                    ) : stepIndex === 1 ? (
-                      <UseCaseLottieAnimation
-                        key={`step2-${selectedIndex}`}
-                        src="/animations/step2-config.json"
-                        className="w-full lg:w-auto"
-                      />
-                    ) : stepIndex === 2 ? (
-                      <UseCaseLottieAnimation
-                        key={`step3-${selectedIndex}`}
-                        src="/animations/step3-config.json"
-                        className="w-full lg:w-auto"
-                      />
-                    ) : step.use_composition ? (
-                      <UseCaseImageComposition
-                        className="w-full lg:w-auto"
-                        mainImage={step.composition_main_image?.url || "/images/use-cases/main-screenshot.png"}
-                        cardImage={step.composition_card_image?.url || "/images/use-cases/card-requirements.png"}
-                        smallImage={step.composition_small_image?.url || "/images/use-cases/small-frame.png"}
-                      />
-                    ) : isFilled.image(step.step_image) ? (
+                    {/* Step Image from Prismic */}
+                    {isFilled.image(step.step_image) ? (
                       <div className="relative w-full lg:w-[523px] h-[280px] sm:h-[350px] lg:h-[558px] shrink-0 rounded-[10px] overflow-hidden">
                         <PrismicNextImage
                           field={step.step_image}
@@ -207,7 +180,7 @@ const UseCaseCards: FC<UseCaseCardsProps> = ({ slice }) => {
                         />
                       </div>
                     ) : (
-                      <UseCaseImageComposition className="w-full lg:w-auto" />
+                      <div className="relative w-full lg:w-[523px] h-[280px] sm:h-[350px] lg:h-[558px] shrink-0 rounded-[10px] overflow-hidden bg-[#F5F5F5]" />
                     )}
 
                     {/* Content */}

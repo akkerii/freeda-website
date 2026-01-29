@@ -29,33 +29,33 @@ const LogoCloud = ({ slice }: LogoCloudProps) => {
           <div className="flex animate-marquee hover:pause">
             {/* Repeat logo sets multiple times to ensure full width coverage */}
             {[0, 1, 2, 3].map((setIndex) => (
-              <div key={`set-${setIndex}`} className="flex items-end gap-12 md:gap-[72px] shrink-0 pr-12 md:pr-[72px]">
+              <div key={`set-${setIndex}`} className="flex items-center gap-8 sm:gap-12 md:gap-[72px] shrink-0 pr-8 sm:pr-12 md:pr-[72px]">
                 {slice.items.map((item: any, index) => (
-                  <div key={`${setIndex}-${index}`} className="shrink-0 flex flex-col items-center gap-2">
-                    <div className="flex items-center justify-center h-10 md:h-14 lg:h-16">
+                  <div key={`${setIndex}-${index}`} className="shrink-0 relative">
+                    <div className="flex items-center justify-center h-6 sm:h-8 md:h-14 lg:h-16">
                       {item.logo?.url && (
                         item.case_study_slug ? (
                           <Link href={`/case-study/${item.case_study_slug}`} className="h-full hover:opacity-100 transition-opacity">
                             <PrismicNextImage
                               field={item.logo}
-                              className="h-full w-auto max-w-[150px] md:max-w-[180px] lg:max-w-[200px] object-contain grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition-all"
+                              className="h-full w-auto max-w-[80px] sm:max-w-[120px] md:max-w-[180px] lg:max-w-[200px] object-contain grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition-all"
                               fallbackAlt=""
                             />
                           </Link>
                         ) : (
                           <PrismicNextImage
                             field={item.logo}
-                            className="h-full w-auto max-w-[150px] md:max-w-[180px] lg:max-w-[200px] object-contain grayscale opacity-70"
+                            className="h-full w-auto max-w-[80px] sm:max-w-[120px] md:max-w-[180px] lg:max-w-[200px] object-contain grayscale opacity-70"
                             fallbackAlt=""
                           />
                         )
                       )}
                     </div>
-                    {/* Case Study badge - only shown for logos with case study slug */}
+                    {/* Case Study badge - positioned absolutely below logo */}
                     {item.case_study_slug && (
                       <Link
                         href={`/case-study/${item.case_study_slug}`}
-                        className="bg-[#F2F2F2] px-2 py-1 rounded-[2px] flex items-center justify-center hover:bg-[#E8E8E8] transition-colors"
+                        className="absolute left-1/2 -translate-x-1/2 top-full mt-2 bg-[#F2F2F2] px-2 py-1 rounded-[2px] flex items-center justify-center hover:bg-[#E8E8E8] transition-colors"
                       >
                         <span className="font-inter font-semibold text-[12px] text-[#8B9187] leading-[1.2] whitespace-nowrap">
                           Case Study
